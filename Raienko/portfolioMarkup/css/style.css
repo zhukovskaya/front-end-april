@@ -1,0 +1,150 @@
+.bodyStyle{
+	background-image: url("../images/backgroundPage.gif");
+	padding:0;
+	margin: 0;
+	font-family: Arial;
+}
+.wrapper{
+	width: 100%;
+	height: 130px;
+	background-image: url("../images/backgroundHeader.gif");
+	text-align:center;
+}
+.headerStyle{
+	display: inline-block;
+	position: relative;
+	vertical-align: center;
+	width: 980px;
+	height: 115px;
+}
+.LogoHolder{
+	position: absolute;
+	left:0px;
+	margin-top: 50px;
+}
+.navigation {
+	position: absolute;
+	right: 4px;
+	margin-top: 40px;
+}
+.navigation ul li{
+	display: inline-block;
+	padding-left: 28px;
+}
+.navigation ul li a{
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 11px;
+	color: white;
+}
+
+.mainStyle{
+	position: relative;
+	top:-4px;
+	display: inline-block;
+	background: white;
+	width: 950px;
+	border: 1px solid #eeeadc;
+	padding: 15px;
+	text-align: left;
+
+}
+.mainBlockHeading{
+	font-size: 20px;
+	font-weight: bold;
+	padding-bottom: 30px;
+}
+.mainBlockHeading div.leftHeading{
+	position: absolute;
+	left:15px;	
+}
+.mainBlockHeading div.rightHeading{
+	position: absolute;
+	right:60px;	
+}
+.contentBlock{
+	float: left;
+}
+.postHolder{
+	width: 620px;
+	height: 280px;
+	position: relative;
+	padding-bottom: 10px;
+}
+.postHolder div.Post {
+	width: 320px;
+	float: left;
+}
+.postHolder div.Post p{
+	font-weight: bold;
+}
+.postHolder div.Post div.dividerSmall{
+	width:300px;
+	height: 1px;
+	background: red;
+}
+.rightPart{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+.postHolder div.dividerBig{
+	width:600px;
+	height: 1px;
+	background: red;
+	position: absolute;
+	bottom: 0px;
+}
+.contentBlock div.pageNav ul li{
+	display: inline;
+	list-style: none;
+}
+.feedbackBlock{
+	width: 300px;
+	float: right;
+}
+.feedbacksHolder ul{
+	padding: 0;
+	margin: 0;
+}
+.feedbacksHolder ul li{
+	list-style: none;
+	background-image: url('../images/brackets.png');
+    background-repeat: no-repeat;
+}
+.feedbacksHolder ul li div.divider{
+	width:100px;
+	height: 1px;
+	margin: 10px;
+	background:red;
+}
+.feedbacksHolder ul li div.author{
+	font-weight: bold;
+	text-align: right;
+}
+.feedbackBlock div.divider{
+	width: 250px;
+	height: 2px;
+	background: green;
+}
+.feedbackBlock div.advertiseBlock ul{
+	margin: 0;
+	padding: 0;
+}
+.feedbackBlock div.advertiseBlock ul li{
+	list-style: none;
+	display: inline-block;
+	border: 5px solid yellow;
+}
+.feedbackBlock div.advertiseBlock ul li input{
+	width: 300px;
+	height: 50px;
+	background: blue;
+}
+.footerStyle{
+	display: inline-block;
+	background: blue;
+	width: 980px;
+	position: relative;
+	top: -8px;
+}
