@@ -134,12 +134,21 @@
 .feedbackBlock div.advertiseBlock ul li{
 	list-style: none;
 	display: inline-block;
-	border: 5px solid yellow;
+	width: 300px;
+	height: 50px;
+	background-color: #fdfbf1;
+	border: 1px solid #ededed;
+	text-align: center;
+	padding: 5px;
+	margin-bottom: 10px;
 }
 .feedbackBlock div.advertiseBlock ul li input{
 	width: 300px;
 	height: 50px;
-	background: blue;
+	background: #f0ede0;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #dfdcd0;
 }
 .footerStyle{
 	display: inline-block;
