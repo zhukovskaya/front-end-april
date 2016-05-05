@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Input examples</title>
+	<title>Lucid Theme</title>
 </head>
 
 <body>
@@ -11,27 +11,27 @@
 
 		<!-- HEADER -->
 		<header id="header">
-			<nav>
+			<div class="nav">
 				<ul>
 					<li>home</a></li>
 					<li>about</a></li>
 					<li>categories</a></li>
 					<li>contact us</a></li>
 				</ul>
-			</nav>
+			</div>
+			<span class="Logo"><img src="logo.png" alt="Lucid Theme"></span>
+			<div class="content">
+				<ul>
+					<li><a href=""></a> SUBSCRIBE TO OUR RSS FEED</li>
+					<li><a href=""></a> CONTACT US NOW!</li>
+				</ul>
+			</div>
 		</header>
 		
 		<!-- MAIN -->
 		<main id="main">
-			<section class="content">
-				<h1>LUCID THEME</h1>
-				
-				<div class="content">
-					<p><img src="icon4.png"> SUBSCRIBE TO OUR RSS FEED</p>
-					<p><img src="icon5.png"> CONTACT US NOW!</p>
-				</div>
-				
-				<section class="content">
+			<article class="post-holder">
+				<div class="post">
 					<h2>THE POST TITLE</h2>
 						<div>
 							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
@@ -40,8 +40,27 @@
 					<img src="img1.jpg">
 					<img src="img2.jpg">
 					<img src="img3.jpg">
-				</section>
-				<section class="content">
+				</div>
+				<div class="meta">
+					<ul>
+						<li><img src="icon1.png"> COMMENT:<a href=""></a></li>
+						<li><img src="icon2.png"> LIKED:<a href=""></a> PEOPLE</li>
+						<li><img src="icon3.png"> BY:<a href=""></a> ADMIN</li>
+					</ul>
+					<ul>
+						<li>CATEGORY: UNNAMED 1</li>
+						<li>TAGS:
+							<ul>
+								<li><a href="">DEMO TAGS1</a></li>
+								<li><a href="">DEMO TAGS2</a></li>
+								<li><a href="">DEMO TAGS3</a></li>
+								<li><a href="">DEMO TAGS4</a></li>
+							</ul>
+						</li>
+					</ul>
+
+				</div
+				<div class="content">
 					<h2>THE POST TITLE2</h2>
 						<div>
 							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
@@ -52,8 +71,9 @@
 					<img src="img3.jpg">
 					<img src="img1.jpg">
 					<img src="img2.jpg">
-				</section>
-				<section class="content">
+				</div>
+
+				<div class="content">
 					<h2>THE POST TITLE3</h2>
 						<div>
 							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
@@ -61,59 +81,75 @@
 						</div>
 					<img src="img1.jpg">
 					<img src="img2.jpg">
-				</section>
-				
-			
-			<aside>
-				<div class="content">
-					<ul>
-							<li><img src="icon1.png"> COMMENT:</li>
-							<li><img src="icon2.png"> LIKED:</li>
-							<li><img src="icon3.png"> BY: ADMIN</li>
-							<li>CATEGORY: UNNAMED 1</li>
-							<li>TAGS:</li>
-							<li>DEMO TAGS1</li>
-							<li>DEMO TAGS2</li>
-							<li>DEMO TAGS3</li>
-							<li>DEMO TAGS4</li>
-					</ul>
 				</div>
-			</aside>
-			
-			<aside>
-				<button name="t">t</button>
-				<button name="T">T</button>
-				
-				<form>
-				
-				<textarea type="submit" name="search" value="SEARCH" placeholder="SITE SEARCH"></textarea>
-				<button type="submit">SEARCH</button>
-				</form>
-			
-			</aside>
-			
-			</section>
-		
-		
-		
+
+				<ul class="pagination">
+					<li><a href="">1</a></li>
+					<li><a href="">2</a></li>
+					<li><a href="">3</a></li>
+					<li><a href="">4</a></li>
+				</ul>
+			</article>
+
+
+				<aside class="sidebar">
+					<ul class="social">
+						<li><a href=""><img src="" alt=""></a>FALLOVERS</li>
+						<li><a href=""><img src="" alt=""></a>FALLOVERS</li>
+					</ul>
+					
+					<div class="search">
+						<form action="">
+							<input type="text" class="search"  placeholder="SITE SEARCH">
+							<input type="text" class="submit" value="SEARCH">
+						</form>
+					</div>
+					
+					<div class="advertising">
+						<ul>
+							<li><a href=""><img src="" alt="125X125"></a></li>
+							<li><a href=""><img src="" alt="125X125"></a></li>
+							<li><a href=""><img src="" alt="125X125"></a></li>
+							<li><a href=""><img src="" alt="125X125"></a></li>
+						</ul>
+					</div>
+
+					<div class="tags">
+						<span><strong>FOCUS</strong></span>
+						<ul>
+							<li class="activ"><a href="">ALL</a></li>
+							<li><a href="">CODE&DISIGN</a></li>
+							<li><a href="">GRAPHIC ART</a></li>
+							<li><a href="">ILLUSTRATIONS</a></li>
+							<li><a href="">MISCELLANEUS</a></li>
+						</ul>
+					</div>
+				</aside>
+					
 		</main>
+		
+		<!-- Footer -->
 		<footer>
 			<div class="content">
-				<p> &copy; 2011 LUSID THEME </p>
-				<p> BY WEEKLYY.COM </p>
-			</div>
-			<nav>
 				<ul>
+					<li><a href=""></a> SUBSCRIBE TO OUR RSS FEED</li>
+					<li><a href=""></a> CONTACT US NOW!</li>
+				</ul>
+			</div>
+			<hr>
+			<div class="footer-holder">
+				<ul class="nav">
 					<li>home</a></li>
 					<li>about</a></li>
 					<li>categories</a></li>
 					<li>contact us</a></li>
 				</ul>
-			</nav>
-		</footer>
-		
-		
+			</div>
+			<div class="copyright">
+				<p>&copy; 2011 LUSID THEME</p>
+				<p>BY WEEKLYY.COM</p>
+			</div>
+		</footer>			
 	</div>	
 </body>
-
 </html>
