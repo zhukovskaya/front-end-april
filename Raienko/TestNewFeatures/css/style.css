@@ -134,8 +134,7 @@ a{
 	background-color: #D9B725;
 }
 .stitched {
-	height: 20;
-  padding: 10px 10px 10px 10px;
+  padding: 5px 10px 5px 10px;
   margin: 10px;
   background: #149D89;
   color: #fff;
@@ -148,18 +147,77 @@ a{
   -webkit-text-shadow: -1px -1px #aa3030;
   font-weight: normal;
 }
-.navigation{
-	position: absolute;
-	left: 0;
-	right: 0;
-	z-index: 1;
-	width: 60px;
+.change-background{
+	height: 48px;
+	width: 48px;
+	background: url('../images/sprite.png') 0 0;
+	margin: 0 auto;
+	transition: 2s;
+}
+.change-background:hover {
+	background: url('../images/sprite.png') -96px 0px;
+}
+.change-background-clip {
+	margin-left: 30px;
+	display: inline-block;
+	width: 80px;
+	height: 50px;
+	font-style: bold;
+	padding-top: 30px;
+	text-align: center;
+	background-color: #00A18D;
+	border: 8px dashed #7F7F7F;
+}
+.change-background-clip1 {
+	display: inline-block;
+	margin-left: 30px;
+	content: "Padding-box";
+	width: 80px;
+	height: 50px;
+	color: black;
+	font-style: bold;
+	padding-top: 30px;
+	text-align: center;
+	background-color: #00A18D;
+	border: 8px dashed #7F7F7F;
+	background-clip: padding-box;
+}
+.change-background-clip2 {
+	margin-left: 30px;
+	display: inline-block;
+	content: "Content-box";
+	width: 80px;
+	height: 50px;
+	color: black;
+	font-style: bold;
+	padding:20px;
+	margin-bottom: 10px;
+	text-align: center;
+	background-color: #00A18D;
+	border: 8px dashed #7F7F7F;
+	background-clip: content-box;
+}
+.change-gradient {
+	margin: 0 auto;
+	height: 100px;
+	background: linear-gradient(to top, #C2853C, #B24C5B);
+	transition: 10s;
+}
+.change-gradient:hover {
+	background: linear-gradient(to top, #976794, #71A05E);
 }
 .mainStyle{
 	margin-left: 70px;
 	width: 500px;
 	background-color: #C9C9A8;
 	float: right;
+}
+.navigation {
+	position: absolute;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	width: 60px;
 }
 .menu {
 	padding: 0;
@@ -205,4 +263,54 @@ li:hover{
 	margin: 0 auto;
 	bottom: 0px;
 	background-color: #53AB7C;
+}
+.right-menu {
+	position: fixed;
+	text-align: left;
+	bottom: 200px;
+	right: 130px;
+	width: 120px;
+	height: 30px;
+	background-color: #D6BD28;
+}
+.right-menu ul {
+	display: none;
+	position: relative;
+	bottom: 0px;
+	left:10px;
+	margin: 0;
+	padding: 0;
+	width: 100px;
+}
+.right-menu:hover ul {
+	display: block;
+}
+.right-menu ul li {
+	list-style: none;
+	background-color: #4CA5B2;
+	padding-left: 10px;
+}
+.right-menu ul li:hover ul li {
+	display: block;
+}
+.right-menu ul li ul{
+	display: none;
+	position: relative;
+	left:-65px;
+	text-align: left;
+	width: 150px;
+}
+.right-menu ul li ul li{
+	display: none;
+	background-color: #39C4C5;
+	color: black;
+	height: 30px;
+	padding-left: 10px;
+}
+.right-menu ul li:hover{
+	background-color: #306268;
+	color: white;
+}
+.right-menu ul li ul li:hover{
+	background-color: #E1A91D;
 }
