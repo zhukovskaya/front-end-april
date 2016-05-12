@@ -1,0 +1,39 @@
+
+.striped-background {
+	padding: 0;
+	margin: 0;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ebebeb+0,ebebeb+14,00aedb+15,00aedb+29,8cc63f+30,8cc63f+44,5261ac+45,5261ac+59,ec098d+60,ec098d+74,f78f1d+75,f78f1d+89,ebebeb+90,ebebeb+100 */
+
+background: linear-gradient(45deg,
+  #ebebeb 0%,
+  #ebebeb 514px,
+  #00aedb 515px,
+  #00aedb 529px,
+  #8cc63f 530px,
+  #8cc63f 544px,
+  #5261ac 545px,
+  #5261ac 559px,
+  #ec098d 560px,
+  #ec098d 574px,
+  #f78f1d 575px,
+  #f78f1d 589px,
+  #ebebeb 590px,
+  #ebebeb 100%) fixed; 
+background-repeat: no-repeat;
+background-attachment: local;
+}
+body{
+	max-width: 1050px;
+	padding: 0;
+	margin: 0;
+}
+.content {
+	padding-left: 30px;
+	width: 400px;
+	height: 1080px;
+	font-size: 52px;
+	color: white;
+	background-color: #595959;
+	margin: 0 auto;
+}
+
