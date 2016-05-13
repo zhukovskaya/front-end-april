@@ -7,6 +7,7 @@ html {
   background: #ebebeb;
 }
 .striped-body {
+  min-width: 960px;
   /* НАСТРОЙКИ ГРАДИЕНТА 
   Порядок цветов
   - белый (фон) начало
@@ -22,7 +23,7 @@ html {
   - оранжевый начало
   - оранжевый окончание
   - белый (фон) до конца
-   */
+  */
   background: linear-gradient(38deg, 
     #ebebeb 0px,
     #ebebeb 510px,
@@ -39,12 +40,16 @@ html {
     #ebebeb 766px);
   background-repeat: no-repeat;
   background-size: 1600px 1600px;
-  background-position: center -960px;
+  background-position: center -966px;
 }
 .wrapper {
-  width: 1033px;
+  min-width: 960px;
+  max-width: 1275px;
   margin: 0 auto;
-  padding-left: 220px;
+  position: relative;
+}
+.wrapper-content-padding {
+  float: right;
 }
 .striped-background {
   /* НАСТРОЙКИ ГРАДИЕНТА 
@@ -61,21 +66,23 @@ html {
   - розовый окончание
   - оранжевый начало
   - оранжевый окончание
-   */
+  */
   background: linear-gradient(38deg, 
     #ebebeb 0px,
-    #ebebeb calc(100%)+510px,
-    #00aedb calc(100%)+511px,
-    #00aedb calc(100%)+561px,
-    #8cc63f calc(100%)+562px,
-    #8cc63f calc(100%)+612px,
-    #5261ac calc(100%)+613px,
-    #5261ac calc(100%)+663px,
-    #ec098d calc(100%)+664px,
-    #ec098d calc(100%)+714px,
-    #f78f1d calc(100%)+715px,
-    #f78f1d calc(100%)+765px);
+    #ebebeb 398px,
+    #00aedb 399px,
+    #00aedb 449px,
+    #8cc63f 450px,
+    #8cc63f 490px,
+    #5261ac 491px,
+    #5261ac 531px,
+    #ec098d 532px,
+    #ec098d 572px,
+    #f78f1d 573px,
+    #f78f1d 613px);
+  background-attachment: fixed;
   background-repeat: no-repeat;
+  background-size: 300px 620px;
 }
 .clearfix:after {
   content:"";
@@ -88,7 +95,7 @@ html {
 }
 .main-block {
   background-color: white;
-  width: 665px;
+  width: 700px;
   float: left;
 }
 .content-holder {
@@ -96,6 +103,7 @@ html {
   font-size: 54px;
   width: 650px;
   height: 2400px;
+  position: relative;
 }
 .rainbow-bottom {
   width: 1055;
@@ -113,13 +121,14 @@ html {
     #f78f1d 170px);
 }
 .aside-block {
-  float: left;
+  float: right;
   width: 355px;
   height: 2400px;
-  background-color: red;
-}
+  background-color: red;}
 .decoration {
-  float: left;
+  position: absolute;
+  right: -13px;
+  top:-8px;
 }
 .rainbow-aside {
   margin-bottom: 150px;
@@ -137,4 +146,8 @@ html {
     #f78f1d 136px,
     #f78f1d 170px);
   transform: skewY(-42deg);
+}
+@media screen (min-width: 1279) 
+{
+  .
 }
