@@ -7,7 +7,6 @@ html {
   background: #ebebeb;
 }
 .striped-body {
-  min-width: 960px;
   /* НАСТРОЙКИ ГРАДИЕНТА 
   Порядок цветов
   - белый (фон) начало
@@ -43,8 +42,7 @@ html {
   background-position: center -966px;
 }
 .wrapper {
-  min-width: 960px;
-  max-width: 1275px;
+  width: 1275px;
   margin: 0 auto;
   position: relative;
 }
@@ -80,7 +78,6 @@ html {
     #ec098d 572px,
     #f78f1d 573px,
     #f78f1d 613px);
-  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: 300px 620px;
 }
@@ -146,8 +143,4 @@ html {
     #f78f1d 136px,
     #f78f1d 170px);
   transform: skewY(-42deg);
-}
-@media screen (min-width: 1279) 
-{
-  .
 }
