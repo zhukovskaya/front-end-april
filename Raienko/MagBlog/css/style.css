@@ -42,7 +42,7 @@ html {
   background-position: center -966px;
 }
 .wrapper {
-  width: 1275px;
+  width: 1245px;
   margin: 0 auto;
   position: relative;
 }
@@ -87,45 +87,400 @@ html {
   clear:both;
 }
 .header-block {
-  background-color: blue;
-  height: 370px;
+  background-color: white;
+  height: 490px;
+  padding: 0px 25px;
+}
+.header-top {
+  padding-top: 28px;
+  height: 70px;
+  text-align: center;
+}
+.logo-holder {
+  display: inline-block;
+  vertical-align: top;
+  float: left;
+}
+.header-block ul {
+  display: inline-block;
+  vertical-align: top;
+  float: right;
+  margin: 0;
+  margin-top: 25px;
+  margin-bottom: 17px;
+}
+.header-block ul li {
+  display: inline-block;
+  list-style: none;
+  float: left;
+  margin-right: 5px;
+}
+.header-block ul li a {
+  display: inline-block;
+  width: 38px;
+  height: 36px;
+}
+.search-form {
+  display: inline-block;
+  margin-top: 35px;
+}
+.search-form input {
+  float: left;
+  padding: 0;
+  margin: 0;
+  width: 320px;
+  height: 33px;
+  border: 1px solid #e5e5e5;
+  border-right: none;
+}
+.search-form input+input {
+  width: 120px;
+  height: 35px;
+  background: #00aedb;
+  border: 0;
+  color: white;
+  font-size: 19pt;
+  text-transform: uppercase;
+}
+.rss-icon {
+  background: url('../images/social_sprite.png') 0px 0px;
+}
+.facebook-icon {
+  background: url('../images/social_sprite.png') -38px 0px;
+}
+.twich-icon {
+  background: url('../images/social_sprite.png') -76px 0px;
+}
+.navigation {
+  padding: 0;
+  margin: 0;
+}
+.navigation ul{
+  padding: 0;
+  margin: 0;
+  width: 1005px;
+}
+.navigation ul li {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+  display: inline-block;
+  float: left;
+  text-transform: uppercase;
+  font-size: 19pt;
+  font-family: 'Arial Narrow';
+  font-weight: bold;
+  height: 35px;
+  text-align: center;
+}
+.navigation ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  width: 100%;
+}
+.home-button {
+  width: 8%;
+  background: #00aedb;
+}
+.cinema-button {
+  width: 10%;
+  background: #8cc63f; 
+}
+.magazine-button {
+  width: 13%;
+  background: #5261ac; 
+}
+.cssauthor-button {
+  width: 20%;
+  background: #00aedb; 
+}
+.topmenu-button {
+  width: 12%;
+  background: #f78f1d; 
+}
+.archives-button {
+  width: 12%;
+  background: #ff0000; 
+}
+.contactus-button {
+  width: 25%;
+  background: #898989;
+}
+.top-stories-holder {
+  position: relative;
+  margin-top: 10px;
+}
+.top-stories-holder h3{
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+  color: #00aedb;
+  font-size: 19pt;
+  font-family: Arial;
+}
+.story {
+  width: 326px;
+  height: 290px;
+  float: left;
+  margin-right: 9px;
+}
+.story a {
+  display: block;
+  width: 326px;
+  height: 35px;
+  text-decoration: none;
+  text-align: left;
+  font-size: 19pt;
+  color: white;
+  text-transform: uppercase;
+  font-family: Arial;
+}
+.story a:before {
+  display: inline-block;
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6.5px 0 6.5px 8px;
+  border-color: transparent transparent transparent #ffffff;
+  margin: 0px 11px;
+}
+.story p {
+  margin: 14px 0px 0px 0px;
+  padding: 0;
+  color: #6a6666;
+  font-family: Helvetica;
+  font-size: 15pt;
+}
+.story-cinema {
+  background-color: #00aedb ;
+}
+.story-cinema:after {
+  display: inline-block;
+  content: '';
+  position: relative;
+  left:-150px;
+  top:5px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 11px 14px 11px 0;
+  border-color: transparent #00aedb transparent transparent;
+}
+.story-travel {
+  background-color: #f78f1d ;
+}
+.story-television {
+  background-color: #ec098d ;
+}
+.story-television:after {
+  display: inline-block;
+  content: '';
+  position: relative;
+  right:-155px;
+  top:5px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 11px 0 11px 14px;
+  border-color: transparent transparent transparent #ec098d;
 }
 .main-block {
   background-color: white;
   width: 700px;
   float: left;
 }
-.content-holder {
-  background-color: yellow;
-  font-size: 54px;
+.post-holder {
+  background-color: white;
   width: 650px;
-  height: 2400px;
   position: relative;
+  padding-left: 30px;
 }
-.rainbow-bottom {
-  width: 1055;
-  height: 5px;
-  background: repeating-linear-gradient(to right, 
-    #ec098d 0px,
-    #ec098d 33px,
-    #5261ac 34px,
-    #5261ac 67px,
-    #8cc63f 68px,
-    #8cc63f 101px,
-    #00aedb 102px,
-    #00aedb 135px,
-    #f78f1d 136px,
-    #f78f1d 170px);
+.post {
+  font-family: Helvetica;
+  position: relative;
+  margin-bottom: 50px;
+}
+.post h2 {
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+  font-size: 30pt;
+  text-align: left;
+
+}
+.post h2:before {
+  content: '28';
+  display: inline-block;
+  position: absolute;
+  left:-80px;
+  top:7px;
+  width: 70px;
+  height: 50px;
+  background-color: #f78f1d;
+  color: white;
+  font-weight: bold;
+  font-size: 35pt;
+  text-align: center;
+}
+.post h2:after {
+  content: 'FEB';
+  display: inline-block;
+  position: absolute;
+  left:-70px;
+  top:50px;
+  top:57px;
+  width: 60px;
+  height: 30px;
+  background-color: #00aedb;
+  color: white;
+  font-weight: bold;
+  font-size: 19pt;
+  text-align: center;
+
+}
+.post-image-holder {
+  padding: 12px;
+  margin: 0;
+  border: 1px solid #bfbfbf;
+  font-size: 0;
+}
+.post-image-holder ul {
+  padding: 0;
+  margin: 9px 0 0 0;
+}
+.post-image-holder ul li {
+  display: inline-block;
+}
+.post-image-holder ul li+li {
+  margin: 0px 0px 0px 9px;
+}
+.post-image-holder ul li a {
+  display: inline-block;
+  padding: 3px;
+  border: 1px solid #bfbfbf;
+  font-size: 0;
+}
+.post-description ul {
+  padding: 0;
+  margin: 10px 0 0 0;
+  color: #6a6666;
+}
+.post-description ul li {
+  padding: 0;
+  margin: 0 25px 0 0;
+  display: inline-block;
+  float: left;
+}
+.post-description ul li a {
+  text-decoration: none;
+  color: #6a6666;
+}
+.post-description ul li+li a {
+  display: inline-block;
+  background: url('../images/icon_comments.png') no-repeat;
+  padding-left: 30px;
+}
+.post-description div {
+  float: right;
+  margin: 2px 12px 0 0;
+}
+.post-description div a {
+  text-decoration: none;
+  color: #6a6666;
+}
+.older-post {
+  margin-bottom: 30px;
+}
+.older-post a {
+  text-decoration: none;
+  color: #6a6666;
+  font-family: Helvetica;
+  font-size: 11pt;
 }
 .aside-block {
   float: right;
   width: 355px;
-  height: 2400px;
   background-color: red;}
+.aside-block h4 {
+  padding: 0;
+  margin: 0;
+}
 .decoration {
   position: absolute;
   right: -13px;
   top:-8px;
+}
+.top-stories-nav {
+  padding: 0;
+  margin: 0;
+}
+.top-stories-nav li {
+  display: inline-block;
+  position: relative;
+  list-style: none;
+  height: 36px;
+  float: left;
+}
+.top-stories-nav li a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  width: 100%;
+}
+.top-stories-posts {
+  padding: 0;
+  margin: 0;
+}
+.top-stories-posts li {
+  list-style:none;
+}
+.top-stories-posts li+li:before {
+  display: inline-block;
+  content: '';
+  height: 1px;
+  width: 100%;
+  background: #dedddd;
+}
+.stories-image-holder {
+  float: left;
+  width: 75px;
+  padding: 3px;
+  border: 1px solid #c9c9c9;
+  font-size: 0;
+}
+.aside-nav-fashion {
+  width: 30%;
+  background-color: #ec098d;
+  border-color:#ec098d;
+}
+.aside-nav-cinema {
+  width: 30%;
+  background-color: #f78f1d;
+  border-color: #f78f1d;
+}
+.aside-nav-television {
+  width: 40%;
+  background-color: #00aedb;
+  border-color:#00aedb;
+}
+.active-tab:after {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  content: '';
+  left: 50px;
+  bottom: -10px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 6.5px 0 6.5px;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-top-color:inherit;
 }
 .rainbow-aside {
   margin-bottom: 150px;
@@ -143,4 +498,19 @@ html {
     #f78f1d 136px,
     #f78f1d 170px);
   transform: skewY(-42deg);
+}
+.rainbow-bottom {
+  width: 1055px;
+  height: 5px;
+  background: repeating-linear-gradient(to right, 
+    #ec098d 0px,
+    #ec098d 33px,
+    #5261ac 34px,
+    #5261ac 67px,
+    #8cc63f 68px,
+    #8cc63f 101px,
+    #00aedb 102px,
+    #00aedb 135px,
+    #f78f1d 136px,
+    #f78f1d 170px);
 }
