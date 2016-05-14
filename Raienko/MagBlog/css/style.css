@@ -42,7 +42,7 @@ html {
   background-position: center -966px;
 }
 .wrapper {
-  width: 1255px;
+  width: 1245px;
   margin: 0 auto;
   position: relative;
 }
@@ -89,7 +89,7 @@ html {
 .header-block {
   background-color: white;
   height: 490px;
-  padding: 0px 30px;
+  padding: 0px 25px;
 }
 .header-top {
   padding-top: 28px;
@@ -418,6 +418,7 @@ html {
 .aside-block {
   float: right;
   width: 355px;
+  height: 700px;
   background-color: red;}
 .decoration {
   position: absolute;
