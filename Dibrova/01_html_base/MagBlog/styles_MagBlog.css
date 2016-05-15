@@ -1,13 +1,12 @@
 body {
 	margin: 0;
-	background: #f9f6ea;
+	background: #eeeeee;
 	color: #8d8d8d;
 	font: 11px/1.2 Arial, Helvetica, sans-serif;
-	min-width: 980px;
+	min-width: 1500px;
 }
 a {
 	text-decoration: none;
-	color: #656565;
 }
 a:hover {
 	text-decoration: underline;
@@ -19,19 +18,22 @@ header, footer, article, section, nav, main {
 	display: block;
 }
 #header {
-	background: #174245 url(../img/head-bg.jpg);
-	padding: 53px 0 50px;
+	background: #fff;
+	padding: 25px 25px 25px;
 }
 .container {
-	width: 980px;
+	width: 1050px;
 	margin: 0 auto;
 }
 footer {
-	width: 980px;
+	width: 1050px;
 	margin: 0 auto;
 }
 #wrapper {
+	width: 1050px;
+	margin: 0 auto;
 	margin-bottom: 100px;
+	color: #fff;
 }
 .container:after, #main:after, #footer:after {
 	content: '';
@@ -43,14 +45,77 @@ footer {
 }
 .logo a {
 	font-size: 40px;
-	width: 227px;
-	height: 29px;
+	width: 187px;
+	height: 64px;
 	display: block;
-	background: url(/Сергей/divas/Dibrova/01_html_base/portfolio/logo.png) no-repeat;
+	background: url(/Сергей/divas/Dibrova/01_html_base/MagBlog/logoMagBlog.png) no-repeat;
 	text-indent: -9999px;
 	overflow: hidden;
 }
-.navigation {
+.search {
+	padding: 10px 0px 0px 150px;
+
+}
+.search-size {
+	width: 320px;
+	height: 35px;
+	float: left;
+}
+.container .search .search-button {
+	box-sizing: border-box;
+	display: inline-block;
+	width: 120px;
+	height: 35px;
+	background: #00aedb;
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: capitalize;
+	padding: 6px 18px;
+		float: left;
+}
+.clearfix {
+  clear: both;
+}
+.social-holder {
+	/*position: absolute;*/
+	/*float: right;*/
+	padding: 0px 150px 0px 0px;
+	margin: 0 0 60px 0px;
+
+}
+#social {
+	/*position: relative;*/
+
+}
+#social li {
+	margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  top: 0;
+}
+#social li, #social a {
+	height: 36px;
+	display: block;
+}
+#hi-fi {
+	left: 0px;
+  width: 36px;
+  background: url(/Сергей/divas/Dibrova/01_html_base/MagBlog/social.png) 0 0;
+}
+#facebook {
+	left: 43px;
+  width: 36px;
+  background: url(/Сергей/divas/Dibrova/01_html_base/MagBlog/social.png) -45px 0;
+}
+#twitter {
+	left: 84px;
+  width: 36px;
+  background: url(/Сергей/divas/Dibrova/01_html_base/MagBlog/social.png) -86px 0;
+}
+/*.navigation {
 	float: right;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -76,7 +141,7 @@ footer {
 .navigation ul a:hover {
 	color: #ffc600;
 	text-decoration: underline;
-}
+}*/
 #main {
 	background: #fff;
 	width: 948px;
@@ -150,7 +215,7 @@ footer {
 	color: #656565;
 	text-decoration: none;
 	text-transform: capitalize;
-	padding: 6px 18px 6px;
+	padding: 6px 18px 9px;
 }
 .project .project-img .more:hover {
 	background: #f0ede0;

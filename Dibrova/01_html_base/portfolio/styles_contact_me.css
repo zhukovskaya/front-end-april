@@ -22,6 +22,13 @@ header, footer, article, section, nav, main {
 	background: #174245 url(../img/head-bg.jpg);
 	padding: 53px 0 50px;
 }
+footer {
+	width: 980px;
+	margin: 0 auto;
+}
+#wrapper {
+	margin-bottom: 100px;
+}
 .container {
 	width: 980px;
 	margin: 0 auto;
@@ -214,12 +221,19 @@ header, footer, article, section, nav, main {
 	color: #000;
 	border-top: 1px solid #eaeaea;
 	border-bottom: 1px solid #eaeaea;
-	}
-
+}
+.logo-footer a {
+	font-size: 40px;
+	width: 227px;
+	height: 29px;
+	display: block;
+	background: url(/Сергей/divas/Dibrova/01_html_base/portfolio/logo-footer.png) no-repeat;
+	text-indent: -9999px;
+	overflow: hidden;
+}
 .footer-logo {
-	margin-left: 175px;
 	float: left;
 }
 .copyright {
-	margin-left: 820px;
+	margin-left: 600px;
 }
