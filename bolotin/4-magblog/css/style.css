@@ -15,7 +15,6 @@ body {font-family: Arial, Helvetica, sans-serif;
 	box-sizing: border-box;
 	background: url(../img/border.png) repeat-y top right;
 	background-color: white;
-
 }
 
 .header-wrapper{width: 980px;	
@@ -332,5 +331,92 @@ article p{
 	float:right;
 	margin-right: 10px;
 }
+
+aside {
+	float: right;
+	width: 326px;
+	box-sizing: border-box;
+}
+
+aside h2{
+	margin-top: 23px;
+	float:left;
+	font-size: 19px;
+	font-family: "HelveticaLTStd-Bold";
+	height: 26px;
+	width: 250px;
+	background: url(../img/tabs-h.png) no-repeat;
+	padding: 11px 0px 0px 21px;
+	color:#fff;
+}
+
+.small-article{
+	border-bottom: 1px solid #dedddd;
+	margin-top: 20px;
+}
+
+.small-article img{
+	float:left;
+	padding:3px;
+	border: 1px solid #c3c3c3;
+	background-color: #fff;
+	margin: 0 10px 13px 0;
+}
+
+.small-article h3{
+	font-size: 15px;
+	font-family: "HelveticaLTStd-Bold";
+	line-height: 20px;
+}
+
+.small-article p{
+	color:#494949;
+	font:13px/17px "HelveticaLTStd-Light";
+	padding-top: 8px;
+}
+
+.small-article:nth-last-of-type(1){
+	border: none;
+}
+
+#tab_c1 .small-article h3{
+	color:#ec098d;
+}
+
+#tab_c2 .small-article h3{
+	color:#f78f1d;
+}
+
+#tab_c3 .small-article h3{
+	color:#00aedb;
+}
+
+.bottom-line {
+	float:left;
+}
+
+footer{
+	text-align:center; 
+	color:#6a6666; 
+	padding:30px 0;
+	font-family: "HelveticaLTStd-Light";
+}
+
+.also-like{margin-top: 20px;}
+
+.also-like h3{
+	float: right;
+	width: 326px;
+	box-sizing: border-box;
+	background-color: #5261ac;
+	color:#FFF;
+	font-family: "HelveticaLTStd-Bold";
+	font-size: 17px;
+	height: 36px;
+	padding-left: 15px;
+  line-height: 41px;
+}
+
+
 
 
