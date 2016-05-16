@@ -1,0 +1,58 @@
+a {
+  text-decoration: none;
+}
+li {
+  display: inline-block;
+  list-style: none;
+}
+.wrapper {
+  background: #3a3d40;
+}
+.navigation a{
+  color: white;
+}
+.main-style {
+  content: "";
+  background: #fdfdfd;
+  text-align: center;
+}
+.dotted-divider:after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 3px;
+  background: url("../images/elements/dots.png");
+}
+.blog-post-comments:before {
+  content: "\0399";
+  display: inline-block;
+  padding-right: 10px;
+}
+.blog-post-comments:after {
+  content: "comments";
+  display: inline-block;
+  padding-left: 10px;
+}
+.tabs-navigation ul{
+  padding: 0;
+  margin: 10px 0;
+  font-size: 0;
+  border: 1px solid transparent;
+  border-bottom-color: red;
+  text-align: center;
+}
+.tabs-navigation .active {
+  background: white;
+}
+.tabs-navigation ul li{
+  padding: 10px;
+  margin: 0;
+  font-size: 12px;
+  position: relative;
+  bottom: -1px;
+  border: 1px solid red;
+  border-bottom: 0;
+}
+.tabs-navigation li+li {
+  border-left:0;
+}
