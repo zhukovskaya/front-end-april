@@ -40,19 +40,21 @@ li {
  color: black; 
 }
 .menu-button li{
- display: block;
- width: 70px;
- background-color: gray; 
+  margin: 0 auto;
+  display: block;
+  width: 70px;
+  background-color: gray; 
 }
 .menu-button li:hover {
- background-color: white; 
+ background-color: #68AB53; 
 }
-.menu-button ul{
+.menu-button ul {
  display: none;
+ text-align: center;
 }
 input {
-  width: 64px;
-  height: 64px;
+  width: 32px;
+  height: 32px;
   opacity: 0;
 }
 input[type=checkbox]:checked ~ ul {
@@ -62,15 +64,15 @@ label {
   content: "";
   display: inline-block;
   position:relative; 
-  left:-70px;
+  left:-32px;
   top:0px;
-  width: 64px;
-  height: 64px;
+  width: 32px;
+  height: 32px;
   background: url("../images/elements/menu_button.png");
   background-position: 0px 0px;
 }
 input[type=checkbox]:checked ~ label{
-  background-position: -64px 0px;
+  background-position: -32px 0px;
 }
 .wrapper-transparent {
   background: transparent;
