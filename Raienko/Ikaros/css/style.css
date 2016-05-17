@@ -1,20 +1,132 @@
+/* General customization */
+.hidden {
+  display: inline-block;
+  position: absolute;
+  left:-9999px;
+  font-size: 0;
+}
 a {
   text-decoration: none;
+}
+ul {
+  margin: 0;
+  padding: 0;
 }
 li {
   display: inline-block;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
-.wrapper {
+.pseudo-wrapper {
+  width: 960px;
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+}
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.body-style {
   background: #3a3d40;
 }
-.navigation a{
+/* Header */
+.menu-button {
+}
+.menu-button li a{
+ color: black; 
+}
+.menu-button li{
+ display: block;
+ width: 70px;
+ background-color: gray; 
+}
+.menu-button li:hover {
+ background-color: white; 
+}
+.menu-button ul{
+ display: none;
+}
+input {
+  width: 64px;
+  height: 64px;
+  opacity: 0;
+}
+input[type=checkbox]:checked ~ ul {
+    display: block
+}
+label {
+  content: "";
+  display: inline-block;
+  position:relative; 
+  left:-70px;
+  top:0px;
+  width: 64px;
+  height: 64px;
+  background: url("../images/elements/menu_button.png");
+  background-position: 0px 0px;
+}
+input[type=checkbox]:checked ~ label{
+  background-position: -64px 0px;
+}
+.wrapper-transparent {
+  background: transparent;
+}
+.header-style {
+  height: 65px;
+  padding: 30px 0px 0px 0px;
+}
+.logo-holder {
+  float: left;
+}
+.navigation {
+  position: absolute;
+  top:0px;
+  right: 0px;
+}
+.navigation ul {
+  height: 95px;
+  font-size: 0;
+}
+.navigation a {
+  display: block;
   color: white;
+  font-size: 12pt;
+  text-transform: uppercase;
+  font-weight: bold;
+  height: 95px;
+  padding: 60px 20px 20px 20px;
+}
+.navigation a.active {
+  background: #35373a;
+  color: #7697ad;
+}
+.navigation li {
+  border: 2px solid transparent;
+  border-left-color: #2d3032;
+  border-right-color: #2d3032;
+}
+.navigation li+li {
+  border-left: 0;
+}
+.wrapper-white {
+  background: #fdfdfd;
+}
+.wrapper-dark-gray {
+  background: #2f3235;
 }
 .main-style {
   content: "";
-  background: #fdfdfd;
+  color: #555555;
   text-align: center;
+}
+.content-image-holder {
+  float: left;
+}
+.tabs-post {
 }
 .dotted-divider:after {
   display: block;
@@ -38,11 +150,11 @@ li {
   margin: 10px 0;
   font-size: 0;
   border: 1px solid transparent;
-  border-bottom-color: red;
+  border-bottom-color: #c5c5c5;
   text-align: center;
 }
 .tabs-navigation .active {
-  background: white;
+  background: #fdfdfd;
 }
 .tabs-navigation ul li{
   padding: 10px;
@@ -50,7 +162,7 @@ li {
   font-size: 12px;
   position: relative;
   bottom: -1px;
-  border: 1px solid red;
+  border: 1px solid #c5c5c5;
   border-bottom: 0;
 }
 .tabs-navigation li+li {

@@ -6,27 +6,39 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <div class="wrapper">
-    <header>
-      <div class="logo-holder">
-        <img src="images/logo.png" alt="Icaros">
-        <div>
-          <h1>Icaros</h1>
-        </div>
-        <nav class="navigation">
-          <ul>
+<body class="body-style">
+<div class="menu-button">
+        <input type="checkbox" id="checkbox_toggle">
+        <label for="checkbox_toggle"></label>
+        <ul>
             <li><a href="#">home</a></li>
             <li><a href="#">service</a></li>
             <li><a href="#">portfolio</a></li>
             <li><a href="#">about</a></li>
             <li><a href="#">blog</a></li>
-            <li><a href="#">contact</a></li>
-          </ul>
-        </nav>
+            <li><a href="#">contract</a></li>
+        </ul>
+</div>
+  <div class="wrapper-transparent">
+    <header class="header-style pseudo-wrapper clearfix">
+      <div class="logo-holder">
+        <img src="images/logo.png" alt="Icaros">
+        <h1 class="hidden">Icaros</h1>
       </div>
+      <nav class="navigation">
+        <ul>
+          <li><a href="#" class="active">home</a></li>
+          <li><a href="#">service</a></li>
+          <li><a href="#">portfolio</a></li>
+          <li><a href="#">about</a></li>
+          <li><a href="#">blog</a></li>
+          <li><a href="#">contact</a></li>
+        </ul>
+      </nav>
     </header>
-    <main class="main-style">
+  </div>
+  <div class="wrapper-white">
+    <main class="main-style pseudo-wrapper">
       <div class="slider">
         <img src="images/slider/slider_0.png" alt="">
       </div>
@@ -133,20 +145,27 @@
         </ul>
       </section>
     </main>
-    <footer>
+  </div>
+  <div class="wrapper-gray">
+    <aside class="pre-footer pseudo-wrapper">
       <div class="popular-posts">
-        pop
-      </div>
-      <div class="twitter">
-        twitter
-      </div>
-      <div class="about-me">
-        about
-      </div>
-      <div class="contact-form">
-        contact
-      </div>
-    </footer>
+          pop
+        </div>
+        <div class="twitter">
+          twitter
+        </div>
+        <div class="about-me">
+          about
+        </div>
+        <div class="contact-form">
+          contact
+        </div>
+    </aside>
+  </div>
+  <div class="wrapper-dark-gray">
+      <footer class="pseudo-wrapper">
+        footer
+      </footer>
   </div>
 </body>
 </html>
