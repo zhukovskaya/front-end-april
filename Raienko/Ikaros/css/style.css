@@ -285,7 +285,7 @@ input[type=checkbox]:checked ~ label{
 }
 /* finished Main */
 /* ASIDE */
-.contact-form input {
+.contact-form input.text-field {
   display: block;
   opacity: 1;
   width: 100%;
@@ -301,6 +301,16 @@ input[type=checkbox]:checked ~ label{
   height: 130px;
   background: #2d3032;
   border: 0;
+}
+.submit-btn {
+  margin-top: 10px;
+  display: block;
+  opacity: 1;
+  border: 0;
+  width: 112px;
+  height: 31px;
+  color: white;
+  background: url("../images/footer/button.png");
 }
 .prefooter-settings {
   width: 25%;
