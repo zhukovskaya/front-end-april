@@ -1,0 +1,137 @@
+//out: ../css/style.css
+@import "mixins/media";
+@import "fonts";
+
+$brandedcolor: #5d9b9a;
+
+* {
+    font-family: "Arial";
+    margin: 0 auto;
+    box-sizing: border-box;
+    position: relative;
+}
+
+html {
+    background: url("../img/background.png");
+    // overflow-x: hidden;
+    @include respond-to(320) {
+        font-size: 75%;
+    }
+    @include respond-to(480) {
+        font-size: 80%;
+    }
+    @include respond-to(768) {
+        font-size: 87.5%;
+    }
+    @include respond-to(992) {
+        font-size: 95%;
+    }
+    @include respond-to(1200) {
+        font-size: 100%;
+    }
+}
+
+h1 {
+    font: ultra-expanded 3.000em "AmericanTypewriter";
+    text-transform: uppercase;
+    @include respond-to(320) {
+        text-align: center;
+    }
+    @include respond-to(480) {
+        text-align: center;
+    }
+}
+
+h2 {
+    font: 1.850em "Arial";
+    text-transform: uppercase;
+    padding: 0.600em 0 0.800em;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+figure {
+    margin: auto;
+}
+
+.wrapper {
+    width: 99%;
+    border: 0.5px solid red;
+    @include respond-to(992) {
+        width: 79%;
+    }
+    @include respond-to(1200) {
+        width: 79%;
+    }
+}
+
+.rss {
+    position: absolute;
+    top: 2.400em;
+    right: 8.500em;
+    color: dimgray;
+    @include respond-to(320) {
+        display: none;
+    }
+    @include respond-to(480) {
+        display: none;
+    }
+
+    .fa-2x {
+        padding-right: 0.500em;
+        font-size: 1.400em;
+    }
+}
+
+.rss_listitem {
+    text-transform: uppercase;
+    display: block;
+}
+
+.rss_listitem_anchor {
+    font: 700 0.700em "Arial";
+}
+
+#back-to-top {
+    width: 1.000em;
+    height: 1.000em;
+    position: fixed;
+    bottom: 0.300em;
+    right: 0.300em;
+    vertical-align: middle;
+    z-index: 9999;
+    border: 0;
+    border-radius: 0.500em;
+    background: #6db5b4;
+    transition: opacity 0.2s ease-out;
+    font-size: 3.000em;
+    text-align: center;
+    color: white;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#back-to-top:hover {
+    background: #5d9b9a;
+}
+
+#back-to-top.show {
+    opacity: 1;
+}
+
+%notBorderNotOutline {
+    outline: none;
+    border: none;
+}
+
+%contentAbsolute {
+    content: '';
+    position: absolute;
+}
+@import "header";
+@import "nav";
+@import "main";
+@import "footer";

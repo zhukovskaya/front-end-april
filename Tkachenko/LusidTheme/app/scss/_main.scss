@@ -1,0 +1,228 @@
+//main: style.scss
+
+main {
+    border: 0.5px solid blue;
+    @include respond-to(992) {
+        padding: 2.500em 5em;
+    }
+    @include respond-to(1200) {
+        padding: 2.500em 5em;
+    }
+}
+
+.section {
+    width: 100%;
+    display: inline-block;
+    @include respond-to(992) {
+        width: 73%;
+    }
+    @include respond-to(1200) {
+        width: 73%;
+    }
+}
+
+.articleleftpart {
+    width: 15%;
+    float: left;
+    padding-right: 0.500em;
+
+    .fa {
+        width: 100%;
+        text-transform: uppercase;
+        text-align: center;
+        color: dimgray;
+
+        &::after {
+            font: 0.750em Arial;
+            color: dimgray;
+        }
+
+        &:first-of-type::after {
+            content: " 12";
+        }
+
+        &:nth-of-type(2)::after {
+            content: " 31 people";
+        }
+
+        &:last-of-type::after {
+            content: " admin";
+        }
+
+        & > br {
+            @include respond-to(992) {
+                display: none;
+            }
+            @include respond-to(1200) {
+                display: none;
+            }
+        }
+        @include respond-to(992) {
+            text-align: left;
+        }
+        @include respond-to(1200) {
+            text-align: left;
+        }
+    }
+    @include respond-to(320) {
+        display: none;
+    }
+    @include respond-to(480) {
+        display: none;
+    }
+    @include respond-to(992) {
+        width: 22%;
+        padding-left: 0.700em;
+    }
+    @include respond-to(1200) {
+        width: 22%;
+        padding-left: 1.600em;
+    }
+}
+
+.articleleftpart__soсial {
+    padding-bottom: 0.300em;
+    border-bottom: 2px groove lightgray;
+}
+
+.articleleftpart__category {
+    margin-top: 0.200em;
+}
+
+.articleleftpart__tags {
+    .articlelink__tag {
+        display: block;
+        padding-bottom: 0.100em;
+    }
+}
+
+.articleleftpart__category,
+.articleleftpart__tags {
+    text-align: center;
+    @include respond-to(992) {
+        text-align: left;
+    }
+    @include respond-to(1200) {
+        text-align: left;
+    }
+}
+
+.articlerightpart {
+    width: 100%;
+    padding: 0.400em;
+    border: 10px solid rgba(0, 0, 0, 0.06);
+    float: right;
+    background-color: #f2f2f2;
+    @include respond-to(768) {
+        width: 85%;
+    }
+    @include respond-to(992) {
+        width: 78%;
+    }
+    @include respond-to(1200) {
+        width: 78%;
+        // margin-bottom: 4.900em;
+    }
+
+    &--mb {
+        @include respond-to(1200) {
+            margin-bottom: 4.900em;
+        }
+    }
+}
+
+.articlerightpart__inside {
+    background-color: white;
+    padding: 0 1.200em;
+    border-radius: 4px;
+}
+
+.articlerightpart__post {
+    font: 400 0.800em/1.500em "Arial";
+    padding-bottom: 1.900em;
+}
+
+.articlerightpart__link {
+    font: 0.800em "Arial";
+    padding: 0 0 0.800em 0.800em;
+    text-transform: uppercase;
+    color: gray;
+}
+
+.articlerightpart__link--categoryandtags {
+    font-size: 0.700em;
+    padding: 0;
+}
+
+.articlelink__tag {
+    font: 0.750em Arial;
+    color: dimgray;
+    text-transform: uppercase;
+}
+
+.articlerightpart__image {
+    display: inline-block;
+    border: 3px solid #5d9b9a;
+    margin: 0.800em 0.100em 0.200em 0.900em;
+}
+
+.fa-commenting,
+.fa-heart,
+.fa-user-plus {
+    font-size: 1.000em;
+}
+
+.asideright {
+    width: 26%;
+    padding: 0 1.400em;
+    height: 730px;
+    vertical-align: top;
+    display: inline-block;
+    border: 0.5px solid green;
+    @include respond-to(320) {
+        display: none;
+    }
+    @include respond-to(480) {
+        display: none;
+    }
+    @include respond-to(768) {
+        display: none;
+    }
+}
+
+.asideright__circle {
+    border: 0.5px solid #73227a;
+    text-align: center;
+}
+
+.asideright__circle__inside {
+    width: 6.500em;
+    height: 6.500em;
+    display: inline-block;
+    border: 10px solid white;
+    margin: 0 0.3em;
+    border-radius: 3.250em;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #5d9b9a;
+}
+
+.asideright__circle__followers {
+  font-size: .800em;
+  display: inline-block;
+  color: dimgray;
+  padding: .300em 2.000em;
+}
+
+.fa-tumblr,
+.fa-twitter {
+    color: white;
+    padding-top: .300em;
+    font-size: 3.700em;
+}
+
+.paginator {
+    width: 100%;
+    height: 30px;
+    border: 0.5px solid green;
+}
