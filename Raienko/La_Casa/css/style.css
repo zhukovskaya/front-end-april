@@ -1,0 +1,135 @@
+/* prepare grid */
+* {
+    box-sizing: border-box;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+/* column size settings */
+
+/* extra-small */
+.col-xs-1 {width: 8.33%;}
+.col-xs-2 {width: 16.66%;}
+.col-xs-3 {width: 25%;}
+.col-xs-4 {width: 33.33%;}
+.col-xs-5 {width: 41.66%;}
+.col-xs-6 {width: 50%;}
+.col-xs-7 {width: 58.33%;}
+.col-xs-8 {width: 66.66%;}
+.col-xs-9 {width: 75%;}
+.col-xs-10 {width: 83.33%;}
+.col-xs-11 {width: 91.66%;}
+.col-xs-12 {width: 100%;}
+/* small */
+.col-sm-1 {width: 8.33%;}
+.col-sm-2 {width: 16.66%;}
+.col-sm-3 {width: 25%;}
+.col-sm-4 {width: 33.33%;}
+.col-sm-5 {width: 41.66%;}
+.col-sm-6 {width: 50%;}
+.col-sm-7 {width: 58.33%;}
+.col-sm-8 {width: 66.66%;}
+.col-sm-9 {width: 75%;}
+.col-sm-10 {width: 83.33%;}
+.col-sm-11 {width: 91.66%;}
+.col-sm-12 {width: 100%;}
+/* middle */
+.col-md-1 {width: 8.33%;}
+.col-md-2 {width: 16.66%;}
+.col-md-3 {width: 25%;}
+.col-md-4 {width: 33.33%;}
+.col-md-5 {width: 41.66%;}
+.col-md-6 {width: 50%;}
+.col-md-7 {width: 58.33%;}
+.col-md-8 {width: 66.66%;}
+.col-md-9 {width: 75%;}
+.col-md-10 {width: 83.33%;}
+.col-md-11 {width: 91.66%;}
+.col-md-12 {width: 100%;}
+/* big */
+.col-bg-1 {width: 8.33%;}
+.col-bg-2 {width: 16.66%;}
+.col-bg-3 {width: 25%;}
+.col-bg-4 {width: 33.33%;}
+.col-bg-5 {width: 41.66%;}
+.col-bg-6 {width: 50%;}
+.col-bg-7 {width: 58.33%;}
+.col-bg-8 {width: 66.66%;}
+.col-bg-9 {width: 75%;}
+.col-bg-10 {width: 83.33%;}
+.col-bg-11 {width: 91.66%;}
+.col-bg-12 {width: 100%;}
+/* large */
+.col-lg-1 {width: 8.33%;}
+.col-lg-2 {width: 16.66%;}
+.col-lg-3 {width: 25%;}
+.col-lg-4 {width: 33.33%;}
+.col-lg-5 {width: 41.66%;}
+.col-lg-6 {width: 50%;}
+.col-lg-7 {width: 58.33%;}
+.col-lg-8 {width: 66.66%;}
+.col-lg-9 {width: 75%;}
+.col-lg-10 {width: 83.33%;}
+.col-lg-11 {width: 91.66%;}
+.col-lg-12 {width: 100%;}
+
+/* General styles */
+
+a {
+  text-decoration: none;
+}
+.inline-children>*{
+  display: inline-block;
+}
+
+/* HEADER */
+.header-block {
+  background-image: url("../images/hero.jpg");
+  background-repeat: no-repeat;
+  height: 500px;
+}
+.header-bar {
+  background-color: rgba(28,54,85,0.2);
+}
+.logo-holder {
+  float: left;
+}
+.header-panel {
+  text-align: right;
+}
+
+@media (max-width: 1500px) {
+  .container {
+    width: 1460px;
+    background: yellow;
+  }
+}
+@media (max-width: 1150px) {
+  .container {
+    width: 1090px;
+    background: green;
+  }
+}
+@media (max-width: 800px) {
+  .container {
+    width: 740px;
+    background: red;
+  }
+}
+@media (max-width: 700px) {
+  .container {
+    width: 640px;
+    background: blue;
+  }
+}
+@media (max-width: 500px) {
+  .container {
+    width: 440px;
+  }
+}
