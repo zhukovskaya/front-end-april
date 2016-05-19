@@ -7,8 +7,7 @@ html,body {
 	-webkit-border-radius: $radius;
 	-moz-border-radius: $radius;
 	-o-border-radius: $radius;
-	border-radius: $radius;
-}
+	border-radius: $radius;}
 
 $color: #555;
 header, footer {
@@ -18,6 +17,4 @@ a {
  	color: $color;
  }
 
-.btn {
-	@include border-radius (4px);
-}
+/*.btn {	@include border-radius (4px);}*/
