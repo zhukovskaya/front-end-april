@@ -59,9 +59,9 @@ gulp.task('sass', function() {
 /*операции с css*/
 gulp.task('css', () => {
     return gulp.src('app/css/style.css')
-        .pipe(uncss({
-            html: ['app/index.html']
-        }))
+        // .pipe(uncss({
+        //     html: ['app/index.html']
+        // }))
         .pipe(autoprefixer({
             browsers: ['last 100 versions'],
             cascade: false
@@ -78,13 +78,37 @@ gulp.task('css', () => {
         .pipe(livereload());
 });
 
-/*операции с js*/
+/*операции со шрифтами*/
+gulp.task('fonts', function() {
+    gulp.src(['fonts/*.ttf'])
+        .pipe(ttf2woff())
+        .pipe(ttf2woff2())
+        .pipe(ttf2eot())
+        .pipe(gulp.dest('dist/fonts/'));
+});
 
+/*операции с js*/
 gulp.task('compress', () => {
     return gulp.src('app/scripts/*.js')
         .pipe(uglify())
         .pipe(rename('script.min.js'))
         .pipe(gulp.dest('dist/scripts/'));
+});
+
+/*операции со шрифтами*/
+gulp.task('copyfonts', function() {
+   gulp.src('app/fonts/*.{ttf,woff,woff2,eot,otf,svg,icon}')
+   .pipe(gulp.dest('dist/fonts'));
+});
+
+/*инициализация*/
+gulp.task('init', function() {
+   gulp.src('bower_components/font-awesome/css/font-awesome.css')
+   .pipe(rename('font-awesome.vendor.css'))
+   .pipe(gulp.dest('app/css/'));
+   gulp.src('bower_components/normalize-css/normalize.css')
+   .pipe(rename('normalize.vendor.css'))
+   .pipe(gulp.dest('app/css/'));
 });
 
 /*WATCH*/
@@ -98,3 +122,8 @@ gulp.task('watch', () => {
     gulp.watch('app/scripts/*.js', ['compress']) /*следить за js, запускать compress*/
 
 });
+
+/*BUILD: step1: gulp html sass css compress png  step2: gulp vendorCSS*/
+gulp.task('build', ['html', 'png', 'sass', 'css', 'compress', 'vendorCSS', 'copyfonts'], function() {
+    console.log('Building completed!');
+})

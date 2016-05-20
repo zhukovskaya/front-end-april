@@ -172,7 +172,8 @@ main {
     width: 100%;
     text-transform: uppercase;
     text-align: center;
-    color: dimgray; }
+    color: dimgray;
+    padding-bottom: 0.300em; }
     .articleleftpart .fa::after {
       font: 0.750em Arial;
       color: dimgray; }
@@ -210,7 +211,7 @@ main {
       padding-left: 1.600em; } }
 
 .articleleftpart__soсial {
-  padding-bottom: 0.300em;
+  padding-bottom: 0.800em;
   border-bottom: 2px groove lightgray; }
 
 .articleleftpart__category {
@@ -218,7 +219,7 @@ main {
 
 .articleleftpart__tags .articlelink__tag {
   display: block;
-  padding-bottom: 0.100em; }
+  padding-top: 0.400em; }
 
 .articleleftpart__category,
 .articleleftpart__tags {

@@ -1,3 +1,5 @@
 /**/node_modules
 /**/dist
-/**/app/bourbon2
+/**/app/bourbon
+/**/bower_components
+npm-debug.log

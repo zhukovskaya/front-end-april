@@ -31,6 +31,7 @@ main {
         text-transform: uppercase;
         text-align: center;
         color: dimgray;
+        padding-bottom: 0.300em;
 
         &::after {
             font: 0.750em Arial;
@@ -81,7 +82,7 @@ main {
 }
 
 .articleleftpart__soсial {
-    padding-bottom: 0.300em;
+    padding-bottom: 0.800em;
     border-bottom: 2px groove lightgray;
 }
 
@@ -92,7 +93,7 @@ main {
 .articleleftpart__tags {
     .articlelink__tag {
         display: block;
-        padding-bottom: 0.100em;
+        padding-top: 0.400em;
     }
 }
 
