@@ -517,4 +517,10 @@ input.main-hdr-control[type=checkbox]:checked ~ label {
   .col-xs-12 {width: 100%;}
 
 }
+@media (max-width: 440px) {
+  .main-hdr-title {
+    width: 70%;
+    font-size: 15px;
+  }
+}
 /* END of MEDIA */
