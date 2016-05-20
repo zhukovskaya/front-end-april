@@ -166,3 +166,53 @@ margin-bottom: 40px;
 }
 
 .gallery .row >div {padding:10px;}
+
+.circle {
+  margin-top: 5px;
+  float:left;
+  padding-top: 13px;
+  line-height: 13px;
+  width: 55px;
+  height: 55px;
+  background: #ececec;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  font-size: 22px;
+  color:#555;
+  background-color: #ececec;
+}
+
+.circle span {
+  font-size: 14px;
+}
+
+.small-news {float: left;
+margin-bottom: 30px;}
+
+.thumb {float: right;text-align:left;}
+
+.thumb h4{
+font-weight: 700;
+font-size: 16px;
+line-height: 30px;
+}
+
+.thumb p{
+font-size: 13px;
+line-height: 22px;
+}
+
+.thumb span{
+  color:#6b99b6;
+  font-size: 12px;
+line-height: 20px;
+}
+
+
+
+
+
+
+
+
