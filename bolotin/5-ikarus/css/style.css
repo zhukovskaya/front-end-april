@@ -1,0 +1,133 @@
+*,
+*:before,
+*:after {
+  	box-sizing: border-box;
+}
+
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.area {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row:before,
+.row:after {
+    content: " ";
+    display: table;
+}
+.row:after {
+    clear: both;
+}
+
+
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+  position: relative;
+  float: left;
+}
+
+
+body{
+	background: url(../img/bg-slider.png) repeat-x top left;
+	font-family: 'Droid Sans', sans-serif;
+	color:#555;
+}
+
+
+.logo{margin-top: 32px;}
+
+.navigation {float:right; }
+
+.navigation ul {text-align: right;}
+
+.navigation ul li{
+float:left;
+position: relative;
+}
+
+
+
+.navigation ul li:after{
+background-image: url(../img/menu-border.png);
+content: ''; 
+height: 88px;
+width: 2px;
+position: absolute;
+left: 0px;
+top: 0px
+}
+
+.navigation ul li:nth-of-type(6):before{
+background-image: url(../img/menu-border.png);
+content: ''; 
+height: 88px;
+width: 2px;
+position: absolute;
+right: 0px;
+top: 0px
+}
+
+
+.navigation ul li a{
+text-transform: uppercase;
+text-decoration: none;
+color: #fff;
+font-size: 12px;
+font-weight: 700;
+font-family: 'Droid Sans', sans-serif;
+padding: 0 20px;
+display: block;
+height: 88px;
+line-height: 113px;
+}
+
+.navigation a.active {
+color:#86acc4;
+text-decoration: none;
+background-color: #35373a;
+}
+
+.slider{
+width:100%;
+margin-top: 54px;
+}
+
+.some-text {
+	text-align: center;
+	position: relative;
+}
+
+.some-text h1{
+font-weight: 700;
+font-size: 30px;
+padding: 40px 0 15px 0;
+}
+
+.main-text{
+font-weight: 400;
+font-size: 18px;
+line-height: 28px;
+margin-bottom: 40px;
+}
+
+.image-fit{
+	max-width: 100%;
+	float:left;
+}
+
+
+.tab-text{
+    text-align: left;
+    padding-left:20px;
+}
+
+.area {height: 3000px;}
