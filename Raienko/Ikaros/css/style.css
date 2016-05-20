@@ -428,7 +428,6 @@ footer a {
 
 /* General */
 .pseudo-wrapper {
-  min-width: 460px;
   padding: 3%;
 }
 /* Header */
@@ -437,10 +436,10 @@ footer a {
 }
 /* Main */
 .latest-blog>ul>li{
-  width: 100%;
+  width: 90%;
 }
 .latest-staff img {
-  width: 440px;
+  width: 90%;
 }
 /* Aside */
 .prefooter-settings {
