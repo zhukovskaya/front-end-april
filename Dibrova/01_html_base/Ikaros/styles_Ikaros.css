@@ -1,9 +1,5 @@
-* {
- margin: 0;
- padding: 0;
- }
 body {
-	/*margin: 0;*/
+	margin: 0;
 	width: 100%;
  	height: 100%;
 	color: #000;
@@ -12,16 +8,17 @@ body {
 a {
 	text-decoration: none;
 }
-#wrapper, #header, #main {
+#wrapper, #header, #main, #footer,
+.latest-portfolio, .latest-blog, .our-services {
 	margin: 0 auto;
-	width: 100%;
+	/*width: 100%;*/
 	max-width: 1500px;
 	height: auto;
 	/*min-width: 200px;*/
 	box-sizing: border-box;
 }
 #wrapper {
-	height: 3126px;
+	/*height: 3126px;*/
 	/*margin: 0;*/
 	background: #fdfdfd;
 }
@@ -31,18 +28,32 @@ a {
 }
 #main {
 	/*width: 100%;*/
-	min-height: 2962px;
+	/*min-height: 2962px;*/
 	padding: 0 18% 0px 18%;
 }
+.clearfix {
+  clear: both;
+  }
 .slider {
 	margin: 3% 0;
 }
-.a1 {
-	padding: 0 0 1% 0;
+.h2 {
 	display: block;
 	font-size: 3em;
 	font-weight: bold;
 	text-align: center;
+	margin: 0;
+}
+p {
+	font-size: 1em;
+}
+span {
+	display: inline-block;
+	font-size: 2em;
+}
+.our-services .services .h2 {
+	padding: 0 0 1% 0;
+
 }
 .tabs {
 	font-size: 1em;
@@ -66,6 +77,100 @@ a {
 .tabs ul a:active {
 	background: #fff;
 }
+.img8 {
+	float: left;
+}
+.web-design .content-web-design {
+	width: 58%;
+	box-sizing: border-box;
+	float: right;
+	padding: 0 0 0 2%;
+}
+.web-design {
+
+}
+.latest-portfolio {
+	padding: 5% 0 2% 0;
+	border-bottom: 1px dotted grey;
+}
+.latest-portfolio .images {
+	padding: 2% 0 1% 0;
+}
+.latest-blog {
+	padding: 3% 0 3% 0;
+	border-bottom: 1px dotted grey;
+}
+.latest-blog span {
+	padding: 1% 0 1% 0;
+}
+.img-post {
+	float: left;
+}
+.cont-post {
+	width: 86%;
+	box-sizing: border-box;
+	float: right;
+	margin: 0;
+	padding: 0 2% 0 0;
+}
+.post1 {
+	width: 50%;
+	box-sizing: border-box;
+	float: left;
+}
+.post2 {
+	width: 50%;
+	box-sizing: border-box;
+	float: right;
+}
+.post3 {
+	width: 50%;
+	box-sizing: border-box;
+	float: left;
+}
+.post4 {
+	width: 50%;
+	box-sizing: border-box;
+	float: right;
+}
+.customers .images img {
+	opacity: 0.33;
+	padding: 1%;
+}
+#footer {
+	background: #3a3d40;
+	height: 450px;
+	padding:  1% 18% 0px 18%; 
+}
+#footer h4 {
+	color: #fdfdfd;
+	text-transform: uppercase;
+}
+#footer p {
+	color: #ababac;
+}
+#footer .p2 {
+	color: #787e84;
+}
+#footer section {
+	width: 25%;
+	box-sizing: border-box;
+	height: auto;
+}
+.popular-posts {
+	float: left;
+}
+.twitter {
+	float: left;
+}
+.about-me {
+	float: left;
+}
+.contact-form {
+	float: left;
+}
+
+
 
 
 

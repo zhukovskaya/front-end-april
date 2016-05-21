@@ -1,155 +1,196 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Lucid Theme</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-	<div id="wrapper">
 
-		<!-- HEADER -->
+    <div id="wrapper">
+
 		<header id="header">
-			<div class="nav">
+			<div class="header-navigation">
+                <ul>
+					<li class="list"><div class="navi"><a class="nav" href="#">home</a></div></li>
+					<li class="list"><div class="navi"><a class="nav" href="#">about</a></div></li>
+					<li class="list"><div class="navi"><a class="nav" href="#">categories</a></div></li>
+					<li class="list"><div class="navi"><a class="nav" href="#">contact us</a></div></li>
+                </ul>
+			</div>
+
+			<span class="logo"><img src="logo.png" width="280" alt="Lucid Theme"></span>
+			<div class="header-content">
 				<ul>
-					<li>home</a></li>
-					<li>about</a></li>
-					<li>categories</a></li>
-					<li>contact us</a></li>
+					<li class="list"><img src="icon4.png" width="12" alt="icon4" class="semi"><a class="cont" href="#"> SUBSCRIBE TO OUR RSS FEED</a></li>
+					<li class="list"><img src="icon5.png" width="15" alt="icon5" class="semi"><a class="cont" href="#"> CONTACT US NOW!</a></li>
 				</ul>
 			</div>
-			<span class="Logo"><img src="logo.png" alt="Lucid Theme"></span>
-			<div class="content">
-				<ul>
-					<li><a href=""></a> SUBSCRIBE TO OUR RSS FEED</li>
-					<li><a href=""></a> CONTACT US NOW!</li>
-				</ul>
-			</div>
-		</header>
-		
-		<!-- MAIN -->
+		</header> <!-- Header -->
+
 		<main id="main">
 			<article class="post-holder">
-				<div class="post">
-					<h2>THE POST TITLE</h2>
-						<div>
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-							<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-						</div>
-					<img src="img1.jpg">
-					<img src="img2.jpg">
-					<img src="img3.jpg">
-				</div>
-				<div class="meta">
-					<ul>
-						<li><img src="icon1.png"> COMMENT:<a href=""></a></li>
-						<li><img src="icon2.png"> LIKED:<a href=""></a> PEOPLE</li>
-						<li><img src="icon3.png"> BY:<a href=""></a> ADMIN</li>
-					</ul>
-					<ul>
-						<li>CATEGORY: UNNAMED 1</li>
-						<li>TAGS:
-							<ul>
-								<li><a href="">DEMO TAGS1</a></li>
-								<li><a href="">DEMO TAGS2</a></li>
-								<li><a href="">DEMO TAGS3</a></li>
-								<li><a href="">DEMO TAGS4</a></li>
-							</ul>
-						</li>
-					</ul>
+                <div class="title">
+                    <div class="meta">
+                        <ul>
+                            <li class="list"><img src="icon1.png" alt="icon1" class="semi" width="15"><span class="met1"> COMMENTS:</span><a class="met" href="#"> 12</a></li>
+                            <li class="list"><img src="icon2.png" alt="icon2" class="semi" width="15"><span class="met1"> LIKED:</span><a class="met" href="#"> PEOPLE</a></li>
+                            <li class="list"><img src="icon3.png" alt="icon3" class="semi" width="15"><span class="met1"> BY:</span><a class="met" href="#"> ADMIN</a></li>
+                        </ul>
+                        <ul>
+                            <li class="list"><span class="met1">CATEGORY:</span><a class="met" href="#"> UNNAMED 1</a></li>
+                            <li class="list"><span class="met1">TAGS:</span>
+                                <ul class="met2">
+                                    <li class="list"><a class="met" href="#">DEMO TAG 1</a></li>
+                                    <li class="list"><a class="met" href="#">DEMO TAG 2</a></li>
+                                    <li class="list"><a class="met" href="#">DEMO TAG 3</a></li>
+                                    <li class="list"><a class="met" href="#">DEMO TAG 4</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div> <!-- meta -->
+    				<div class="post">
+                        <h2 class="post-title">THE POST TITLE</h2>
+                            <div class="post-text">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+                            </div>
+                        <img src="img1.jpg" alt="img1">
+                        <img src="img2.jpg" alt="img2">
+                        <img src="img3.jpg" alt="img3">
+                    </div> <!--post-->
+                </div> <!-- title -->
 
-				</div
-				<div class="content">
-					<h2>THE POST TITLE2</h2>
-						<div>
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-							<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-						</div>
-					<img src="img1.jpg">
-					<img src="img2.jpg">
-					<img src="img3.jpg">
-					<img src="img1.jpg">
-					<img src="img2.jpg">
-				</div>
+                <div class="title">
+                     <div class="meta">
+                        <ul>
+                            <li class="list"><img src="icon1.png" alt="icon1" class="semi" width="15"><span class="met1"> COMMENTS:</span><a class="met" href="#"> 12</a></li>
+                            <li class="list"><img src="icon2.png" alt="icon2" class="semi" width="15"><span class="met1"> LIKED:</span><a class="met" href="#"> PEOPLE</a></li>
+                            <li class="list"><img src="icon3.png" alt="icon3" class="semi" width="15"><span class="met1"> BY:</span><a class="met" href="#"> ADMIN</a></li>
+                        </ul>
+                        <ul>
+                            <li class="list"><span class="met1">CATEGORY:</span><a class="met" href="#"> UNNAMED 1</a></li>
+                            <li class="list"><span class="met1">TAGS:</span>
+                                <ul class="met2">
+                                    <li class="list"><a class="met" href="#">DEMO TAG 1</a></li>
+                                    <li class="list"><a class="met" href="#">DEMO TAG 2</a></li>
+                                    <li class="list"><a class="met" href="#">DEMO TAG 3</a></li>
+                                    <li class="list"><a class="met" href="#">DEMO TAG 4</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div> <!-- meta -->
+                    <div class="post">
+                        <h2 class="post-title">THE POST TITLE2</h2>
+                            <div class="post-text">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+                            </div>
+                        <img src="img1.jpg" alt="img1">
+                        <img src="img2.jpg" alt="icon2">
+                        <img src="img3.jpg" alt="icon3">
+                        <img src="img1.jpg" alt="img1">
+                        <img src="img2.jpg" alt="icon2">
+                    </div> <!-- post -->
+                </div> <!-- title -->
 
-				<div class="content">
-					<h2>THE POST TITLE3</h2>
-						<div>
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-							<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-						</div>
-					<img src="img1.jpg">
-					<img src="img2.jpg">
-				</div>
+                <div class="title">
+                     <div class="meta">
+                        <ul>
+                            <li class="list"><img src="icon1.png" alt="icon1" class="semi" width="15"><span class="met1"> COMMENTS:</span><a class="met" href="#"> 12</a></li>
+                            <li class="list"><img src="icon2.png" alt="icon2" class="semi" width="15"><span class="met1"> LIKED:</span><a class="met" href="#"> PEOPLE</a></li>
+                            <li class="list"><img src="icon3.png" alt="icon3" class="semi" width="15"><span class="met1"> BY:</span><a class="met" href="#"> ADMIN</a></li>
+                        </ul>
+                        <ul>
+                            <li class="list"><span class="met1">CATEGORY:</span><a class="met" href="#"> UNNAMED 1</a></li>
+                            <li class="list"><span class="met1">TAGS:</span>
+                                <ul class="met2">
+                                    <li class="list"><a class="met" href="#">DEMO TAG 1</a></li>
+                                    <li class="list"><a class="met" href="#">DEMO TAG 2</a></li>
+                                    <li class="list"><a class="met" href="#">DEMO TAG 3</a></li>
+                                    <li class="list"><a class="met" href="#">DEMO TAG 4</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div> <!-- meta -->
+    				<div class="post">
+    					<h2 class="post-title">THE POST TITLE3</h2>
+    						<div class="post-text">
+    							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    							<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+    						</div>
+    					<img src="img1.jpg" alt="img1">
+    					<img src="img2.jpg" alt="icon2">
+    				</div> <!-- post -->
+                </div> <!-- title -->
 
 				<ul class="pagination">
-					<li><a href="">1</a></li>
-					<li><a href="">2</a></li>
-					<li><a href="">3</a></li>
-					<li><a href="">4</a></li>
+					<li class="list"><div class="pag"><a class="pan" href="#">1</a></div></li>
+					<li class="list"><div class="pag"><a class="pan" href="#">2</a></div></li>
+					<li class="list"><div class="pag"><a class="pan" href="#">3</a></div></li>
+					<li class="list"><div class="pag"><a class="pan" href="#">4</a></div></li>
 				</ul>
 			</article>
 
-
 				<aside class="sidebar">
 					<ul class="social">
-						<li><a href=""><img src="" alt=""></a>FALLOVERS</li>
-						<li><a href=""><img src="" alt=""></a>FALLOVERS</li>
+						<li><a href="#"><img src="img5.png" alt="img5">599</a>FALLOVERS</li>
+						<li><a href="#"><img src="img6.png" alt="img6">624</a>FALLOVERS</li>
 					</ul>
-					
+
 					<div class="search">
-						<form action="">
+						<form>
 							<input type="text" class="search"  placeholder="SITE SEARCH">
-							<input type="text" class="submit" value="SEARCH">
+							<input type="submit" class="submit" value="SEARCH">
 						</form>
 					</div>
-					
+
 					<div class="advertising">
 						<ul>
-							<li><a href=""><img src="" alt="125X125"></a></li>
-							<li><a href=""><img src="" alt="125X125"></a></li>
-							<li><a href=""><img src="" alt="125X125"></a></li>
-							<li><a href=""><img src="" alt="125X125"></a></li>
+							<li><a href="#"><img src="img4.jpg" alt="125X125"></a></li>
+							<li><a href="#"><img src="img4.jpg" alt="125X125"></a></li>
+							<li><a href="#"><img src="img4.jpg" alt="125X125"></a></li>
+							<li><a href="#"><img src="img4.jpg" alt="125X125"></a></li>
 						</ul>
 					</div>
 
 					<div class="tags">
 						<span><strong>FOCUS</strong></span>
 						<ul>
-							<li class="activ"><a href="">ALL</a></li>
-							<li><a href="">CODE&DISIGN</a></li>
-							<li><a href="">GRAPHIC ART</a></li>
-							<li><a href="">ILLUSTRATIONS</a></li>
-							<li><a href="">MISCELLANEUS</a></li>
+							<li class="activ"><a href="#">ALL</a></li>
+							<li><a href="#">CODE&amp;DISIGN</a></li>
+							<li><a href="#">GRAPHIC ART</a></li>
+							<li><a href="#">ILLUSTRATIONS</a></li>
+							<li><a href="#">MISCELLANEUS</a></li>
 						</ul>
 					</div>
 				</aside>
-					
-		</main>
-		
-		<!-- Footer -->
-		<footer>
-			<div class="content">
+
+		</main> <!-- Main -->
+
+
+		<footer id="footer">
+			<div class="footer-content">
 				<ul>
-					<li><a href=""></a> SUBSCRIBE TO OUR RSS FEED</li>
-					<li><a href=""></a> CONTACT US NOW!</li>
+					<li class="list"><img src="icon4.png" width="12" alt="icon4" class="semi"><a class="cont" href="#"> SUBSCRIBE TO OUR RSS FEED</a></li>
+                    <li class="list"><img src="icon5.png" width="15" alt="icon5" class="semi"><a class="cont" href="#"> CONTACT US NOW!</a></li>
 				</ul>
 			</div>
-			<hr>
-			<div class="footer-holder">
-				<ul class="nav">
-					<li>home</a></li>
-					<li>about</a></li>
-					<li>categories</a></li>
-					<li>contact us</a></li>
+			<hr class="footer-hr">
+			<div class="footer-navigation">
+				<ul>
+					<li class="list"><div class="fnavi"><a class="fnav" href="#">home</a></div></li>
+                    <li class="list"><div class="fnavi"><a class="fnav" href="#">about</a></div></li>
+                    <li class="list"><div class="fnavi"><a class="fnav" href="#">categories</a></div></li>
+                    <li class="list"><div class="fnavi"><a class="fnav" href="#">contact us</a></div></li>
 				</ul>
 			</div>
 			<div class="copyright">
 				<p>&copy; 2011 LUSID THEME</p>
 				<p>BY WEEKLYY.COM</p>
 			</div>
-		</footer>			
-	</div>	
+		</footer> <!-- Footer -->
+	</div> <!-- Wrapper -->
 </body>
 </html>
