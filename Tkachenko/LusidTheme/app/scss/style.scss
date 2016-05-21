@@ -5,15 +5,14 @@
 $brandedcolor: #5d9b9a;
 
 * {
-    font-family: "Arial";
-    margin: 0 auto;
-    box-sizing: border-box;
     position: relative;
+    margin: 0 auto;
+    font-family: "Arial";
+    box-sizing: border-box;
 }
 
 html {
     background: url("../img/background.png");
-    // overflow-x: hidden;
     @include respond-to(320) {
         font-size: 75%;
     }
@@ -34,6 +33,7 @@ html {
 h1 {
     font: ultra-expanded 3.000em "AmericanTypewriter";
     text-transform: uppercase;
+    letter-spacing: 0.042em;
     @include respond-to(320) {
         text-align: center;
     }
@@ -46,9 +46,10 @@ h1 {
 }
 
 h2 {
-    font: 1.850em "Arial";
-    text-transform: uppercase;
     padding: 0.600em 0 0.800em;
+    font: 1.850em "Arial";
+    letter-spacing: -.086em;
+    text-transform: uppercase;
 }
 
 h4 {
@@ -58,6 +59,7 @@ h4 {
 a {
     color: inherit;
     text-decoration: none;
+    cursor: pointer;
 }
 
 figure {
@@ -72,7 +74,6 @@ figure {
 
 .wrapper {
     width: 99%;
-    // border: 0.5px solid red;
     @include respond-to(992) {
         width: 79%;
     }
@@ -99,8 +100,8 @@ figure {
     }
 
     &_listitem {
-        text-transform: uppercase;
         display: block;
+        text-transform: uppercase;
 
         &_anchor {
             font: 700 0.700em "Arial";
@@ -114,13 +115,13 @@ figure {
 }
 
 #back-to-top {
-    width: 1.000em;
-    height: 1.000em;
     position: fixed;
     bottom: 0.300em;
     right: 0.300em;
-    vertical-align: middle;
+    width: 1.000em;
+    height: 1.000em;
     z-index: 9999;
+    vertical-align: middle;
     border: 0;
     border-radius: 0.500em;
     background: #6db5b4;
@@ -128,8 +129,8 @@ figure {
     font-size: 3.000em;
     text-align: center;
     color: white;
-    opacity: 0;
     cursor: pointer;
+    opacity: 0;
 }
 
 #back-to-top:hover {
@@ -140,15 +141,15 @@ figure {
     opacity: 1;
 }
 
-%notBorderNotOutline {
-    outline: none;
-    border: none;
-}
+// %notBorderNotOutline {
+//     outline: none;
+//     border: none;
+// }
 
-%contentAbsolute {
-    content: '';
-    position: absolute;
-}
+// %contentAbsolute {
+//     content: '';
+//     position: absolute;
+// }
 @import "header";
 @import "nav";
 @import "main";

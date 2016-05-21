@@ -1,11 +1,10 @@
 // main: style.scss
 
 #footer {
-    // border: 0.5px solid blue;
+  margin-bottom: 5.000em;
+  padding: 0.500em;
     border-top: 2px groove lightgray;
     text-transform: uppercase;
-    margin-bottom: 5.000em;
-    padding: 0.500em;
     @include respond-to(992) {
         padding: 0.700em 7.000em;
     }

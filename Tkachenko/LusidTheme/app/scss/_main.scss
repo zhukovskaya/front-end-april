@@ -1,7 +1,6 @@
 //main: style.scss
 
 main {
-    // border: 0.5px solid blue;
     @include respond-to(992) {
         padding: 2.500em 5.000em;
     }
@@ -11,8 +10,8 @@ main {
 }
 
 .section {
-    width: 100%;
     display: inline-block;
+    width: 100%;
     @include respond-to(992) {
         width: 73%;
     }
@@ -28,10 +27,10 @@ main {
 
     .fa {
         width: 100%;
+        padding-bottom: 0.300em;
         text-transform: uppercase;
         text-align: center;
         color: dimgray;
-        padding-bottom: 0.300em;
 
         &::after {
             font: 0.750em Arial;
@@ -111,8 +110,8 @@ main {
 .articlerightpart {
     width: 100%;
     padding: 0.200em;
-    border: 10px solid rgba(0, 0, 0, 0.06);
     float: right;
+    border: 10px solid rgba(0, 0, 0, 0.06);
     background-color: #f2f2f2;
     @include respond-to(768) {
         width: 85%;
@@ -122,7 +121,6 @@ main {
     }
     @include respond-to(1200) {
         width: 78%;
-        // margin-bottom: 4.900em;
     }
 
     &--mb {
@@ -132,39 +130,39 @@ main {
     }
 
     &__inside {
-        background-color: white;
         padding: 0 1.200em;
+        background-color: white;
         border-radius: 4px;
     }
 
     &__post {
-        font: 400 0.800em/1.500em "Arial";
         padding-bottom: 1.900em;
+        font: 400 0.800em/1.500em "Arial";
     }
 
     &__link {
-        font: 0.800em "Arial";
         padding: 0 0 0.800em 0.800em;
+        font: 0.800em "Arial";
         text-transform: uppercase;
         color: gray;
 
         &--categoryandtags {
-            font-size: 0.700em;
             padding: 0;
+            font-size: 0.700em;
         }
     }
 
     &__image {
         display: inline-block;
-        border: 3px solid $brandedcolor;
         margin: 0.800em 0.100em 0.200em 0.900em;
+        border: 3px solid $brandedcolor;
     }
 }
 
 .articlelink__tag {
     font: 0.750em Arial;
-    color: dimgray;
     text-transform: uppercase;
+    color: dimgray;
 }
 
 .fa-commenting,
@@ -174,12 +172,11 @@ main {
 }
 
 .asideright {
-    width: 26%;
+    display: inline-block;
     padding: 0 1.400em;
+    width: 26%;
     height: 730px;
     vertical-align: top;
-    display: inline-block;
-    // border: 0.5px solid green;
     @include respond-to(320) {
         display: none;
     }
@@ -195,42 +192,46 @@ main {
         text-align: center;
 
         &__inside {
+            margin: 0 0.300em;
             width: 6.500em;
             height: 6.500em;
-            display: inline-block;
             border: 10px solid white;
-            margin: 0 0.3em;
             border-radius: 3.250em;
             text-align: center;
             vertical-align: middle;
             background-color: $brandedcolor;
         }
 
-        &__followers {
-            font-size: 0.800em;
+        &__container {
             display: inline-block;
-            color: dimgray;
+        }
+
+        &__followers {
+            display: block;
             padding: 0.600em 2.000em;
+            width: 100%;
+            font-size: 0.800em;
+            color: dimgray;
         }
     }
 }
 
 .fa-tumblr,
 .fa-twitter {
-    color: white;
     padding-top: 0.300em;
     font-size: 3.700em;
+    color: white;
 }
 
 .paginator {
     margin-top: 3.000em;
     @include respond-to(320) {
-        text-align: center;
         margin-bottom: 1.000em;
+        text-align: center;
     }
     @include respond-to(480) {
-        text-align: center;
         margin-bottom: 1.000em;
+        text-align: center;
     }
     @include respond-to(768) {
         top: -2.000em;
@@ -247,14 +248,14 @@ main {
         padding: 0;
 
         &__list {
+            display: inline-block;
+            margin-right: 0.600em;
+            padding-top: 0.3em;
             width: 30px;
             height: 30px;
-            background-color: #f2f2f2;
-            display: inline-block;
             border: 1px solid lightgray;
+            background-color: #f2f2f2;
             text-align: center;
-            padding-top: 0.3em;
-            margin-right: 0.600em;
 
             &:hover {
                 border: 1px solid dimgray;
@@ -265,6 +266,83 @@ main {
                 vertical-align: middle;
                 font-weight: bold;
             }
+        }
+    }
+}
+
+.search {
+    margin: 2.000em auto 2.700em;
+
+    &__button,
+    &__fild {
+        width: 96%;
+        font: 0.800em "Glasgow-Medium";
+        outline: none;
+        text-transform: uppercase;
+        vertical-align: middle;
+        letter-spacing: 0.083em;
+    }
+
+    &__fild {
+        margin-bottom: 0.500em;
+        padding: 0.300em;
+        color: lightgray;
+    }
+
+    &__button {
+        border: none;
+        text-align: center;
+        background-color: $brandedcolor;
+        border-radius: 4px;
+        color: white;
+
+        &:hover {
+            background-color: lightgray;
+            color: $brandedcolor;
+        }
+    }
+
+}
+
+.poster {
+    display: inline-block;
+    margin: 0.250em;
+    width: 110px;
+    height: 110px;
+    background-color: white;
+    border: 1px solid lightgray;
+
+    &__text {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        font-size: 0.750em;
+        line-height: 110px;
+        vertical-align: middle;
+        color: lightgray;
+    }
+}
+
+.asidemenu {
+    margin-top: 2.000em;
+    text-transform: uppercase;
+
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    &__list {
+        margin-top: 0.600em;
+        padding: .400em;
+        padding-left: .800em;
+        font-size: .800em;
+        background-color: white;
+        border-radius: 8px;
+        color: lightgray;
+
+        &:hover {
+          color: black;
         }
     }
 }

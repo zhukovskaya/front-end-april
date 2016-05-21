@@ -14,10 +14,10 @@
   font-style: normal; }
 
 * {
-  font-family: "Arial";
+  position: relative;
   margin: 0 auto;
-  box-sizing: border-box;
-  position: relative; }
+  font-family: "Arial";
+  box-sizing: border-box; }
 
 html {
   background: url("../img/background.png"); }
@@ -39,7 +39,8 @@ html {
 
 h1 {
   font: ultra-expanded 3.000em "AmericanTypewriter";
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  letter-spacing: 0.042em; }
   @media only screen and (min-width: 0px) and (max-width: 479px) {
     h1 {
       text-align: center; } }
@@ -51,16 +52,18 @@ h1 {
       margin: 0; } }
 
 h2 {
+  padding: 0.600em 0 0.800em;
   font: 1.850em "Arial";
-  text-transform: uppercase;
-  padding: 0.600em 0 0.800em; }
+  letter-spacing: -.086em;
+  text-transform: uppercase; }
 
 h4 {
   font-weight: normal; }
 
 a {
   color: inherit;
-  text-decoration: none; }
+  text-decoration: none;
+  cursor: pointer; }
 
 figure {
   margin: auto; }
@@ -95,8 +98,8 @@ figure {
     padding-right: 0.500em;
     font-size: 1.400em; }
   .rss_listitem {
-    text-transform: uppercase;
-    display: block; }
+    display: block;
+    text-transform: uppercase; }
     .rss_listitem_anchor {
       font: 700 0.700em "Arial"; }
 
@@ -105,13 +108,13 @@ figure {
   margin-right: 1.700em; }
 
 #back-to-top {
-  width: 1.000em;
-  height: 1.000em;
   position: fixed;
   bottom: 0.300em;
   right: 0.300em;
-  vertical-align: middle;
+  width: 1.000em;
+  height: 1.000em;
   z-index: 9999;
+  vertical-align: middle;
   border: 0;
   border-radius: 0.500em;
   background: #6db5b4;
@@ -119,8 +122,8 @@ figure {
   font-size: 3.000em;
   text-align: center;
   color: white;
-  opacity: 0;
-  cursor: pointer; }
+  cursor: pointer;
+  opacity: 0; }
 
 #back-to-top:hover {
   background: #5d9b9a; }
@@ -129,8 +132,8 @@ figure {
   opacity: 1; }
 
 #header {
-  border-top: 10px solid rgba(0, 0, 0, 0.06);
-  padding: 1.000em 0; }
+  padding: 1.000em 0;
+  border-top: 10px solid rgba(0, 0, 0, 0.06); }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     #header {
       padding: 1.800em 6.500em; } }
@@ -151,8 +154,8 @@ figure {
 
 .mainmenu--nav {
   font: 1.000em "Glasgow-Medium";
-  color: white;
-  text-shadow: 0.5px 0.5px 0 lightgray; }
+  text-shadow: 0.5px 0.5px 0 lightgray;
+  color: white; }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   main {
@@ -163,8 +166,8 @@ figure {
     padding: 2.300em 5.000em 4.000em; } }
 
 .section {
-  width: 100%;
-  display: inline-block; }
+  display: inline-block;
+  width: 100%; }
   @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .section {
       width: 73%; } }
@@ -178,10 +181,10 @@ figure {
   padding-right: 0.500em; }
   .articleleftpart .fa {
     width: 100%;
+    padding-bottom: 0.300em;
     text-transform: uppercase;
     text-align: center;
-    color: dimgray;
-    padding-bottom: 0.300em; }
+    color: dimgray; }
     .articleleftpart .fa::after {
       font: 0.750em Arial;
       color: dimgray; }
@@ -237,8 +240,8 @@ figure {
 .articlerightpart {
   width: 100%;
   padding: 0.200em;
-  border: 10px solid rgba(0, 0, 0, 0.06);
   float: right;
+  border: 10px solid rgba(0, 0, 0, 0.06);
   background-color: #f2f2f2; }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     .articlerightpart {
@@ -253,29 +256,29 @@ figure {
     .articlerightpart--mb {
       margin-bottom: 4.900em; } }
   .articlerightpart__inside {
-    background-color: white;
     padding: 0 1.200em;
+    background-color: white;
     border-radius: 4px; }
   .articlerightpart__post {
-    font: 400 0.800em/1.500em "Arial";
-    padding-bottom: 1.900em; }
+    padding-bottom: 1.900em;
+    font: 400 0.800em/1.500em "Arial"; }
   .articlerightpart__link {
-    font: 0.800em "Arial";
     padding: 0 0 0.800em 0.800em;
+    font: 0.800em "Arial";
     text-transform: uppercase;
     color: gray; }
     .articlerightpart__link--categoryandtags {
-      font-size: 0.700em;
-      padding: 0; }
+      padding: 0;
+      font-size: 0.700em; }
   .articlerightpart__image {
     display: inline-block;
-    border: 3px solid #5d9b9a;
-    margin: 0.800em 0.100em 0.200em 0.900em; }
+    margin: 0.800em 0.100em 0.200em 0.900em;
+    border: 3px solid #5d9b9a; }
 
 .articlelink__tag {
   font: 0.750em Arial;
-  color: dimgray;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  color: dimgray; }
 
 .fa-commenting,
 .fa-heart,
@@ -283,11 +286,11 @@ figure {
   font-size: 1.000em; }
 
 .asideright {
-  width: 26%;
+  display: inline-block;
   padding: 0 1.400em;
+  width: 26%;
   height: 730px;
-  vertical-align: top;
-  display: inline-block; }
+  vertical-align: top; }
   @media only screen and (min-width: 0px) and (max-width: 479px) {
     .asideright {
       display: none; } }
@@ -301,37 +304,39 @@ figure {
     border-bottom: 2px groove lightgray;
     text-align: center; }
     .asideright__circle__inside {
+      margin: 0 0.300em;
       width: 6.500em;
       height: 6.500em;
-      display: inline-block;
       border: 10px solid white;
-      margin: 0 0.3em;
       border-radius: 3.250em;
       text-align: center;
       vertical-align: middle;
       background-color: #5d9b9a; }
+    .asideright__circle__container {
+      display: inline-block; }
     .asideright__circle__followers {
+      display: block;
+      padding: 0.600em 2.000em;
+      width: 100%;
       font-size: 0.800em;
-      display: inline-block;
-      color: dimgray;
-      padding: 0.600em 2.000em; }
+      color: dimgray; }
 
 .fa-tumblr,
 .fa-twitter {
-  color: white;
   padding-top: 0.300em;
-  font-size: 3.700em; }
+  font-size: 3.700em;
+  color: white; }
 
 .paginator {
   margin-top: 3.000em; }
   @media only screen and (min-width: 0px) and (max-width: 479px) {
     .paginator {
-      text-align: center;
-      margin-bottom: 1.000em; } }
+      margin-bottom: 1.000em;
+      text-align: center; } }
   @media only screen and (min-width: 480px) and (max-width: 767px) {
     .paginator {
-      text-align: center;
-      margin-bottom: 1.000em; } }
+      margin-bottom: 1.000em;
+      text-align: center; } }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     .paginator {
       top: -2.000em;
@@ -345,14 +350,14 @@ figure {
   .paginator__menu {
     padding: 0; }
     .paginator__menu__list {
+      display: inline-block;
+      margin-right: 0.600em;
+      padding-top: 0.3em;
       width: 30px;
       height: 30px;
-      background-color: #f2f2f2;
-      display: inline-block;
       border: 1px solid lightgray;
-      text-align: center;
-      padding-top: 0.3em;
-      margin-right: 0.600em; }
+      background-color: #f2f2f2;
+      text-align: center; }
       .paginator__menu__list:hover {
         border: 1px solid dimgray;
         background-color: lightgray; }
@@ -360,11 +365,67 @@ figure {
         vertical-align: middle;
         font-weight: bold; }
 
+.search {
+  margin: 2.000em auto 2.700em; }
+  .search__button, .search__fild {
+    width: 96%;
+    font: 0.800em "Glasgow-Medium";
+    outline: none;
+    text-transform: uppercase;
+    vertical-align: middle;
+    letter-spacing: 0.083em; }
+  .search__fild {
+    margin-bottom: 0.500em;
+    padding: 0.300em;
+    color: lightgray; }
+  .search__button {
+    border: none;
+    text-align: center;
+    background-color: #5d9b9a;
+    border-radius: 4px;
+    color: white; }
+    .search__button:hover {
+      background-color: lightgray;
+      color: #5d9b9a; }
+
+.poster {
+  display: inline-block;
+  margin: 0.250em;
+  width: 110px;
+  height: 110px;
+  background-color: white;
+  border: 1px solid lightgray; }
+  .poster__text {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-size: 0.750em;
+    line-height: 110px;
+    vertical-align: middle;
+    color: lightgray; }
+
+.asidemenu {
+  margin-top: 2.000em;
+  text-transform: uppercase; }
+  .asidemenu ul {
+    list-style: none;
+    padding-left: 0; }
+  .asidemenu__list {
+    margin-top: 0.600em;
+    padding: .400em;
+    padding-left: .800em;
+    font-size: .800em;
+    background-color: white;
+    border-radius: 8px;
+    color: lightgray; }
+    .asidemenu__list:hover {
+      color: black; }
+
 #footer {
-  border-top: 2px groove lightgray;
-  text-transform: uppercase;
   margin-bottom: 5.000em;
-  padding: 0.500em; }
+  padding: 0.500em;
+  border-top: 2px groove lightgray;
+  text-transform: uppercase; }
   @media only screen and (min-width: 992px) and (max-width: 1199px) {
     #footer {
       padding: 0.700em 7.000em; } }
