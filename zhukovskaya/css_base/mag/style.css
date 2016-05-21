@@ -35,6 +35,7 @@ aside {
 	width: 1055px;
 	background: #fff;
 	margin: 0 auto;
+	overflow: hidden;
 }
 
 ul {
@@ -259,6 +260,7 @@ background: #fafafa;
 padding: 12px;
 border: 1px solid #bfbfbf;
 float: left;
+margin-bottom: 20px;
   }
  .gal a {
  	display: inline-block;
@@ -269,10 +271,42 @@ float: left;
  	padding: 0;
  }
 
- .gal img {
- 	border: 5px solid #
+ .gal li {
+ 	border: 1px solid #bfbfbf;
+ 	height: 156px;
  }
-/* aside*/
+
+ .gal ul img {
+ 	border: 3px solid #fff;
+ 	 }
+
+ .artical-links {
+ 	margin: 20px 0;
+ }
+
+.artical-links li, .artical-links a, #last  {
+	display: inline;
+	width: 25px;
+	text-transform: capitalize;
+	color: #494949;
+}
+.artical-links span {
+	margin: 10px;
+}
+.artical-links span + a {
+	float: right;
+	width: 100px;
+}
+#last {
+	text-transform: lowercase;
+	}
+
+
+
+
+/* aside
+
+ Do not finished yet */
  
 aside {
 	float: right;
@@ -300,20 +334,17 @@ aside {
 	
 	width: 125px;
 }
-
+ 
 .tabs {
   position: relative;   
-  min-height: 200px; /* This part sucks */
   clear: both;
-  margin: 25px 0;
+  margin: 0;
 }
 .tab {
   float: left;
 }
 .tab label {
-  padding: 10px; 
-  border: 1px solid #ccc; 
-  margin-left: -1px; 
+  padding: 10px 20px; 
   position: relative;
   left: 1px; 
 }
@@ -327,28 +358,28 @@ aside {
   right: 0;
   bottom: 0;
   padding: 20px;
-  border: 1px solid #ccc; 
-}
-[type=radio]:checked ~ label {
-  
-  border-bottom: 1px solid white;
-  z-index: 2;
-}
-[type=radio]:checked ~ label ~ .content {
-  z-index: 1;
+  margin: 10px 0;
+  display: none;
 }
 
+
+input:checked ~ label ~ .tab-content {
+  display: block;
+}
 
 
 /*footer*/
 
-footer {
+footer p {
 	margin: 0 auto;
-	height: 80px;
+	height: 74px;
+	width: 185px;
+	padding-top: 30px;
+
 
 }
 
-.holder {
+/*.holder {
 	position: relative;
 	width: 300px;
 	height: 300px;
@@ -376,7 +407,7 @@ footer {
 	top:50%;
 	left: 50%;
 	margin: -25px -25%;
-	border-color: #134 transparent  transparent;
+	border-color:  transparent #134 transparent;
 	border-style: solid;
 	border-width: 12px 14px 12px 0;
 	height: 0;
@@ -395,7 +426,7 @@ footer {
 	height: 0;
 
 }
-
+*/
 
 
 
