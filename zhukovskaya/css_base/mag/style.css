@@ -263,6 +263,15 @@ float: left;
  .gal a {
  	display: inline-block;
  }
+ .gal ul, .gal li {
+ 	display: inline-block;
+ 	margin: 0;
+ 	padding: 0;
+ }
+
+ .gal img {
+ 	border: 5px solid #
+ }
 /* aside*/
  
 aside {
@@ -291,19 +300,44 @@ aside {
 	
 	width: 125px;
 }
-aside section p {
-	margin: 6px 0 10px;
-	display: inline-block;
-}	
 
-aside section p a {
-	padding: 10px 21px;
-	
+.tabs {
+  position: relative;   
+  min-height: 200px; /* This part sucks */
+  clear: both;
+  margin: 25px 0;
+}
+.tab {
+  float: left;
+}
+.tab label {
+  padding: 10px; 
+  border: 1px solid #ccc; 
+  margin-left: -1px; 
+  position: relative;
+  left: 1px; 
+}
+.tab [type=radio] {
+  display: none;   
+}
+.tab-content {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+  border: 1px solid #ccc; 
+}
+[type=radio]:checked ~ label {
+  
+  border-bottom: 1px solid white;
+  z-index: 2;
+}
+[type=radio]:checked ~ label ~ .content {
+  z-index: 1;
 }
 
-aside section p a + a {
-	margin: 0 -4px;
-	}
 
 
 /*footer*/
@@ -334,6 +368,34 @@ footer {
 	height: 0;
 
 }
+
+
+.triangle {
+	display: block;
+	position: absolute;
+	top:50%;
+	left: 50%;
+	margin: -25px -25%;
+	border-color: #134 transparent  transparent;
+	border-style: solid;
+	border-width: 12px 14px 12px 0;
+	height: 0;
+
+}
+
+.triangle {
+	display: block;
+	position: absolute;
+	top:50%;
+	left: 50%;
+	margin: -25px -25%;
+	border-color: transparent #134 transparent;
+	border-style: solid;
+	border-width: 12px 14px 12px 0;
+	height: 0;
+
+}
+
 
 
 
