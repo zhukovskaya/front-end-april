@@ -40,12 +40,19 @@ h1 {
     @include respond-to(480) {
         text-align: center;
     }
+    @include respond-to(768) {
+        margin: 0;
+    }
 }
 
 h2 {
     font: 1.850em "Arial";
     text-transform: uppercase;
     padding: 0.600em 0 0.800em;
+}
+
+h4 {
+    font-weight: normal;
 }
 
 a {
@@ -55,11 +62,17 @@ a {
 
 figure {
     margin: auto;
+    @include respond-to(320) {
+        text-align: center;
+    }
+    @include respond-to(480) {
+        text-align: center;
+    }
 }
 
 .wrapper {
     width: 99%;
-    border: 0.5px solid red;
+    // border: 0.5px solid red;
     @include respond-to(992) {
         width: 79%;
     }
@@ -84,15 +97,20 @@ figure {
         padding-right: 0.500em;
         font-size: 1.400em;
     }
+
+    &_listitem {
+        text-transform: uppercase;
+        display: block;
+
+        &_anchor {
+            font: 700 0.700em "Arial";
+        }
+    }
 }
 
-.rss_listitem {
-    text-transform: uppercase;
-    display: block;
-}
-
-.rss_listitem_anchor {
-    font: 700 0.700em "Arial";
+.mainmenu {
+    display: inline-block;
+    margin-right: 1.700em;
 }
 
 #back-to-top {
@@ -115,7 +133,7 @@ figure {
 }
 
 #back-to-top:hover {
-    background: #5d9b9a;
+    background: $brandedcolor;
 }
 
 #back-to-top.show {

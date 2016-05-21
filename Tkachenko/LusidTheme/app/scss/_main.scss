@@ -1,12 +1,12 @@
 //main: style.scss
 
 main {
-    border: 0.5px solid blue;
+    // border: 0.5px solid blue;
     @include respond-to(992) {
-        padding: 2.500em 5em;
+        padding: 2.500em 5.000em;
     }
     @include respond-to(1200) {
-        padding: 2.500em 5em;
+        padding: 2.300em 5.000em 4.000em;
     }
 }
 
@@ -79,38 +79,38 @@ main {
         width: 22%;
         padding-left: 1.600em;
     }
-}
 
-.articleleftpart__soсial {
-    padding-bottom: 0.800em;
-    border-bottom: 2px groove lightgray;
-}
-
-.articleleftpart__category {
-    margin-top: 0.200em;
-}
-
-.articleleftpart__tags {
-    .articlelink__tag {
-        display: block;
-        padding-top: 0.400em;
+    &__soсial {
+        padding-bottom: 0.800em;
+        border-bottom: 2px groove lightgray;
     }
-}
 
-.articleleftpart__category,
-.articleleftpart__tags {
-    text-align: center;
-    @include respond-to(992) {
-        text-align: left;
+    &__category {
+        margin-top: 0.200em;
     }
-    @include respond-to(1200) {
-        text-align: left;
+
+    &__tags {
+        .articlelink__tag {
+            display: block;
+            padding-top: 0.400em;
+        }
+    }
+
+    &__category,
+    &__tags {
+        text-align: center;
+        @include respond-to(992) {
+            text-align: left;
+        }
+        @include respond-to(1200) {
+            text-align: left;
+        }
     }
 }
 
 .articlerightpart {
     width: 100%;
-    padding: 0.400em;
+    padding: 0.200em;
     border: 10px solid rgba(0, 0, 0, 0.06);
     float: right;
     background-color: #f2f2f2;
@@ -130,41 +130,41 @@ main {
             margin-bottom: 4.900em;
         }
     }
-}
 
-.articlerightpart__inside {
-    background-color: white;
-    padding: 0 1.200em;
-    border-radius: 4px;
-}
+    &__inside {
+        background-color: white;
+        padding: 0 1.200em;
+        border-radius: 4px;
+    }
 
-.articlerightpart__post {
-    font: 400 0.800em/1.500em "Arial";
-    padding-bottom: 1.900em;
-}
+    &__post {
+        font: 400 0.800em/1.500em "Arial";
+        padding-bottom: 1.900em;
+    }
 
-.articlerightpart__link {
-    font: 0.800em "Arial";
-    padding: 0 0 0.800em 0.800em;
-    text-transform: uppercase;
-    color: gray;
-}
+    &__link {
+        font: 0.800em "Arial";
+        padding: 0 0 0.800em 0.800em;
+        text-transform: uppercase;
+        color: gray;
 
-.articlerightpart__link--categoryandtags {
-    font-size: 0.700em;
-    padding: 0;
+        &--categoryandtags {
+            font-size: 0.700em;
+            padding: 0;
+        }
+    }
+
+    &__image {
+        display: inline-block;
+        border: 3px solid $brandedcolor;
+        margin: 0.800em 0.100em 0.200em 0.900em;
+    }
 }
 
 .articlelink__tag {
     font: 0.750em Arial;
     color: dimgray;
     text-transform: uppercase;
-}
-
-.articlerightpart__image {
-    display: inline-block;
-    border: 3px solid #5d9b9a;
-    margin: 0.800em 0.100em 0.200em 0.900em;
 }
 
 .fa-commenting,
@@ -179,7 +179,7 @@ main {
     height: 730px;
     vertical-align: top;
     display: inline-block;
-    border: 0.5px solid green;
+    // border: 0.5px solid green;
     @include respond-to(320) {
         display: none;
     }
@@ -189,41 +189,82 @@ main {
     @include respond-to(768) {
         display: none;
     }
-}
 
-.asideright__circle {
-    border: 0.5px solid #73227a;
-    text-align: center;
-}
+    &__circle {
+        border-bottom: 2px groove lightgray;
+        text-align: center;
 
-.asideright__circle__inside {
-    width: 6.500em;
-    height: 6.500em;
-    display: inline-block;
-    border: 10px solid white;
-    margin: 0 0.3em;
-    border-radius: 3.250em;
-    text-align: center;
-    vertical-align: middle;
-    background-color: #5d9b9a;
-}
+        &__inside {
+            width: 6.500em;
+            height: 6.500em;
+            display: inline-block;
+            border: 10px solid white;
+            margin: 0 0.3em;
+            border-radius: 3.250em;
+            text-align: center;
+            vertical-align: middle;
+            background-color: $brandedcolor;
+        }
 
-.asideright__circle__followers {
-  font-size: .800em;
-  display: inline-block;
-  color: dimgray;
-  padding: .300em 2.000em;
+        &__followers {
+            font-size: 0.800em;
+            display: inline-block;
+            color: dimgray;
+            padding: 0.600em 2.000em;
+        }
+    }
 }
 
 .fa-tumblr,
 .fa-twitter {
     color: white;
-    padding-top: .300em;
+    padding-top: 0.300em;
     font-size: 3.700em;
 }
 
 .paginator {
-    width: 100%;
-    height: 30px;
-    border: 0.5px solid green;
+    margin-top: 3.000em;
+    @include respond-to(320) {
+        text-align: center;
+        margin-bottom: 1.000em;
+    }
+    @include respond-to(480) {
+        text-align: center;
+        margin-bottom: 1.000em;
+    }
+    @include respond-to(768) {
+        top: -2.000em;
+        margin-left: 8.500em;
+    }
+    @include respond-to(992) {
+        margin-left: 7.000em;
+    }
+    @include respond-to(1200) {
+        margin-left: 10.700em;
+    }
+
+    &__menu {
+        padding: 0;
+
+        &__list {
+            width: 30px;
+            height: 30px;
+            background-color: #f2f2f2;
+            display: inline-block;
+            border: 1px solid lightgray;
+            text-align: center;
+            padding-top: 0.3em;
+            margin-right: 0.600em;
+
+            &:hover {
+                border: 1px solid dimgray;
+                background-color: lightgray;
+            }
+
+            a {
+                vertical-align: middle;
+                font-weight: bold;
+            }
+        }
+    }
 }

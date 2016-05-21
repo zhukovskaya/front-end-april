@@ -1,12 +1,54 @@
 // main: style.scss
 
 #footer {
-    height: 120px;
-    border: 0.5px solid blue;
-    margin-bottom: 5em;
+    // border: 0.5px solid blue;
+    border-top: 2px groove lightgray;
+    text-transform: uppercase;
+    margin-bottom: 5.000em;
+    padding: 0.500em;
+    @include respond-to(992) {
+        padding: 0.700em 7.000em;
+    }
+    @include respond-to(1200) {
+        padding: 0.700em 7.000em;
+    }
+
+    br {
+        display: none;
+        @include respond-to(320) {
+            display: block;
+        }
+    }
 }
 
-.rss-footer {
-    top: .100em;
+.rss--footer {
+    top: -4.300em;
     right: 7.500em;
+}
+
+.mainmenu--footer {
+    color: dimgray;
+    font-size: 0.700em;
+}
+
+.footerleftpart {
+    display: inline-block;
+    float: left;
+    font-size: 0.7500em;
+    padding-top: 0.300em;
+    color: dimgray;
+
+    &__text {
+        margin-top: 0.200em;
+    }
+}
+
+.footerrightpart {
+    display: inline-block;
+    float: right;
+    padding: 0;
+
+    .mainmenu {
+        margin-right: 1.200em;
+    }
 }
