@@ -26,9 +26,17 @@ html {
     }
 }
 
-h1 {}
+h1 {
+    font: 6.250em "p22_corinthiaregular";
+    color: rgb(255, 255, 255);
+}
 
-h3 {}
+h3 {
+    display: inline-block;
+    margin-top: 1.800em;
+    font: 1.250em "Bitter";
+    color: rgb(255, 255, 255);
+}
 
 h4 {}
 
@@ -45,12 +53,13 @@ figure {
 }
 
 ul {
-  padding: 0;
-  list-style: none;
+    padding: 0;
+    list-style: none;
 }
 
 .wrapper {
-    width: 99%;
+    width: 95%;
+    border: 0.1px solid red;
 }
 
 #back-to-top {
