@@ -1,5 +1,8 @@
 // main: style.scss
 
 #footer {
-
+    padding: 0 2.500em;
+    @include respond-to(1200) {
+        padding: 0 12.500em;
+    }
 }

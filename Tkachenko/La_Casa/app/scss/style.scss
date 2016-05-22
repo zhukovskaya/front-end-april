@@ -1,5 +1,6 @@
 //out: ../css/style.css
 @import "mixins/media";
+@import "mixins/triangle";
 
 * {
     position: relative;
@@ -26,16 +27,28 @@ html {
 }
 
 h1 {
-  margin-top: 1.800em;  
-    font: 6.250em "P22 Corinthia";
-    text-align: center;
-    color: rgb(255, 255, 255);
-}
-
-h3 {
-    margin-top: 1.800em;
     font: 1.250em "Bitter";
     color: rgb(255, 255, 255);
+    @include respond-to(992) {
+        margin-top: 1.800em;
+    }
+    @include respond-to(1200) {
+        margin-top: 1.800em;
+    }
+}
+
+h2 {
+    padding: 0 .500em .500em;
+    font: 2.250em "P22 Corinthia";
+    text-align: center;
+    color: rgb(255, 255, 255);
+    @include respond-to(992) {
+        font: 6.250em "P22 Corinthia";
+    }
+    @include respond-to(1200) {
+        margin-top: 1.800em;
+        font: 6.250em "P22 Corinthia";
+    }
 }
 
 h4 {}
@@ -57,9 +70,23 @@ ul {
     list-style: none;
 }
 
+li {
+    display: inline-block;
+}
+
+img {
+    width: 100%;
+}
+
 .wrapper {
-    width: 95%;
+    width: 100%;
     border: 0.1px solid red;
+    @include respond-to(992) {
+        width: 95%;
+    }
+    @include respond-to(1200) {
+        width: 95%;
+    }
 }
 
 #back-to-top {

@@ -1,12 +1,41 @@
 //main: style.scss
 
-main {
+main {}
+
+.mainmenu {
+  height: 3.000em;
+    padding: .500em;
+    background-color: #bfd9f2;
+    letter-spacing: 0.100em;
+    @include respond-to(768) {
+      padding: .500em 2.500em;
+    }
+    @include respond-to(992) {
+      padding: .500em 2.500em;
+    }
+    @include respond-to(1200) {
+      padding: 2.200em 12.500em 4.000em;
     }
 
-.maincontainer {
-    border: 0.1px solid rgb(215, 59, 115);
-    height: 100px;
+    &__question {
+        float: left;
+        margin-top: .2em;
+        font: 1.250em "Lato";
+        text-transform: uppercase;
+        color: rgb(149, 186, 223);
+    }
+
+    .fa-cog {
+        float: right;
+        color: rgb(160, 195, 229);
+    }
 }
 
-.section {
+.maincontainer {
+    padding: 0 2.500em;
+    @include respond-to(1200) {
+        padding: 0 12.500em;
     }
+}
+
+.section {}
