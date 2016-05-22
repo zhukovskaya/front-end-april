@@ -193,21 +193,21 @@ h2 + ul {
 
 .mainmenu {
   height: 3.000em;
-  padding: .500em;
+  padding: 0.500em;
   background-color: #bfd9f2;
   letter-spacing: 0.100em; }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     .mainmenu {
-      padding: .500em 2.500em; } }
+      padding: 0.500em 2.500em; } }
   @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .mainmenu {
-      padding: .500em 2.500em; } }
+      padding: 0.500em 2.500em; } }
   @media only screen and (min-width: 1200px) and (max-width: 4800px) {
     .mainmenu {
       padding: 2.200em 12.500em 4.000em; } }
   .mainmenu__question {
     float: left;
-    margin-top: .2em;
+    margin-top: 0.2em;
     font: 1.250em "Lato";
     text-transform: uppercase;
     color: #95badf; }
@@ -220,6 +220,25 @@ h2 + ul {
   @media only screen and (min-width: 1200px) and (max-width: 4800px) {
     .maincontainer {
       padding: 0 12.500em; } }
+
+.proposition {
+  margin-top: 6.300em; }
+
+.figure {
+  display: inline-block;
+  width: calc(92.6%/3); }
+  .figure__image {
+    height: 50%; }
+
+.empty {
+  width: 40px;
+  display: inline-block; }
+
+.price {
+  position: absolute;
+  border-radius: 4px;
+  background-color: white;
+  z-index: 100; }
 
 #footer {
   padding: 0 2.500em; }

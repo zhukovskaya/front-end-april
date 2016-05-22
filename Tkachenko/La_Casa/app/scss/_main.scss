@@ -3,23 +3,23 @@
 main {}
 
 .mainmenu {
-  height: 3.000em;
-    padding: .500em;
+    height: 3.000em;
+    padding: 0.500em;
     background-color: #bfd9f2;
     letter-spacing: 0.100em;
     @include respond-to(768) {
-      padding: .500em 2.500em;
+        padding: 0.500em 2.500em;
     }
     @include respond-to(992) {
-      padding: .500em 2.500em;
+        padding: 0.500em 2.500em;
     }
     @include respond-to(1200) {
-      padding: 2.200em 12.500em 4.000em;
+        padding: 2.200em 12.500em 4.000em;
     }
 
     &__question {
         float: left;
-        margin-top: .2em;
+        margin-top: 0.2em;
         font: 1.250em "Lato";
         text-transform: uppercase;
         color: rgb(149, 186, 223);
@@ -39,3 +39,27 @@ main {}
 }
 
 .section {}
+
+.proposition {
+    margin-top: 6.300em;
+}
+
+.figure {
+    display: inline-block;
+    width: calc(92.6%/3);
+    &__image {
+      height: 50%;
+    }
+}
+
+.empty {
+    width: 40px;
+    display: inline-block;
+}
+
+.price {
+    position: absolute;
+    border-radius: 4px;
+    background-color: white;
+    z-index: 100;
+}
