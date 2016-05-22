@@ -2,7 +2,73 @@
 
 #header {
     height: 800px;
-    padding: 6.250em 12.500em 0 12.500em;
-    border: 0.1px solid rgb(136, 226, 39);
-    background-image: url("../img/hero_small.png");
+    padding: 6.250em 12.500em 0;
+    border: 0.1px solid rgb(138, 226, 39);
+    background: url("../img/hero_small.png") center no-repeat #dadada;
+
+    & > ul {
+        position: absolute;
+        top: 0;
+
+    }
+}
+
+.headercontainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6.250em;
+    padding: 0 12.500em;
+    border: 0.1px solid rgb(119, 202, 252);
+    background-color: rgba(#b4b9bf, 0.65);
+}
+
+.headercontainer__left {
+    float: left;
+}
+
+.headercontainer__right {
+    float: right;
+    margin-top: 1.800em;
+
+    nav {
+        display: inline-block;
+    }
+}
+
+.mainmenu,
+.singin {
+    display: inline-block;
+    font: 1.000em "Lato";
+    color: rgb(255, 255, 255);
+}
+
+.mainmenu {
+    padding-right: 3.400em;
+}
+
+.singin {
+    width: 6.250em;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 2px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 2.500em;
+}
+
+.underh1 {
+    display: inline-block;
+
+    &__anchor {
+        padding: 0 0.400em;
+        font: 0.875em "Lato";
+        color: white;
+
+        &::after {
+            content: " - ";
+            position: absolute;
+            padding: 0 0.200em;
+        }
+    }
 }

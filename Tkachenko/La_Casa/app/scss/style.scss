@@ -1,6 +1,5 @@
 //out: ../css/style.css
 @import "mixins/media";
-@import "fonts";
 
 * {
     position: relative;
@@ -27,12 +26,13 @@ html {
 }
 
 h1 {
-    font: 6.250em "p22_corinthiaregular";
+  margin-top: 1.800em;  
+    font: 6.250em "P22 Corinthia";
+    text-align: center;
     color: rgb(255, 255, 255);
 }
 
 h3 {
-    display: inline-block;
     margin-top: 1.800em;
     font: 1.250em "Bitter";
     color: rgb(255, 255, 255);
@@ -99,6 +99,5 @@ ul {
 //     position: absolute;
 // }
 @import "header";
-@import "nav";
 @import "main";
 @import "footer";
