@@ -2,6 +2,8 @@
 @import "mixins/media";
 @import "mixins/triangle";
 
+$brandcolor: #dadada;
+
 * {
     position: relative;
     margin: 0 auto;
@@ -38,7 +40,7 @@ h1 {
 }
 
 h2 {
-    padding: 0 .500em .500em;
+    padding: 0 0.500em 0.500em;
     font: 2.250em "P22 Corinthia";
     text-align: center;
     color: rgb(255, 255, 255);
@@ -53,7 +55,12 @@ h2 {
 
 h4 {}
 
-h5 {}
+h5 {
+    padding: 1.4500em 0 0.700em;
+    font: 700 1.000em "Lato";
+    letter-spacing: .050em;
+    color: rgb(103, 101, 101);
+}
 
 a {
     color: inherit;

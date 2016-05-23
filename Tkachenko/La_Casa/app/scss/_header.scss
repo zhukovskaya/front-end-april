@@ -2,16 +2,16 @@
 
 #header {
     padding: 0.500em 2.500em 0;
-    background-color: #dadada;
+    background-color: $brandcolor;
     @include respond-to(992) {
         height: 600px;
         padding: 6.250em 12.500em 0;
-        background: url("../img/hero_small.png") bottom no-repeat #dadada;
+        background: url("../img/hero_small.png") bottom no-repeat $brandcolor;
     }
     @include respond-to(1200) {
         height: 800px;
         padding: 6.250em 12.500em 0;
-        background: url("../img/hero_small.png") center no-repeat #dadada;
+        background: url("../img/hero_small.png") center no-repeat $brandcolor;
     }
 }
 
@@ -70,10 +70,10 @@
     vertical-align: middle;
     text-align: center;
     line-height: 2.500em;
-    color: rgb(255, 255, 255);
+    color: #ffffff;
 
     &:hover {
-        outline: rgb(255, 255, 255) solid 2px;
+        outline: #ffffff solid 2px;
         transition: 0.5s;
         -moz-outline-radius: 2px;
     }
@@ -103,7 +103,7 @@ h2 + ul {
     &__anchor {
         padding: 0 0.800em;
         font: 0.875em "Lato";
-        color: white;
+        color: #ffffff;
 
         &:not(.underh2__anchor--last)::after {
             content: " - ";
