@@ -25,26 +25,20 @@ a {
 	height: 94px;
 	background: #3a3d40;
 	padding: 0 18%;
-		position: relative;
+	position: relative;
 }
 #header .logo {
-	box-sizing: border-box;
 	height: 94px;
-	float: left;
 	position: absolute;
 	top: 28%;
 }
 .header-navigation {
-	float: right;
-	height: 94px;
-	width: 78%;
-	padding: 3% 0;	
-	box-sizing: border-box;
-
+	
 }
 .header-navigation ul {
 	position: absolute;
-	right: 13%;
+	width: 44%;
+	right: 5%;
 	top: 28%;
 }
 .header-navigation ul li {

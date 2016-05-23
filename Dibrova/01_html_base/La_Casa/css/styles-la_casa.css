@@ -1,0 +1,169 @@
+/* Reset styles */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+*:before,
+*:after {
+  content: '';
+  display: table; }
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box; }
+
+/* Styles for our responsive site */
+/* Layouts */
+/* Header */
+.header {
+  max-width: 1500px;
+  height: 100px;
+  background-color: #b4b9bf;
+  margin: 0;
+  position: relative; }
+
+.header .logo {
+  /*box-sizing: border-box;*/
+  /*float: left;*/
+  position: absolute;
+  top: 41%; }
+
+.header-navigation {
+  /*float: left;*/ }
+
+.header-navigation ul {
+  position: absolute;
+  width: 400px;
+  right: 380px;
+  top: 41%; }
+
+.header-navigation ul li {
+  display: inline-block;
+  padding: 0 4.3%; }
+
+.header .login a, .header-navigation a {
+  text-decoration: none;
+  font-size: 1em;
+  font-family: arial;
+  text-transform: capitalize;
+  color: #fff; }
+
+.header .login {
+  float: right;
+  box-sizing: border-box;
+  height: 36px;
+  width: 100px;
+  border: 2px solid white;
+  padding: 8px 28px;
+  margin: 30px 285px; }
+
+@media screen and (max-width: 1500px) {
+  .header {
+    height: 100px; }
+
+  .header .logo {
+    width: 69px;
+    height: 14px;
+    left: 235px; } }
+@media screen and (max-width: 1150px) {
+  .header {
+    height: 90px; }
+
+  .header .logo {
+    width: 66px;
+    height: 13px;
+    left: 75px; }
+
+  .header-navigation ul {
+    right: 215px; }
+
+  .header .login {
+    margin: 25px 122px; } }
+@media screen and (max-width: 800px) {
+  .header {
+    height: 80px; }
+
+  .header .logo {
+    width: 59px;
+    height: 13px;
+    left: 30px; }
+
+  .header-navigation ul {
+    right: 160px; }
+
+  .header .login {
+    margin: 22px 75px; } }
+@media screen and (max-width: 700px) {
+  .header {
+    height: 100px; }
+
+  .header .logo {
+    width: 71px;
+    height: 14px;
+    left: 40px; }
+
+  .header .login, .header-navigation {
+    display: none; } }
+@media screen and (max-width: 500px) {
+  .header {
+    height: 120px; }
+
+  .header .logo {
+    width: 87px;
+    height: 19px;
+    left: 47px; } }
+/* Main */
+.main {
+  max-width: 1500px; }
+
+/* Sidebar */
+/* Footer */
+.footer {
+  max-width: 1000px; }
+
+/*# sourceMappingURL=styles-la_casa.css.map */
