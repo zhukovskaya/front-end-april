@@ -30,56 +30,50 @@
 }
 
 .maincontainer {
-  text-align: center;
-  @include respond-to(992) {
-      padding: 6.300em 1.500em 0;
-  }
+    text-align: center;
+    @include respond-to(992) {
+        padding: 6.300em 1.500em 0;
+    }
     @include respond-to(1200) {
         padding: 6.300em 12.500em 0;
     }
-}
-
-.price {
-    position: absolute;
-    top: 0.500em;
-    left: 0.700em;
-    padding: 0.850em 1.300em;
-    z-index: 100;
-    font: 700 1.000em "Lato";
-    border-radius: 4px;
-    background-color: #ffffff;
-    color: #524f4f;
-
 }
 
 .figure {
     display: inline-block;
     width: 46%;
     margin: .500em;
-    // margin-right: 1.000em;
     @include respond-to(992) {
-      width: 30%;
+        width: 30%;
     }
     @include respond-to(1200) {
-        width: calc(92.6%/3);
+        width: 340px;
         margin: auto;
         padding-bottom: 2.500em;
     }
 
-    & > img {
-        height: 10.000em;
-        @include respond-to(768) {
-            height: 16.000em;
-        }
-        @include respond-to(1200) {
-            height: 14.375em;
+    &__top {
+        background-color: $brandcolor;
+        height: 230px;
+        overflow: hidden;
+
+
+        &__price {
+            position: absolute;
+            top: .500em;
+            left: .700em;
+            padding: .850em 1.300em;
+            z-index: 100;
+            font: 700 1.000em "Lato";
+            border-radius: 4px;
+            background-color: #ffffff;
+            color: #524f4f;
         }
     }
 
     &__link {
         font: 0.750em "Lato";
         letter-spacing: 0.030em;
-        text-align: left;
         color: #9d9d9d;
 
         & + * {
@@ -92,15 +86,16 @@
 }
 
 figcaption {
-    margin-top: -4px;
     padding: 0 1.250em 1.600em;
     border: 2px solid #f2f1f1;
+    text-align: left;
 }
 
 .emptycolumnfirst,
 .emptycolumntwice {
     width: 40px;
     display: none;
+    overflow: hidden;
     @include respond-to(1200) {
         display: inline-block;
     }
@@ -109,8 +104,9 @@ figcaption {
 .emptycolumnthird {
     width: 40px;
     display: none;
+    overflow: hidden;
     @include respond-to(1200) {
-        display: inline-block;
+        display: none;
     }
 }
 
@@ -130,7 +126,7 @@ input[type=button] {
         left: calc(50% - 264px/2);
         width: 264px;
         height: 60px;
-        margin: 3.900em auto 6.200em;
+        margin: 3.800em auto 6.200em;
 
     }
 }

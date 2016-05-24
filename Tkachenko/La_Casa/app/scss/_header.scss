@@ -96,6 +96,7 @@ h2 + ul {
     }
     @include respond-to(1200) {
         display: block;
+        top: 100px;
     }
 }
 

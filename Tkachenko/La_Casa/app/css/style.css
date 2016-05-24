@@ -66,7 +66,7 @@ h4 {
       padding: 2.600em 0; } }
 
 h5 {
-  padding: 1.4500em 0 0.700em;
+  padding: 1.500em 0 0.700em;
   font: 700 1.000em "Lato";
   letter-spacing: 0.050em;
   text-align: left;
@@ -88,7 +88,7 @@ li:not(.footermenu__list):not(.aboutus) {
   display: inline-block; }
 
 img {
-  width: 100%; }
+  max-width: 100%; }
 
 .wrapper {
   width: 100%; }
@@ -205,7 +205,8 @@ h2 + ul {
       top: 200px; } }
   @media only screen and (min-width: 1200px) and (max-width: 4800px) {
     h2 + ul {
-      display: block; } }
+      display: block;
+      top: 100px; } }
 
 .underh2__anchor {
   padding: 0 0.800em;
@@ -249,17 +250,6 @@ h2 + ul {
     .maincontainer {
       padding: 6.300em 12.500em 0; } }
 
-.price {
-  position: absolute;
-  top: 0.500em;
-  left: 0.700em;
-  padding: 0.850em 1.300em;
-  z-index: 100;
-  font: 700 1.000em "Lato";
-  border-radius: 4px;
-  background-color: #ffffff;
-  color: #524f4f; }
-
 .figure {
   display: inline-block;
   width: 46%;
@@ -269,21 +259,26 @@ h2 + ul {
       width: 30%; } }
   @media only screen and (min-width: 1200px) and (max-width: 4800px) {
     .figure {
-      width: calc(92.6%/3);
+      width: 340px;
       margin: auto;
       padding-bottom: 2.500em; } }
-  .figure > img {
-    height: 10.000em; }
-    @media only screen and (min-width: 768px) and (max-width: 991px) {
-      .figure > img {
-        height: 16.000em; } }
-    @media only screen and (min-width: 1200px) and (max-width: 4800px) {
-      .figure > img {
-        height: 14.375em; } }
+  .figure__top {
+    background-color: #dadada;
+    height: 230px;
+    overflow: hidden; }
+    .figure__top__price {
+      position: absolute;
+      top: .500em;
+      left: .700em;
+      padding: .850em 1.300em;
+      z-index: 100;
+      font: 700 1.000em "Lato";
+      border-radius: 4px;
+      background-color: #ffffff;
+      color: #524f4f; }
   .figure__link {
     font: 0.750em "Lato";
     letter-spacing: 0.030em;
-    text-align: left;
     color: #9d9d9d; }
     .figure__link + * {
       font: 0.750em "Lato";
@@ -292,14 +287,15 @@ h2 + ul {
       color: #676767; }
 
 figcaption {
-  margin-top: -4px;
   padding: 0 1.250em 1.600em;
-  border: 2px solid #f2f1f1; }
+  border: 2px solid #f2f1f1;
+  text-align: left; }
 
 .emptycolumnfirst,
 .emptycolumntwice {
   width: 40px;
-  display: none; }
+  display: none;
+  overflow: hidden; }
   @media only screen and (min-width: 1200px) and (max-width: 4800px) {
     .emptycolumnfirst,
     .emptycolumntwice {
@@ -307,10 +303,11 @@ figcaption {
 
 .emptycolumnthird {
   width: 40px;
-  display: none; }
+  display: none;
+  overflow: hidden; }
   @media only screen and (min-width: 1200px) and (max-width: 4800px) {
     .emptycolumnthird {
-      display: inline-block; } }
+      display: none; } }
 
 input[type=button] {
   left: calc(50% - 15em/2);
@@ -329,7 +326,7 @@ input[type=button] {
       left: calc(50% - 264px/2);
       width: 264px;
       height: 60px;
-      margin: 3.900em auto 6.200em; } }
+      margin: 3.800em auto 6.200em; } }
 
 #footer {
   padding: 0.500em;
