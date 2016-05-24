@@ -47,9 +47,23 @@ h2 {
       font: 6.250em "P22 Corinthia"; } }
 
 h4 {
+  margin: 1.500em auto auto;
+  padding: 1.500em 0;
+  border-top: 1px solid #82abd4;
   font: 0.875em "Lato";
   text-align: center;
+  letter-spacing: 0.060em;
   color: #ffffff; }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    h4 {
+      padding: 2.600em 0; } }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    h4 {
+      padding: 2.600em 0; } }
+  @media only screen and (min-width: 1200px) and (max-width: 4800px) {
+    h4 {
+      margin: 3.600em auto 5.000em;
+      padding: 2.600em 0; } }
 
 h5 {
   padding: 1.4500em 0 0.700em;
@@ -70,15 +84,14 @@ ul {
   padding: 0;
   list-style: none; }
 
-li:not(.footermenu__list) {
+li:not(.footermenu__list):not(.aboutus) {
   display: inline-block; }
 
 img {
   width: 100%; }
 
 .wrapper {
-  width: 100%;
-  border: 0.1px solid red; }
+  width: 100%; }
   @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .wrapper {
       width: 95%; } }
@@ -229,6 +242,9 @@ h2 + ul {
 
 .maincontainer {
   text-align: center; }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .maincontainer {
+      padding: 6.300em 1.500em 0; } }
   @media only screen and (min-width: 1200px) and (max-width: 4800px) {
     .maincontainer {
       padding: 6.300em 12.500em 0; } }
@@ -316,17 +332,63 @@ input[type=button] {
       margin: 3.900em auto 6.200em; } }
 
 #footer {
-  padding: 0 2.500em;
+  padding: 0.500em;
   background-color: #95badf; }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    #footer {
+      padding: 2.500em; } }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    #footer {
+      padding: 2.500em;
+      margin-bottom: 2.000em; } }
   @media only screen and (min-width: 1200px) and (max-width: 4800px) {
     #footer {
-      padding: 0 12.500em; } }
+      padding: 6.000em 12.500em 0; } }
 
 .footermenu {
-  display: inline-block; }
+  display: inline-block;
+  width: calc(100%/3); }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .footermenu {
+      width: calc(70%/3); } }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .footermenu {
+      width: calc(70%/3); } }
+  @media only screen and (min-width: 1200px) and (max-width: 4800px) {
+    .footermenu {
+      width: calc(70%/3); } }
+  .footermenu__list, .aboutus {
+    padding-bottom: 1.100em;
+    font: 1.000em "Lato";
+    color: #ffffff; }
 
 .aboutussocial {
-  display: inline-block; }
+  vertical-align: top;
+  text-align: center; }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .aboutussocial {
+      width: 30%;
+      display: inline-block;
+      text-align: left; } }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .aboutussocial {
+      width: 30%;
+      display: inline-block;
+      text-align: left; } }
+  @media only screen and (min-width: 1200px) and (max-width: 4800px) {
+    .aboutussocial {
+      width: 30%;
+      display: inline-block;
+      text-align: left; } }
+  .aboutussocial .fa-facebook, .aboutussocial .fa-git, .aboutussocial .fa-skype, .aboutussocial .fa-twitter {
+    margin-right: 1.200em;
+    font-size: 1.100em;
+    color: #ffffff; }
+
+.aboutus {
+  padding-bottom: 1.500em;
+  line-height: 2.000em;
+  text-align: justify; }
 
 h4 a {
   font-weight: 700; }

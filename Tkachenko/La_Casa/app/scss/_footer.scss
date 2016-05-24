@@ -1,19 +1,80 @@
 // main: style.scss
 
 #footer {
-    padding: 0 2.500em;
+    padding: 0.500em;
     background-color: #95badf;
+    @include respond-to(768) {
+        padding: 2.500em;
+    }
+    @include respond-to(992) {
+        padding: 2.500em;
+        margin-bottom: 2.000em;
+    }
     @include respond-to(1200) {
-        padding: 0 12.500em;
+        padding: 6.000em 12.500em 0;
     }
 }
 
 .footermenu {
     display: inline-block;
+    width: calc(100%/3);
+    @include respond-to(768) {
+        width: calc(70%/3);
+    }
+    @include respond-to(992) {
+        width: calc(70%/3);
+    }
+    @include respond-to(1200) {
+        width: calc(70%/3);
+    }
+
+    &__list {
+        padding-bottom: 1.100em;
+        font: 1.000em "Lato";
+        color: #ffffff;
+    }
 }
 
 .aboutussocial {
-    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    @include respond-to(768) {
+        width: 30%;
+        display: inline-block;
+        text-align: left;
+
+    }
+    @include respond-to(992) {
+        width: 30%;
+        display: inline-block;
+        text-align: left;
+
+    }
+    @include respond-to(1200) {
+        width: 30%;
+        display: inline-block;
+        text-align: left;
+
+    }
+
+    .fa {
+        &-facebook,
+        &-git,
+        &-skype,
+        &-twitter {
+            margin-right: 1.200em;
+            font-size: 1.100em;
+            color: #ffffff;
+
+        }
+    }
+}
+
+.aboutus {
+    @extend .footermenu__list;
+    padding-bottom: 1.500em;
+    line-height: 2.000em;
+    text-align: justify;
 }
 
 h4 {

@@ -54,9 +54,23 @@ h2 {
 }
 
 h4 {
+    margin: 1.500em auto auto;
+    padding: 1.500em 0;
+    border-top: 1px solid #82abd4;
     font: 0.875em "Lato";
     text-align: center;
+    letter-spacing: 0.060em;
     color: #ffffff;
+    @include respond-to(768) {
+        padding: 2.600em 0;
+    }
+    @include respond-to(992) {
+        padding: 2.600em 0;
+    }
+    @include respond-to(1200) {
+        margin: 3.600em auto 5.000em;
+        padding: 2.600em 0;
+    }
 }
 
 h5 {
@@ -92,7 +106,7 @@ img {
 
 .wrapper {
     width: 100%;
-    border: 0.1px solid red;
+    // border: 0.1px solid red;
     @include respond-to(992) {
         width: 95%;
     }
