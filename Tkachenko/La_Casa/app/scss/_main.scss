@@ -30,7 +30,7 @@
 }
 
 .maincontainer {
-    padding: 0 2.500em;
+  text-align: center;
     @include respond-to(1200) {
         padding: 6.300em 12.500em 0;
     }
@@ -51,23 +51,40 @@
 
 .figure {
     display: inline-block;
-    width: calc(92.6%/3);
-    padding-bottom: 2.500em;
+    width: 46%;
+    margin: .500em;
+    // margin-right: 1.000em;
+    @include respond-to(992) {
+      width: 30%;
+    }
+    @include respond-to(1200) {
+        width: calc(92.6%/3);
+        margin: auto;
+        padding-bottom: 2.500em;
+    }
 
-    &__image {
-        height: 14.375em;
+    & > img {
+        height: 10.000em;
+        @include respond-to(768) {
+            height: 16.000em;
+        }
+        @include respond-to(1200) {
+            height: 14.375em;
+        }
     }
 
     &__link {
         font: 0.750em "Lato";
         letter-spacing: 0.030em;
+        text-align: left;
         color: #9d9d9d;
-    }
 
-    &__ftsq {
-        font: 0.750em "Lato";
-        letter-spacing: 0.030em;
-        color: #676767;
+        & + * {
+            font: 0.750em "Lato";
+            letter-spacing: 0.030em;
+            text-align: left;
+            color: #676767;
+        }
     }
 }
 
@@ -80,23 +97,38 @@ figcaption {
 .emptycolumnfirst,
 .emptycolumntwice {
     width: 40px;
-    display: inline-block;
+    display: none;
+    @include respond-to(1200) {
+        display: inline-block;
+    }
+}
+
+.emptycolumnthird {
+    width: 40px;
+    display: none;
+    @include respond-to(1200) {
+        display: inline-block;
+    }
 }
 
 input[type=button] {
+    left: calc(50% - 15em/2);
+    width: 15.000em;
+    height: 3.000em;
+    margin: .500em auto 1.000em;
     outline: none;
     border: 2px solid #afcce7;
     background-color: transparent;
+    border-radius: 30px;
     font: 1.000em "Lato";
     text-transform: uppercase;
     color: #afcce7;
     @include respond-to(1200) {
-      left: calc(50% - 264px/2);
+        left: calc(50% - 264px/2);
         width: 264px;
         height: 60px;
         margin: 3.900em auto 6.200em;
-        line-height: 60px;
-        border-radius: 30px;
+        // line-height: 60px;
 
     }
 }
