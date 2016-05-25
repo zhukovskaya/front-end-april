@@ -3,47 +3,51 @@
 #header {
     padding: 0.500em 2.500em 0;
     background-color: $brandcolor;
-    @include respond(992, 4800) {
-        padding: 6.250em 12.500em 0;
+    @include respond(992, 4801) {
+        padding: 6.250em 12.500em 23.125em;
         background: url("../img/hero_small.png") bottom no-repeat $brandcolor;
     }
-    @include respond-to(992) {
-        height: 600px;
-    }
-    @include respond-to(1200) {
-        height: 800px;
-    }
+    // @include respond-to(992) {
+    //     height: 600px;
+    // }
+    // @include respond-to(1200) {
+    //     height: 800px;
+    // }
 }
 
-.headercontainer {
+.headertop {
     width: 100%;
     padding: 0.500em;
-    @include respond(992, 4800) {
+    @include respond(992, 4801) {
         position: absolute;
         top: 0;
         left: 0;
-        height: 6.250em;
         background-color: rgba(#b4b9bf, .65);
     }
     @include respond-to(992) {
-        padding: 0 4.500em;
+        padding: 1.414em 4.500em 0;
     }
     @include respond-to(1200) {
-        padding: 0 12.500em;
+        padding: 1.414em 12.500em 0;
     }
 
     &__left {
-        @include respond(992, 4800) {
+        @include respond(992, 4801) {
             float: left;
         }
     }
 
     &__right {
-        @include respond(992, 4800) {
-            margin-top: 1.800em;
+        @include respond(992, 4801) {
             float: right;
         }
     }
+    // &::after {
+    //   @extend %clearfloat;
+    // }
+}
+
+.headerbottom {
 }
 
 .fa-bed:before,
@@ -84,7 +88,7 @@ h2 + ul {
         display: block;
         top: 200px;
     }
-    @include respond(1255, 4800) {
+    @include respond(1255, 4801) {
         display: block;
         top: 100px;
     }
