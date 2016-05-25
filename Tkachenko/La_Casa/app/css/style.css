@@ -28,7 +28,7 @@ h1 {
   color: #ffffff; }
   @media only screen and (min-width: 992px) and (max-width: 4799px) {
     h1 {
-      margin-top: 1.800em; } }
+      margin-bottom: 2.000em; } }
 
 h2 {
   padding: 0 0.500em 0.500em;
@@ -116,37 +116,29 @@ img {
   background-color: #dadada; }
   @media only screen and (min-width: 992px) and (max-width: 4800px) {
     #header {
-      padding: 6.250em 12.500em 0;
+      padding: 6.250em 12.500em 23.125em;
       background: url("../img/hero_small.png") bottom no-repeat #dadada; } }
-  @media only screen and (min-width: 992px) and (max-width: 1199px) {
-    #header {
-      height: 600px; } }
-  @media only screen and (min-width: 1200px) and (max-width: 4800px) {
-    #header {
-      height: 800px; } }
 
-.headercontainer {
+.headertop {
   width: 100%;
   padding: 0.500em; }
   @media only screen and (min-width: 992px) and (max-width: 4800px) {
-    .headercontainer {
+    .headertop {
       position: absolute;
       top: 0;
       left: 0;
-      height: 6.250em;
       background-color: rgba(180, 185, 191, 0.65); } }
   @media only screen and (min-width: 992px) and (max-width: 1199px) {
-    .headercontainer {
-      padding: 0 4.500em; } }
+    .headertop {
+      padding: 1.414em 4.500em 0; } }
   @media only screen and (min-width: 1200px) and (max-width: 4800px) {
-    .headercontainer {
-      padding: 0 12.500em; } }
+    .headertop {
+      padding: 1.414em 12.500em 0; } }
   @media only screen and (min-width: 992px) and (max-width: 4800px) {
-    .headercontainer__left {
+    .headertop__left {
       float: left; } }
   @media only screen and (min-width: 992px) and (max-width: 4800px) {
-    .headercontainer__right {
-      margin-top: 1.800em;
+    .headertop__right {
       float: right; } }
 
 .fa-bed:before,
@@ -220,7 +212,7 @@ h2 + ul {
   text-align: center; }
   @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .maincontainer {
-      padding: 6.300em 1.500em 0; } }
+      padding: 3.300em 1.500em 0; } }
   @media only screen and (min-width: 1200px) and (max-width: 4800px) {
     .maincontainer {
       padding-top: 6.300em;
@@ -290,8 +282,8 @@ input[type=button] {
   @media only screen and (min-width: 1200px) and (max-width: 4800px) {
     input[type=button] {
       left: calc(50% - 264px/2);
-      width: 264px;
-      height: 60px;
+      width: 16.500em;
+      height: 3.750em;
       margin: 3.800em auto 6.200em; } }
 
 #footer {

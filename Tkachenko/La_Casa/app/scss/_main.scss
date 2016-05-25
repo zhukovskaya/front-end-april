@@ -29,7 +29,7 @@
 .maincontainer {
     text-align: center;
     @include respond-to(992) {
-        padding: 6.300em 1.500em 0;
+        padding: 3.300em 1.500em 0;
     }
     @include respond-to(1200) {
         padding-top: 6.300em;
@@ -94,7 +94,6 @@ figcaption {
     text-align: left;
     @include respond-to(1200) {
         margin-top: auto;
-
     }
 }
 
@@ -112,8 +111,8 @@ input[type=button] {
     color: #afcce7;
     @include respond-to(1200) {
         left: calc(50% - 264px/2);
-        width: 264px;
-        height: 60px;
+        width: 16.500em;
+        height: 3.750em;
         margin: 3.800em auto 6.200em;
     }
 }
