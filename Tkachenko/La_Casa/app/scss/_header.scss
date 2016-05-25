@@ -3,53 +3,43 @@
 #header {
     padding: 0.500em 2.500em 0;
     background-color: $brandcolor;
-    @include respond-to(992) {
-        height: 600px;
+    @include respond(992, 4800) {
         padding: 6.250em 12.500em 0;
         background: url("../img/hero_small.png") bottom no-repeat $brandcolor;
     }
+    @include respond-to(992) {
+        height: 600px;
+    }
     @include respond-to(1200) {
         height: 800px;
-        padding: 6.250em 12.500em 0;
-        background: url("../img/hero_small.png") center no-repeat $brandcolor;
     }
 }
 
 .headercontainer {
     width: 100%;
     padding: 0.500em;
-    @include respond-to(992) {
+    @include respond(992, 4800) {
         position: absolute;
         top: 0;
         left: 0;
         height: 6.250em;
+        background-color: rgba(#b4b9bf, .65);
+    }
+    @include respond-to(992) {
         padding: 0 4.500em;
-        background-color: rgba(#b4b9bf, 0.65);
     }
     @include respond-to(1200) {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 6.250em;
         padding: 0 12.500em;
-        background-color: rgba(#b4b9bf, 0.65);
     }
 
     &__left {
-        @include respond-to(992) {
-            float: left;
-        }
-        @include respond-to(1200) {
+        @include respond(992, 4800) {
             float: left;
         }
     }
 
     &__right {
-        @include respond-to(992) {
-            margin-top: 1.800em;
-            float: right;
-        }
-        @include respond-to(1200) {
+        @include respond(992, 4800) {
             margin-top: 1.800em;
             float: right;
         }
@@ -90,11 +80,11 @@ h2 + ul {
     top: 100px;
     left: 50%;
     margin-left: -130px;
-    @include respond-to(992) {
+    @include respond(992, 1255) {
         display: block;
         top: 200px;
     }
-    @include respond-to(1200) {
+    @include respond(1255, 4800) {
         display: block;
         top: 100px;
     }

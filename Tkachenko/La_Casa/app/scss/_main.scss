@@ -42,7 +42,7 @@
 .figure {
     display: inline-block;
     width: 46%;
-    margin: .500em;
+    margin: 0.500em;
     @include respond-to(992) {
         width: 30%;
     }
@@ -57,12 +57,11 @@
         height: 230px;
         overflow: hidden;
 
-
         &__price {
             position: absolute;
-            top: .500em;
-            left: .700em;
-            padding: .850em 1.300em;
+            top: 0.500em;
+            left: 0.700em;
+            padding: 0.850em 1.300em;
             z-index: 100;
             font: 700 1.000em "Lato";
             border-radius: 4px;
@@ -114,7 +113,7 @@ input[type=button] {
     left: calc(50% - 15em/2);
     width: 15.000em;
     height: 3.000em;
-    margin: .500em auto 1.000em;
+    margin: 0.500em auto 1.000em;
     outline: none;
     border: 2px solid #afcce7;
     background-color: transparent;

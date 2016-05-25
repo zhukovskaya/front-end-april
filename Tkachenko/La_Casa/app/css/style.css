@@ -26,10 +26,7 @@
 h1 {
   font: 1.250em "Bitter";
   color: #ffffff; }
-  @media only screen and (min-width: 992px) and (max-width: 1199px) {
-    h1 {
-      margin-top: 1.800em; } }
-  @media only screen and (min-width: 1200px) and (max-width: 4800px) {
+  @media only screen and (min-width: 992px) and (max-width: 4799px) {
     h1 {
       margin-top: 1.800em; } }
 
@@ -38,13 +35,12 @@ h2 {
   font: 2.250em "P22 Corinthia";
   text-align: center;
   color: #ffffff; }
-  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+  @media only screen and (min-width: 992px) and (max-width: 4799px) {
     h2 {
       font: 6.250em "P22 Corinthia"; } }
   @media only screen and (min-width: 1200px) and (max-width: 4800px) {
     h2 {
-      margin-top: 1.800em;
-      font: 6.250em "P22 Corinthia"; } }
+      margin-top: 1.800em; } }
 
 h4 {
   margin: 1.500em auto auto;
@@ -54,16 +50,12 @@ h4 {
   text-align: center;
   letter-spacing: 0.060em;
   color: #ffffff; }
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
-    h4 {
-      padding: 2.600em 0; } }
-  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+  @media only screen and (min-width: 768px) and (max-width: 4799px) {
     h4 {
       padding: 2.600em 0; } }
   @media only screen and (min-width: 1200px) and (max-width: 4800px) {
     h4 {
-      margin: 3.600em auto 5.000em;
-      padding: 2.600em 0; } }
+      margin: 3.600em auto 5.000em; } }
 
 h5 {
   padding: 1.500em 0 0.700em;
@@ -92,10 +84,7 @@ img {
 
 .wrapper {
   width: 100%; }
-  @media only screen and (min-width: 992px) and (max-width: 1199px) {
-    .wrapper {
-      width: 95%; } }
-  @media only screen and (min-width: 1200px) and (max-width: 4800px) {
+  @media only screen and (min-width: 992px) and (max-width: 4799px) {
     .wrapper {
       width: 95%; } }
 
@@ -114,7 +103,6 @@ img {
   font-size: 3.000em;
   text-align: center;
   color: white;
-  cursor: pointer;
   opacity: 0; }
 
 #back-to-top:hover {
@@ -126,47 +114,37 @@ img {
 #header {
   padding: 0.500em 2.500em 0;
   background-color: #dadada; }
-  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+  @media only screen and (min-width: 992px) and (max-width: 4799px) {
     #header {
-      height: 600px;
       padding: 6.250em 12.500em 0;
       background: url("../img/hero_small.png") bottom no-repeat #dadada; } }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    #header {
+      height: 600px; } }
   @media only screen and (min-width: 1200px) and (max-width: 4800px) {
     #header {
-      height: 800px;
-      padding: 6.250em 12.500em 0;
-      background: url("../img/hero_small.png") center no-repeat #dadada; } }
+      height: 800px; } }
 
 .headercontainer {
   width: 100%;
   padding: 0.500em; }
-  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+  @media only screen and (min-width: 992px) and (max-width: 4799px) {
     .headercontainer {
       position: absolute;
       top: 0;
       left: 0;
       height: 6.250em;
-      padding: 0 4.500em;
       background-color: rgba(180, 185, 191, 0.65); } }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .headercontainer {
+      padding: 0 4.500em; } }
   @media only screen and (min-width: 1200px) and (max-width: 4800px) {
     .headercontainer {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 6.250em;
-      padding: 0 12.500em;
-      background-color: rgba(180, 185, 191, 0.65); } }
-  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+      padding: 0 12.500em; } }
+  @media only screen and (min-width: 992px) and (max-width: 4799px) {
     .headercontainer__left {
       float: left; } }
-  @media only screen and (min-width: 1200px) and (max-width: 4800px) {
-    .headercontainer__left {
-      float: left; } }
-  @media only screen and (min-width: 992px) and (max-width: 1199px) {
-    .headercontainer__right {
-      margin-top: 1.800em;
-      float: right; } }
-  @media only screen and (min-width: 1200px) and (max-width: 4800px) {
+  @media only screen and (min-width: 992px) and (max-width: 4799px) {
     .headercontainer__right {
       margin-top: 1.800em;
       float: right; } }
@@ -199,11 +177,11 @@ h2 + ul {
   top: 100px;
   left: 50%;
   margin-left: -130px; }
-  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+  @media only screen and (min-width: 992px) and (max-width: 1254px) {
     h2 + ul {
       display: block;
       top: 200px; } }
-  @media only screen and (min-width: 1200px) and (max-width: 4800px) {
+  @media only screen and (min-width: 1255px) and (max-width: 4799px) {
     h2 + ul {
       display: block;
       top: 100px; } }
@@ -253,7 +231,7 @@ h2 + ul {
 .figure {
   display: inline-block;
   width: 46%;
-  margin: .500em; }
+  margin: 0.500em; }
   @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .figure {
       width: 30%; } }
@@ -268,9 +246,9 @@ h2 + ul {
     overflow: hidden; }
     .figure__top__price {
       position: absolute;
-      top: .500em;
-      left: .700em;
-      padding: .850em 1.300em;
+      top: 0.500em;
+      left: 0.700em;
+      padding: 0.850em 1.300em;
       z-index: 100;
       font: 700 1.000em "Lato";
       border-radius: 4px;
@@ -313,7 +291,7 @@ input[type=button] {
   left: calc(50% - 15em/2);
   width: 15.000em;
   height: 3.000em;
-  margin: .500em auto 1.000em;
+  margin: 0.500em auto 1.000em;
   outline: none;
   border: 2px solid #afcce7;
   background-color: transparent;

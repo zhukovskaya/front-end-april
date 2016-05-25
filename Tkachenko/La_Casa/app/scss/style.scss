@@ -31,10 +31,7 @@ html {
 h1 {
     font: 1.250em "Bitter";
     color: #ffffff;
-    @include respond-to(992) {
-        margin-top: 1.800em;
-    }
-    @include respond-to(1200) {
+    @include respond(992, 4800) {
         margin-top: 1.800em;
     }
 }
@@ -44,12 +41,11 @@ h2 {
     font: 2.250em "P22 Corinthia";
     text-align: center;
     color: #ffffff;
-    @include respond-to(992) {
+    @include respond(992, 4800) {
         font: 6.250em "P22 Corinthia";
     }
     @include respond-to(1200) {
         margin-top: 1.800em;
-        font: 6.250em "P22 Corinthia";
     }
 }
 
@@ -61,15 +57,11 @@ h4 {
     text-align: center;
     letter-spacing: 0.060em;
     color: #ffffff;
-    @include respond-to(768) {
-        padding: 2.600em 0;
-    }
-    @include respond-to(992) {
+    @include respond(768, 4800) {
         padding: 2.600em 0;
     }
     @include respond-to(1200) {
         margin: 3.600em auto 5.000em;
-        padding: 2.600em 0;
     }
 }
 
@@ -106,11 +98,7 @@ img {
 
 .wrapper {
     width: 100%;
-    // border: 0.1px solid red;
-    @include respond-to(992) {
-        width: 95%;
-    }
-    @include respond-to(1200) {
+    @include respond(992, 4800) {
         width: 95%;
     }
 }
@@ -130,7 +118,6 @@ img {
     font-size: 3.000em;
     text-align: center;
     color: white;
-    cursor: pointer;
     opacity: 0;
 }
 
