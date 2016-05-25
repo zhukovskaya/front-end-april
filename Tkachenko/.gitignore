@@ -1,4 +1,6 @@
 /**/node_modules
 /**/dist
 /**/bower_components
+/**/*.png
+/**/*.psd
 npm-debug.log
