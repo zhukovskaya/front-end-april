@@ -34,10 +34,7 @@ h1 {
     font: ultra-expanded 3.000em "AmericanTypewriter";
     text-transform: uppercase;
     letter-spacing: 0.042em;
-    @include respond-to(320) {
-        text-align: center;
-    }
-    @include respond-to(480) {
+    @include respond(320, 768) {
         text-align: center;
     }
     @include respond-to(768) {
@@ -64,20 +61,19 @@ a {
 
 figure {
     margin: auto;
-    @include respond-to(320) {
-        text-align: center;
-    }
-    @include respond-to(480) {
+    @include respond(320, 768) {
         text-align: center;
     }
 }
 
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
 .wrapper {
     width: 99%;
-    @include respond-to(992) {
-        width: 79%;
-    }
-    @include respond-to(1200) {
+    @include respond(992, 4801) {
         width: 79%;
     }
 }
@@ -87,10 +83,7 @@ figure {
     top: 2.400em;
     right: 8.500em;
     color: dimgray;
-    @include respond-to(320) {
-        display: none;
-    }
-    @include respond-to(480) {
+    @include respond(320, 768) {
         display: none;
     }
 
@@ -99,11 +92,11 @@ figure {
         font-size: 1.400em;
     }
 
-    &_listitem {
+    &__listitem {
         display: block;
         text-transform: uppercase;
 
-        &_anchor {
+        &__anchor {
             font: 700 0.700em "Arial";
         }
     }
@@ -129,7 +122,6 @@ figure {
     font-size: 3.000em;
     text-align: center;
     color: white;
-    cursor: pointer;
     opacity: 0;
 }
 
@@ -140,16 +132,6 @@ figure {
 #back-to-top.show {
     opacity: 1;
 }
-
-// %notBorderNotOutline {
-//     outline: none;
-//     border: none;
-// }
-
-// %contentAbsolute {
-//     content: '';
-//     position: absolute;
-// }
 @import "header";
 @import "nav";
 @import "main";

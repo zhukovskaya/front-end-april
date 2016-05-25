@@ -5,10 +5,7 @@
   padding: 0.500em;
     border-top: 2px groove lightgray;
     text-transform: uppercase;
-    @include respond-to(992) {
-        padding: 0.700em 7.000em;
-    }
-    @include respond-to(1200) {
+    @include respond(992, 4801) {
         padding: 0.700em 7.000em;
     }
 
@@ -31,7 +28,6 @@
 }
 
 .footerleftpart {
-    display: inline-block;
     float: left;
     font-size: 0.7500em;
     padding-top: 0.300em;
@@ -43,7 +39,6 @@
 }
 
 .footerrightpart {
-    display: inline-block;
     float: right;
     padding: 0;
 

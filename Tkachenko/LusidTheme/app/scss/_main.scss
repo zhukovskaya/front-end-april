@@ -12,10 +12,7 @@ main {
 .section {
     display: inline-block;
     width: 100%;
-    @include respond-to(992) {
-        width: 73%;
-    }
-    @include respond-to(1200) {
+    @include respond(992, 4801) {
         width: 73%;
     }
 }
@@ -50,24 +47,15 @@ main {
         }
 
         & > br {
-            @include respond-to(992) {
-                display: none;
-            }
-            @include respond-to(1200) {
+            @include respond(992, 4801) {
                 display: none;
             }
         }
-        @include respond-to(992) {
-            text-align: left;
-        }
-        @include respond-to(1200) {
+        @include respond(992, 4801) {
             text-align: left;
         }
     }
-    @include respond-to(320) {
-        display: none;
-    }
-    @include respond-to(480) {
+    @include respond(320, 768) {
         display: none;
     }
     @include respond-to(992) {
@@ -98,10 +86,7 @@ main {
     &__category,
     &__tags {
         text-align: center;
-        @include respond-to(992) {
-            text-align: left;
-        }
-        @include respond-to(1200) {
+        @include respond(992, 4801) {
             text-align: left;
         }
     }
@@ -116,10 +101,7 @@ main {
     @include respond-to(768) {
         width: 85%;
     }
-    @include respond-to(992) {
-        width: 78%;
-    }
-    @include respond-to(1200) {
+    @include respond(992, 4801) {
         width: 78%;
     }
 
@@ -175,15 +157,8 @@ main {
     display: inline-block;
     padding: 0 1.400em;
     width: 26%;
-    height: 730px;
     vertical-align: top;
-    @include respond-to(320) {
-        display: none;
-    }
-    @include respond-to(480) {
-        display: none;
-    }
-    @include respond-to(768) {
+    @include respond(320, 992) {
         display: none;
     }
 
@@ -225,11 +200,7 @@ main {
 
 .paginator {
     margin-top: 3.000em;
-    @include respond-to(320) {
-        margin-bottom: 1.000em;
-        text-align: center;
-    }
-    @include respond-to(480) {
+    @include respond(320, 768) {
         margin-bottom: 1.000em;
         text-align: center;
     }
@@ -327,10 +298,7 @@ main {
     margin-top: 2.000em;
     text-transform: uppercase;
 
-    ul {
-        list-style: none;
-        padding-left: 0;
-    }
+    
 
     &__list {
         margin-top: 0.600em;

@@ -41,10 +41,7 @@ h1 {
   font: ultra-expanded 3.000em "AmericanTypewriter";
   text-transform: uppercase;
   letter-spacing: 0.042em; }
-  @media only screen and (min-width: 0px) and (max-width: 479px) {
-    h1 {
-      text-align: center; } }
-  @media only screen and (min-width: 480px) and (max-width: 767px) {
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
     h1 {
       text-align: center; } }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -67,19 +64,17 @@ a {
 
 figure {
   margin: auto; }
-  @media only screen and (min-width: 0px) and (max-width: 479px) {
-    figure {
-      text-align: center; } }
-  @media only screen and (min-width: 480px) and (max-width: 767px) {
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
     figure {
       text-align: center; } }
 
+ul {
+  list-style: none;
+  padding-left: 0; }
+
 .wrapper {
   width: 99%; }
-  @media only screen and (min-width: 992px) and (max-width: 1199px) {
-    .wrapper {
-      width: 79%; } }
-  @media only screen and (min-width: 1200px) and (max-width: 4800px) {
+  @media only screen and (min-width: 992px) and (max-width: 4800px) {
     .wrapper {
       width: 79%; } }
 
@@ -88,19 +83,16 @@ figure {
   top: 2.400em;
   right: 8.500em;
   color: dimgray; }
-  @media only screen and (min-width: 0px) and (max-width: 479px) {
-    .rss {
-      display: none; } }
-  @media only screen and (min-width: 480px) and (max-width: 767px) {
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
     .rss {
       display: none; } }
   .rss .fa-2x {
     padding-right: 0.500em;
     font-size: 1.400em; }
-  .rss_listitem {
+  .rss__listitem {
     display: block;
     text-transform: uppercase; }
-    .rss_listitem_anchor {
+    .rss__listitem__anchor {
       font: 700 0.700em "Arial"; }
 
 .mainmenu {
@@ -122,7 +114,6 @@ figure {
   font-size: 3.000em;
   text-align: center;
   color: white;
-  cursor: pointer;
   opacity: 0; }
 
 #back-to-top:hover {
@@ -134,10 +125,7 @@ figure {
 #header {
   padding: 1.000em 0;
   border-top: 10px solid rgba(0, 0, 0, 0.06); }
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
-    #header {
-      padding: 1.800em 6.500em; } }
-  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+  @media only screen and (min-width: 768px) and (max-width: 1199px) {
     #header {
       padding: 1.800em 6.500em; } }
   @media only screen and (min-width: 1200px) and (max-width: 4800px) {
@@ -168,10 +156,7 @@ figure {
 .section {
   display: inline-block;
   width: 100%; }
-  @media only screen and (min-width: 992px) and (max-width: 1199px) {
-    .section {
-      width: 73%; } }
-  @media only screen and (min-width: 1200px) and (max-width: 4800px) {
+  @media only screen and (min-width: 992px) and (max-width: 4800px) {
     .section {
       width: 73%; } }
 
@@ -194,22 +179,13 @@ figure {
       content: " 31 people"; }
     .articleleftpart .fa:last-of-type::after {
       content: " admin"; }
-    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    @media only screen and (min-width: 992px) and (max-width: 4800px) {
       .articleleftpart .fa > br {
         display: none; } }
-    @media only screen and (min-width: 1200px) and (max-width: 4800px) {
-      .articleleftpart .fa > br {
-        display: none; } }
-    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    @media only screen and (min-width: 992px) and (max-width: 4800px) {
       .articleleftpart .fa {
         text-align: left; } }
-    @media only screen and (min-width: 1200px) and (max-width: 4800px) {
-      .articleleftpart .fa {
-        text-align: left; } }
-  @media only screen and (min-width: 0px) and (max-width: 479px) {
-    .articleleftpart {
-      display: none; } }
-  @media only screen and (min-width: 480px) and (max-width: 767px) {
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
     .articleleftpart {
       display: none; } }
   @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -230,10 +206,7 @@ figure {
     padding-top: 0.400em; }
   .articleleftpart__category, .articleleftpart__tags {
     text-align: center; }
-    @media only screen and (min-width: 992px) and (max-width: 1199px) {
-      .articleleftpart__category, .articleleftpart__tags {
-        text-align: left; } }
-    @media only screen and (min-width: 1200px) and (max-width: 4800px) {
+    @media only screen and (min-width: 992px) and (max-width: 4800px) {
       .articleleftpart__category, .articleleftpart__tags {
         text-align: left; } }
 
@@ -246,10 +219,7 @@ figure {
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     .articlerightpart {
       width: 85%; } }
-  @media only screen and (min-width: 992px) and (max-width: 1199px) {
-    .articlerightpart {
-      width: 78%; } }
-  @media only screen and (min-width: 1200px) and (max-width: 4800px) {
+  @media only screen and (min-width: 992px) and (max-width: 4800px) {
     .articlerightpart {
       width: 78%; } }
   @media only screen and (min-width: 1200px) and (max-width: 4800px) {
@@ -289,15 +259,8 @@ figure {
   display: inline-block;
   padding: 0 1.400em;
   width: 26%;
-  height: 730px;
   vertical-align: top; }
-  @media only screen and (min-width: 0px) and (max-width: 479px) {
-    .asideright {
-      display: none; } }
-  @media only screen and (min-width: 480px) and (max-width: 767px) {
-    .asideright {
-      display: none; } }
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
+  @media only screen and (min-width: 320px) and (max-width: 991px) {
     .asideright {
       display: none; } }
   .asideright__circle {
@@ -329,11 +292,7 @@ figure {
 
 .paginator {
   margin-top: 3.000em; }
-  @media only screen and (min-width: 0px) and (max-width: 479px) {
-    .paginator {
-      margin-bottom: 1.000em;
-      text-align: center; } }
-  @media only screen and (min-width: 480px) and (max-width: 767px) {
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
     .paginator {
       margin-bottom: 1.000em;
       text-align: center; } }
@@ -407,9 +366,6 @@ figure {
 .asidemenu {
   margin-top: 2.000em;
   text-transform: uppercase; }
-  .asidemenu ul {
-    list-style: none;
-    padding-left: 0; }
   .asidemenu__list {
     margin-top: 0.600em;
     padding: .400em;
@@ -426,10 +382,7 @@ figure {
   padding: 0.500em;
   border-top: 2px groove lightgray;
   text-transform: uppercase; }
-  @media only screen and (min-width: 992px) and (max-width: 1199px) {
-    #footer {
-      padding: 0.700em 7.000em; } }
-  @media only screen and (min-width: 1200px) and (max-width: 4800px) {
+  @media only screen and (min-width: 992px) and (max-width: 4800px) {
     #footer {
       padding: 0.700em 7.000em; } }
   #footer br {
@@ -447,7 +400,6 @@ figure {
   font-size: 0.700em; }
 
 .footerleftpart {
-  display: inline-block;
   float: left;
   font-size: 0.7500em;
   padding-top: 0.300em;
@@ -456,7 +408,6 @@ figure {
     margin-top: 0.200em; }
 
 .footerrightpart {
-  display: inline-block;
   float: right;
   padding: 0; }
   .footerrightpart .mainmenu {
