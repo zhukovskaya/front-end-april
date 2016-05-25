@@ -1,6 +1,11 @@
 /**/node_modules
 /**/dist
 /**/bower_components
+<<<<<<< HEAD
 /**/*.png
 /**/*.psd
+=======
+/**/*.psd
+/**/*.png
+>>>>>>> master
 npm-debug.log
