@@ -3,11 +3,10 @@
 #footer {
     padding: 0.500em;
     background-color: #95badf;
-    @include respond-to(768) {
+    @include respond(768, 1200) {
         padding: 2.500em;
     }
     @include respond-to(992) {
-        padding: 2.500em;
         margin-bottom: 2.000em;
     }
     @include respond-to(1200) {
@@ -18,13 +17,7 @@
 .footermenu {
     display: inline-block;
     width: calc(100%/3);
-    @include respond-to(768) {
-        width: calc(70%/3);
-    }
-    @include respond-to(992) {
-        width: calc(70%/3);
-    }
-    @include respond-to(1200) {
+    @include respond(768, 4801) {
         width: calc(70%/3);
     }
 
@@ -38,23 +31,10 @@
 .aboutussocial {
     vertical-align: top;
     text-align: center;
-    @include respond-to(768) {
+    @include respond(768, 4801) {
         width: 30%;
         display: inline-block;
         text-align: left;
-
-    }
-    @include respond-to(992) {
-        width: 30%;
-        display: inline-block;
-        text-align: left;
-
-    }
-    @include respond-to(1200) {
-        width: 30%;
-        display: inline-block;
-        text-align: left;
-
     }
 
     .fa {
@@ -65,7 +45,6 @@
             margin-right: 1.200em;
             font-size: 1.100em;
             color: #ffffff;
-
         }
     }
 }

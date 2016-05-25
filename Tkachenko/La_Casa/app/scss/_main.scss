@@ -5,10 +5,7 @@
     padding: 0.500em;
     background-color: #bfd9f2;
     letter-spacing: 0.100em;
-    @include respond-to(768) {
-        padding: 0.500em 2.500em;
-    }
-    @include respond-to(992) {
+    @include respond(768, 1200) {
         padding: 0.500em 2.500em;
     }
     @include respond-to(1200) {
@@ -35,7 +32,13 @@
         padding: 6.300em 1.500em 0;
     }
     @include respond-to(1200) {
-        padding: 6.300em 12.500em 0;
+        padding-top: 6.300em;
+        padding-left: 12.500em;
+        padding-right: calc(12.500em - 40px);
+    }
+    @include respond(1200, 1600) {
+        padding-left: 1.500em;
+        padding-right: calc(1.500em - 40px);
     }
 }
 
@@ -48,14 +51,14 @@
     }
     @include respond-to(1200) {
         width: 340px;
-        margin: auto;
-        padding-bottom: 2.500em;
+        margin: auto 40px 2.500em auto;
     }
 
     &__top {
-        background-color: $brandcolor;
-        height: 230px;
-        overflow: hidden;
+        @include respond-to(1200) {
+            height: 230px;
+            overflow: hidden;
+        }
 
         &__price {
             position: absolute;
@@ -85,27 +88,13 @@
 }
 
 figcaption {
+    margin-top: -4px;
     padding: 0 1.250em 1.600em;
     border: 2px solid #f2f1f1;
     text-align: left;
-}
-
-.emptycolumnfirst,
-.emptycolumntwice {
-    width: 40px;
-    display: none;
-    overflow: hidden;
     @include respond-to(1200) {
-        display: inline-block;
-    }
-}
+        margin-top: auto;
 
-.emptycolumnthird {
-    width: 40px;
-    display: none;
-    overflow: hidden;
-    @include respond-to(1200) {
-        display: none;
     }
 }
 
@@ -126,6 +115,5 @@ input[type=button] {
         width: 264px;
         height: 60px;
         margin: 3.800em auto 6.200em;
-
     }
 }

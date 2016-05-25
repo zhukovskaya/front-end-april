@@ -3,7 +3,7 @@
 #header {
     padding: 0.500em 2.500em 0;
     background-color: $brandcolor;
-    @include respond(992, 4800) {
+    @include respond(992, 4801) {
         padding: 6.250em 12.500em 0;
         background: url("../img/hero_small.png") bottom no-repeat $brandcolor;
     }
@@ -18,7 +18,7 @@
 .headercontainer {
     width: 100%;
     padding: 0.500em;
-    @include respond(992, 4800) {
+    @include respond(992, 4801) {
         position: absolute;
         top: 0;
         left: 0;
@@ -33,13 +33,13 @@
     }
 
     &__left {
-        @include respond(992, 4800) {
+        @include respond(992, 4801) {
             float: left;
         }
     }
 
     &__right {
-        @include respond(992, 4800) {
+        @include respond(992, 4801) {
             margin-top: 1.800em;
             float: right;
         }
@@ -84,7 +84,7 @@ h2 + ul {
         display: block;
         top: 200px;
     }
-    @include respond(1255, 4800) {
+    @include respond(1255, 4801) {
         display: block;
         top: 100px;
     }

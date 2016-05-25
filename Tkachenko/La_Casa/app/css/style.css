@@ -26,10 +26,7 @@
 h1 {
   font: 1.250em "Bitter";
   color: #ffffff; }
-  @media only screen and (min-width: 992px) and (max-width: 1199px) {
-    h1 {
-      margin-top: 1.800em; } }
-  @media only screen and (min-width: 1200px) and (max-width: 4800px) {
+  @media only screen and (min-width: 992px) and (max-width: 4799px) {
     h1 {
       margin-top: 1.800em; } }
 
@@ -38,13 +35,12 @@ h2 {
   font: 2.250em "P22 Corinthia";
   text-align: center;
   color: #ffffff; }
-  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+  @media only screen and (min-width: 992px) and (max-width: 4799px) {
     h2 {
       font: 6.250em "P22 Corinthia"; } }
   @media only screen and (min-width: 1200px) and (max-width: 4800px) {
     h2 {
-      margin-top: 1.800em;
-      font: 6.250em "P22 Corinthia"; } }
+      margin-top: 1.800em; } }
 
 h4 {
   margin: 1.500em auto auto;
@@ -54,19 +50,15 @@ h4 {
   text-align: center;
   letter-spacing: 0.060em;
   color: #ffffff; }
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
-    h4 {
-      padding: 2.600em 0; } }
-  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+  @media only screen and (min-width: 768px) and (max-width: 4799px) {
     h4 {
       padding: 2.600em 0; } }
   @media only screen and (min-width: 1200px) and (max-width: 4800px) {
     h4 {
-      margin: 3.600em auto 5.000em;
-      padding: 2.600em 0; } }
+      margin: 3.600em auto 5.000em; } }
 
 h5 {
-  padding: 1.4500em 0 0.700em;
+  padding: 1.500em 0 0.700em;
   font: 700 1.000em "Lato";
   letter-spacing: 0.050em;
   text-align: left;
@@ -88,14 +80,11 @@ li:not(.footermenu__list):not(.aboutus) {
   display: inline-block; }
 
 img {
-  width: 100%; }
+  max-width: 100%; }
 
 .wrapper {
   width: 100%; }
-  @media only screen and (min-width: 992px) and (max-width: 1199px) {
-    .wrapper {
-      width: 95%; } }
-  @media only screen and (min-width: 1200px) and (max-width: 4800px) {
+  @media only screen and (min-width: 992px) and (max-width: 4800px) {
     .wrapper {
       width: 95%; } }
 
@@ -114,7 +103,6 @@ img {
   font-size: 3.000em;
   text-align: center;
   color: white;
-  cursor: pointer;
   opacity: 0; }
 
 #back-to-top:hover {
@@ -126,7 +114,7 @@ img {
 #header {
   padding: 0.500em 2.500em 0;
   background-color: #dadada; }
-  @media only screen and (min-width: 992px) and (max-width: 4799px) {
+  @media only screen and (min-width: 992px) and (max-width: 4800px) {
     #header {
       padding: 6.250em 12.500em 0;
       background: url("../img/hero_small.png") bottom no-repeat #dadada; } }
@@ -140,7 +128,7 @@ img {
 .headercontainer {
   width: 100%;
   padding: 0.500em; }
-  @media only screen and (min-width: 992px) and (max-width: 4799px) {
+  @media only screen and (min-width: 992px) and (max-width: 4800px) {
     .headercontainer {
       position: absolute;
       top: 0;
@@ -153,10 +141,10 @@ img {
   @media only screen and (min-width: 1200px) and (max-width: 4800px) {
     .headercontainer {
       padding: 0 12.500em; } }
-  @media only screen and (min-width: 992px) and (max-width: 4799px) {
+  @media only screen and (min-width: 992px) and (max-width: 4800px) {
     .headercontainer__left {
       float: left; } }
-  @media only screen and (min-width: 992px) and (max-width: 4799px) {
+  @media only screen and (min-width: 992px) and (max-width: 4800px) {
     .headercontainer__right {
       margin-top: 1.800em;
       float: right; } }
@@ -193,7 +181,7 @@ h2 + ul {
     h2 + ul {
       display: block;
       top: 200px; } }
-  @media only screen and (min-width: 1255px) and (max-width: 4799px) {
+  @media only screen and (min-width: 1255px) and (max-width: 4800px) {
     h2 + ul {
       display: block;
       top: 100px; } }
@@ -212,10 +200,7 @@ h2 + ul {
   padding: 0.500em;
   background-color: #bfd9f2;
   letter-spacing: 0.100em; }
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
-    .mainmenu {
-      padding: 0.500em 2.500em; } }
-  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+  @media only screen and (min-width: 768px) and (max-width: 1199px) {
     .mainmenu {
       padding: 0.500em 2.500em; } }
   @media only screen and (min-width: 1200px) and (max-width: 4800px) {
@@ -238,7 +223,13 @@ h2 + ul {
       padding: 6.300em 1.500em 0; } }
   @media only screen and (min-width: 1200px) and (max-width: 4800px) {
     .maincontainer {
-      padding: 6.300em 12.500em 0; } }
+      padding-top: 6.300em;
+      padding-left: 12.500em;
+      padding-right: calc(12.500em - 40px); } }
+  @media only screen and (min-width: 1200px) and (max-width: 1599px) {
+    .maincontainer {
+      padding-left: 1.500em;
+      padding-right: calc(1.500em - 40px); } }
 
 .figure {
   display: inline-block;
@@ -250,22 +241,21 @@ h2 + ul {
   @media only screen and (min-width: 1200px) and (max-width: 4800px) {
     .figure {
       width: 340px;
-      margin: auto;
-      padding-bottom: 2.500em; } }
-  .figure__top {
-    background-color: #dadada;
-    height: 230px;
-    overflow: hidden; }
-    .figure__top__price {
-      position: absolute;
-      top: 0.500em;
-      left: 0.700em;
-      padding: 0.850em 1.300em;
-      z-index: 100;
-      font: 700 1.000em "Lato";
-      border-radius: 4px;
-      background-color: #ffffff;
-      color: #524f4f; }
+      margin: auto 40px 2.500em auto; } }
+  @media only screen and (min-width: 1200px) and (max-width: 4800px) {
+    .figure__top {
+      height: 230px;
+      overflow: hidden; } }
+  .figure__top__price {
+    position: absolute;
+    top: 0.500em;
+    left: 0.700em;
+    padding: 0.850em 1.300em;
+    z-index: 100;
+    font: 700 1.000em "Lato";
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #524f4f; }
   .figure__link {
     font: 0.750em "Lato";
     letter-spacing: 0.030em;
@@ -277,27 +267,13 @@ h2 + ul {
       color: #676767; }
 
 figcaption {
+  margin-top: -4px;
   padding: 0 1.250em 1.600em;
   border: 2px solid #f2f1f1;
   text-align: left; }
-
-.emptycolumnfirst,
-.emptycolumntwice {
-  width: 40px;
-  display: none;
-  overflow: hidden; }
   @media only screen and (min-width: 1200px) and (max-width: 4800px) {
-    .emptycolumnfirst,
-    .emptycolumntwice {
-      display: inline-block; } }
-
-.emptycolumnthird {
-  width: 40px;
-  display: none;
-  overflow: hidden; }
-  @media only screen and (min-width: 1200px) and (max-width: 4800px) {
-    .emptycolumnthird {
-      display: none; } }
+    figcaption {
+      margin-top: auto; } }
 
 input[type=button] {
   left: calc(50% - 15em/2);
@@ -321,12 +297,11 @@ input[type=button] {
 #footer {
   padding: 0.500em;
   background-color: #95badf; }
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
+  @media only screen and (min-width: 768px) and (max-width: 1199px) {
     #footer {
       padding: 2.500em; } }
   @media only screen and (min-width: 992px) and (max-width: 1199px) {
     #footer {
-      padding: 2.500em;
       margin-bottom: 2.000em; } }
   @media only screen and (min-width: 1200px) and (max-width: 4800px) {
     #footer {
@@ -335,13 +310,7 @@ input[type=button] {
 .footermenu {
   display: inline-block;
   width: calc(100%/3); }
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
-    .footermenu {
-      width: calc(70%/3); } }
-  @media only screen and (min-width: 992px) and (max-width: 1199px) {
-    .footermenu {
-      width: calc(70%/3); } }
-  @media only screen and (min-width: 1200px) and (max-width: 4800px) {
+  @media only screen and (min-width: 768px) and (max-width: 4800px) {
     .footermenu {
       width: calc(70%/3); } }
   .footermenu__list, .aboutus {
@@ -352,17 +321,7 @@ input[type=button] {
 .aboutussocial {
   vertical-align: top;
   text-align: center; }
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
-    .aboutussocial {
-      width: 30%;
-      display: inline-block;
-      text-align: left; } }
-  @media only screen and (min-width: 992px) and (max-width: 1199px) {
-    .aboutussocial {
-      width: 30%;
-      display: inline-block;
-      text-align: left; } }
-  @media only screen and (min-width: 1200px) and (max-width: 4800px) {
+  @media only screen and (min-width: 768px) and (max-width: 4800px) {
     .aboutussocial {
       width: 30%;
       display: inline-block;
