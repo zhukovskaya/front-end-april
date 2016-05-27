@@ -10,6 +10,9 @@
 .header .logo {
 	/*box-sizing: border-box;*/
 	/*float: left;*/
+	width: 69px;
+	height: 14px;
+	left: 13%;
 	position: absolute;
 	top: 41%;
 }
@@ -18,13 +21,13 @@
 }
 .header-navigation ul {
 	position: absolute;
-	width: 400px;
-	right: 380px;
+	width: 470px;
+	right: 20%;
 	top: 41%;
 }
 .header-navigation ul li {
 	display: inline-block;
-	padding: 0 4.3%;
+	padding: 0 5.1%;
 }
 .header .login a, .header-navigation a {
 	text-decoration: none;
@@ -40,31 +43,28 @@
 	width: 100px;
 	border: 2px solid white;
 	padding: 8px 28px;
-	margin: 30px 285px;
+	margin: 30px 13%;
 }
 
 
 
 
 
-@media screen and (max-width: $hugeWidth) {
+@media screen and (max-width: 1500px) {
 	.header {
 	height: $headerHeight;
 	}
 	.header .logo {
-	width: 69px;
-	height: 14px;
-	left: 235px;
+
 	}
 }
 
-@media screen and (max-width: $bigWidth) {
+@media screen and (max-width: 1150px) {
 	.header {
 	height: $headerHeight / 10 * 9;
 	}
 	.header .logo {
 	width: 66px;
-	height: 13px;
 	left: 75px;
 	}
 	.header-navigation ul {
@@ -76,13 +76,12 @@
 
 }
 
-@media screen and (max-width: $mediumWidth) {
+@media screen and (max-width: 800px) {
 	.header {
 	height: $headerHeight / 10 * 8;
 	}
 	.header .logo {
 	width: 59px;
-	height: 13px;
 	left: 30px;
 	}
 	.header-navigation ul {
@@ -93,13 +92,12 @@
 	}
 }
 
-@media screen and (max-width: $smallWidth) {
+@media screen and (max-width: 700px) {
 	.header {
 	height: $headerHeight;
 	}
 	.header .logo {
 	width: 71px;
-	height: 14px;
 	left: 40px;
 	}
 	.header .login, .header-navigation {
@@ -107,7 +105,7 @@
 	}
 }
 
-@media screen and (max-width: $extrasmallWidth) {
+@media screen and (max-width: 500px) {
 	.header {
 	height: $headerHeight / 10 * 12;
 	}
