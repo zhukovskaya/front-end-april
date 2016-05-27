@@ -1,1 +1,10 @@
-Front End Tasks.
+It's adaptable adaptive site.
+
+Building:
+
+  Step 1: bower i
+  Step 2: npm i
+  Step 3: gulp init
+  Step 4: gulp build
+
+Bingo!!!
