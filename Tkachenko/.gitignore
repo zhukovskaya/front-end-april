@@ -1,11 +1,8 @@
 /**/node_modules
 /**/dist
 /**/bower_components
-<<<<<<< HEAD
-/**/*.png
-/**/*.psd
-=======
+/**/app/css/font-awesome.vendor.css
+/**/app/css/normalize.vendor.css
 /**/*.psd
 /**/*.png
->>>>>>> master
 npm-debug.log
