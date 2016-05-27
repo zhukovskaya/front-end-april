@@ -109,6 +109,8 @@ gulp.task('init', function() {
    gulp.src('bower_components/normalize-css/normalize.css')
    .pipe(rename('normalize.vendor.css'))
    .pipe(gulp.dest('app/css/'));
+   gulp.src('bower_components/font-awesome/fonts/*.{ttf,woff,woff2,eot,otf,svg}')
+   .pipe(gulp.dest('app/fonts'));
 });
 
 /*WATCH*/
