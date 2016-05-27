@@ -1,6 +1,9 @@
-html,body {
+html,body,ul {
   margin: 0;
   padding: 0;
+}
+li {
+  list-style: none;
 }
 h1 {
   margin-top: 0;
@@ -32,6 +35,11 @@ h1 {
   background: gray;
   color: white;
 }
+.answer-small {
+  width: 169px;
+  padding: 0;
+  margin-top: 2px;
+}
 .formatedForm input {
   margin-bottom: 5px;
 }
@@ -57,4 +65,48 @@ h1 {
 }
 .farm {
   text-align: left;
+}
+.dissabled {
+  display: none;
+}
+.enabled {
+  display: block;
+  background: white;
+  padding: 5px;
+}
+.special {
+  margin-top: 10px;
+  padding-top: 10px;
+  background: #83A2C3;
+  color: white;
+  text-align: center;
+}
+.special-container {
+  padding-bottom: 20px;
+}
+.special-container p{
+  text-align: left;
+  padding: 0 10px;
+  font-size: 20px;
+}
+.special-container input {
+  text-align: center;
+  font-size: 25px;
+  width: 90%;
+  height: 30px;
+  margin-bottom: 10px;
+  border: 0;
+}
+.special-container h3 {
+  display: block;
+  background: #46B87A;
+}
+.big-green-btn {
+  border: 0;
+  background: #46B87A;
+  color: white;
+  font-weight: bold; 
+}
+#storyLine {
+  color: black;
 }
