@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>js is comming</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+  <main class="main-style">
+    <h1>Chalenges</h1>
+    <section>  
+      <div class="question">
+        <h2>1. What number's bigger</h2>
+        <p>Write a function named greaterNum that:
+          takes 2 arguments, both numbers.
+          returns whichever number is the greater (higher) number.
+          Call that function 2 times with different number pairs, and log the output to make sure it works (e.g. "The greater number of 5 and 10 is 10.").
+        </p>
+        <form class="formatedForm clearfix">
+          <input type="button" id="quest1submit" value="press me" onclick="firstQuest()" class="submit-btn right-floated" />
+          <input type="number" id="quest1input1" class="left-floated" placeholder="Enter first number" />
+          <input type="number" id="quest1input2" class="left-floated" placeholder="Enter second number" />   
+        </form>
+        <div id="firstAnswer" class="answer">Answer</div>
+      </div>
+    </section>
+    <section>  
+      <div class="question">
+      <h2>2. The World Translator</h2>
+      <p>Write a function named helloWorld that:
+        takes 1 argument, a language code (e.g. "es", "de", "en")
+        returns "Hello, World" for the given language, for atleast 3 languages. It should default to returning English.
+        Call that function for each of the supported languages and log the result to make sure it works.
+      </p>
+        <form class="formatedForm clearfix">
+          <input type="button" 
+            id="quest2submit" 
+            value="press me" 
+            onclick="secondQuest()" 
+            class="submit-btn right-floated" />
+          <input type="text" 
+            id="quest2input1" 
+            class="left-floated" 
+            value="Hello World!" 
+            readonly />
+          <select id="quest2input2">
+            <option>English</option>
+            <option>Espaniol</option>
+            <option>Deutsch</option>
+          </select>   
+        </form>
+        <div id="secondAnswer" class="answer">Translation</div>
+      </div>
+    </section>
+    <section>  
+      <div class="question">
+      <h2>3. The Grade Assigner</h2>
+      <p>Write a function named assignGrade that:
+        takes 1 argument, a number score.
+        returns a grade for the score, either "A", "B", "C", "D", or "F".
+        Call that function for a few different scores and log the result to make sure it works.
+      </p>
+        <form class="formatedForm clearfix" onsubmit="thirdQuest(); return false;">
+          <input type="number" 
+            min="0" 
+            max="100" 
+            id="quest3input" 
+            placeholder="Mark [0-100]" 
+            required 
+            class="left-floated quest3input" />
+          <input type="submit" 
+            value="press me"
+            class="submit-btn right-floated" />
+        </form>
+        <div id="thirdAnswer" class="answer">Your Mark</div>
+      </div>
+    </section>
+    <section>  
+      <div class="question">
+      <h2>4. The Pluralizer</h2>
+      <p>Write a function named pluralize that:
+        takes 2 arguments, a noun and a number.
+        returns the number and pluralized form, like "5 cats" or "1 dog".
+        Call that function for a few different scores and log the result to make sure it works.
+        Bonus: Make it handle a few collective nouns like "sheep" and "geese".
+      </p>
+        <form class="formatedForm clearfix" onsubmit="fourthQuest(); return false;">
+          <input type="submit"  
+            value="take"
+            class="submit-btn right-floated" />
+          <input type="text" 
+            id="quest4input1" 
+            class="left-floated" 
+            placeholder="Input noun [Aa-Zz]"
+            pattern="[A-Za-z]{3,}" /> 
+          <input type="number"
+            id="quest4input2"
+            class="left-floated"  
+            min="0"
+            placeholder="How many?" /> 
+        </form>
+        <div id="fourthAnswer" class="answer farm">You have : </div>
+      </div>
+    </section>
+  </main>
+  <script type='text/javascript' src='js/magic.js'></script>
+</body>
+</html>
