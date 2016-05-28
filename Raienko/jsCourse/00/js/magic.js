@@ -24,18 +24,18 @@ function secondQuest () {
 }
 
 function thirdQuest () {
-  var argument = document.getElementById("quest3input").value;
-  var answer;
-    if (argument >= 95) {
-      answer="A";
-    } else if (argument >= 85) {
-        answer="B";
-      } else if (argument >= 75) {
-          answer="C";
-        } else if (argument >= 65) {
-            answer="D";
-          } else {answer="F";}
-  document.getElementById("thirdAnswer").innerText = (answer);
+  var markNuerous = document.getElementById("quest3input").value;
+  var mark;
+    if (markNuerous >= 95) {
+      mark="A";
+    } else if (markNuerous >= 85) {
+       mark="B";
+      } else if (markNuerous >= 75) {
+          mark="C";
+        } else if (markNuerous >= 65) {
+            mark="D";
+          } else {mark="F";}
+  document.getElementById("thirdAnswer").innerText = (mark);
 }
 
 function fourthQuest () {
@@ -53,7 +53,7 @@ function fourthQuest () {
 }
 
 function smallTasksStarter () {
-  // enable choosen li , disable all other 
+  // enable choosen li with task description , disable all other 
   var choosenTask = document.getElementById("smallTasks").value;
   var i=0;
   while (i < 11) {
@@ -70,12 +70,13 @@ function smallTasksStarter () {
 }
 
 function smallTasksChecker () {
-  // recieve choosen li from input.valu 
+  // recieve choosen li from hidden input
   var choosenTask = document.getElementById('smallTasksTrick').value;
   
   var inputedValue = document.getElementById('smallTasksInput').value;
   var answer="Choose task first!";
 
+  // launch task checker according to choosen task
   switch (choosenTask) {
     case "1": {
       if (inputedValue == "0") {answer="BEPHO!";} else {answer="HEBEPHO!";}
@@ -120,7 +121,7 @@ function storyGenerator () {
   document.getElementById('jobTitle').textContent = document.getElementById('jobTitleInp').value;
   document.getElementById('cityTitle').textContent = document.getElementById('cityTitleInp').value;
   document.getElementById('partnersName').textContent = document.getElementById('partnersNameInp').value;
-
+  //show block, that contains story
   document.getElementById('storyLine').className = "enabled";
 }
 
