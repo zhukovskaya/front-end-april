@@ -55,37 +55,102 @@ function assignGrade() {
             document.getElementById('task3_ta').innerHTML = 'Error';
     }
 }
+// Task 4
+
+function pluralize() {
+    var noun = document.getElementById('task4_1').value;
+    var number = document.getElementById('task4_2').value;
+    if ((number > 0)&&(number != 1)&&(noun != 'cats')&&(noun != 'dogs')) {
+      document.getElementById('task4_ta').innerHTML = +number + ' ' + noun + 's';
+    } else if ((number > 0)&&(number == 1)&&(noun != 'cats')&&(noun != 'dogs')) {
+      document.getElementById('task4_ta').innerHTML = +number + ' ' + noun;
+    } else if ((number > 0)&&(number == 1)&&(noun == 'cats')) {
+      document.getElementById('task4_ta').innerHTML = +number + ' cat';
+    } else if ((number > 0)&&(number == 1)&&(noun == 'dogs')) {
+      document.getElementById('task4_ta').innerHTML = +number + ' dog';
+    } else {
+      document.getElementById('task4_ta').innerHTML = 'Error';
+    }
+}
+
+// Task 5
+
+function task5() {
+    var a = document.getElementById('task5_1').value;
+    var output = (a == 0) ? 'Верно!' : 'Неверно!';
+    document.getElementById('task5_ta').innerHTML = output;
+}
+
+// Task 6
+
+function task6() {
+    var a = document.getElementById('task6_1').value;
+    var output = (a > 0) ? 'Верно!' : 'Неверно!';
+    document.getElementById('task6_ta').innerHTML = output;
+}
+
+// Task 7
+
+function task7() {
+    var a = document.getElementById('task7_1').value;
+    var output = (a < 0) ? 'Верно!' : 'Неверно!';
+    document.getElementById('task7_ta').innerHTML = output;
+}
+
+// Task 8
+
+function task8() {
+    var a = document.getElementById('task8_1').value;
+    var output = (a >= 0) ? 'Верно!' : 'Неверно!';
+    document.getElementById('task8_ta').innerHTML = output;
+}
+
+// Task 9
+
+function task9() {
+    var a = document.getElementById('task9_1').value;
+    var output = (a <= 0) ? 'Верно!' : 'Неверно!';
+    document.getElementById('task9_ta').innerHTML = output;
+}
+
+// Task 10
+
+function task10() {
+    var a = document.getElementById('task10_1').value;
+    var output = (a != 0) ? 'Верно!' : 'Неверно!';
+    document.getElementById('task10_ta').innerHTML = output;
+}
 
 // Task 11
 
 function task11() {
     var a = document.getElementById('task11_1').value;
-  output = (a === 'test')?'Верно!':'Неверно!';
-  document.getElementById('task11_ta').innerHTML = output;
+    var output = (a === 'test') ? 'Верно!' : 'Неверно!';
+    document.getElementById('task11_ta').innerHTML = output;
 }
 
 // Task 12
 
 function task12() {
     var a = document.getElementById('task12_1').value;
-  output = (a === '1')?'Верно!':'Неверно!';
-  document.getElementById('task12_ta').innerHTML = output;
+    var output = (a === '1') ? 'Верно!' : 'Неверно!';
+    document.getElementById('task12_ta').innerHTML = output;
 }
 
 // Task 13
 
 function task13() {
     var test = document.getElementById('task13_1').value;
-  output = (test == 'true')?'Верно!':'Неверно!';
-  document.getElementById('task13_ta').innerHTML = output;
+    var output = (test == 'true') ? 'Верно!' : 'Неверно!';
+    document.getElementById('task13_ta').innerHTML = output;
 }
 
 // Task 14
 
 function task14() {
     var test = document.getElementById('task14_1').value;
-  output = (test != 'true')?'Верно!':'Неверно!';
-  document.getElementById('task14_ta').innerHTML = output;
+    var output = (test != 'true') ? 'Верно!' : 'Неверно!';
+    document.getElementById('task14_ta').innerHTML = output;
 }
 
 // Task 15
@@ -93,7 +158,7 @@ function task14() {
 function task15() {
     var a = document.getElementById('task15_1').value;
     var b = document.getElementById('task15_2').value;
-    var result = ((+a + +b) > 5)?5:(+a + +b)*10;
+    var result = ((+a + +b) > 5) ? 5 : (+a + +b) * 10;
     document.getElementById('task15_ta').innerHTML = result;
 }
 
