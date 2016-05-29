@@ -177,7 +177,7 @@ function leapYear(array) {
 /*
  17. Write a JavaScript program to shuffle an array.
  */
-function shuffleArray() {
+function shuffleArray(array) {
 
 }
 
@@ -190,7 +190,7 @@ function shuffleArray() {
  console.log(binarySearch(items, 1)); //0
  console.log(binarySearch(items, 5)); //4
  */
-function binarySearch() {
+function binarySearch(array, target) {
 
 }
 
@@ -202,14 +202,14 @@ function binarySearch() {
  Expected Output :
  [4, 5, 8, 10, 12, 13]
  */
-function sumOfInvidual() {
+function sumOfInvidual(array1,array2) {
 
 };
 
 /*
  20. Write a JavaScript program to find duplicate values in a JavaScript array.
  */
-function findDuplicate() {
+function findDuplicate(array) {
 
 }
 
@@ -220,7 +220,7 @@ function findDuplicate() {
  console.log(flattenNested([1, [2], [3, [[4]]],[5,6]], true));
  [1, 2, 3, [[4]], 5, 6]
  */
-function flattenNested() {
+function flattenNested(array) {
 
 }
 
@@ -229,7 +229,7 @@ function flattenNested() {
  console.log(computeUnion([1, 2, 3], [100, 2, 1, 10]));
  [1, 2, 3, 10, 100]
  */
-function computeUnion() {
+function computeUnion(array1, array2) {
 
 };
 
@@ -242,7 +242,7 @@ function computeUnion() {
  console.log(difference([1, 2, 3], [100, 2, 1, 10]));
  ["3", "10", "100"]
  */
-function difference() {
+function difference(array1, array2) {
 
 };
 
@@ -346,7 +346,7 @@ function removeElement(array, target) {
  console.log(findElement([2, 5, 9, 6], 5));
  [2, 9, 6]
  */
-function findElement() {
+function findElement(array, target) {
 
 }
 
