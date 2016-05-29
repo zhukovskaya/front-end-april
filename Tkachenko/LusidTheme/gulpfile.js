@@ -49,7 +49,7 @@ gulp.task('png', () => {
 });
 
 /*создание css*/
-gulp.task('sass', function() {
+gulp.task('sass', () => {
     return gulp.src('app/scss/**/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('app/css'));
@@ -78,15 +78,6 @@ gulp.task('css', () => {
         .pipe(livereload());
 });
 
-/*операции со шрифтами*/
-gulp.task('fonts', function() {
-    gulp.src(['fonts/*.ttf'])
-        .pipe(ttf2woff())
-        .pipe(ttf2woff2())
-        .pipe(ttf2eot())
-        .pipe(gulp.dest('dist/fonts/'));
-});
-
 /*операции с js*/
 gulp.task('compress', () => {
     return gulp.src('app/scripts/*.js')
@@ -97,20 +88,22 @@ gulp.task('compress', () => {
 
 /*операции со шрифтами*/
 gulp.task('copyfonts', function() {
-   gulp.src('app/fonts/*.{ttf,woff,woff2,eot,otf,svg,icon}')
-   .pipe(gulp.dest('dist/fonts'));
+    gulp.src('app/fonts/*.{ttf,woff,woff2,eot,otf,svg,icon}')
+        .pipe(gulp.dest('dist/fonts'));
 });
 
 /*инициализация*/
-gulp.task('init', function() {
-   gulp.src('bower_components/font-awesome/css/font-awesome.css')
-   .pipe(rename('font-awesome.vendor.css'))
-   .pipe(gulp.dest('app/css/'));
-   gulp.src('bower_components/normalize-css/normalize.css')
-   .pipe(rename('normalize.vendor.css'))
-   .pipe(gulp.dest('app/css/'));
-   gulp.src('bower_components/font-awesome/fonts/*.{ttf,woff,woff2,eot,otf,svg}')
-   .pipe(gulp.dest('app/fonts'));
+gulp.task('init', () => {
+    gulp.src('bower_components/font-awesome/css/font-awesome.css')
+        .pipe(rename('font-awesome.vendor.css'))
+        .pipe(gulp.dest('app/css/'));
+    gulp.src('bower_components/normalize-css/normalize.css')
+        .pipe(rename('normalize.vendor.css'))
+        .pipe(gulp.dest('app/css/'));
+    gulp.src('bower_components/font-awesome/fonts/*.{ttf,woff,woff2,eot,otf,svg}')
+        .pipe(gulp.dest('app/fonts'));
+    gulp.src('app/img/*.ico')
+        .pipe(gulp.dest('dist/img'));
 });
 
 /*WATCH*/
