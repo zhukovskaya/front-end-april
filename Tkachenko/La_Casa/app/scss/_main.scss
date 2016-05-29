@@ -22,12 +22,12 @@
 
     &__list {
         width: 100%;
-        height: 15.000em;
         position: absolute;
         top: 99px;
         left: 0;
         display: none;
         z-index: 101;
+        padding: 4.000em 12.000em 1.000em 4.500em;
         background-color: #cbe0f4;
         border: 1px solid #aac8e4;
         @include respond(320, 768) {
@@ -73,6 +73,32 @@
                 right: 2.500em;
                 @include triangle(1.500em, #aac8e4, up);
             }
+        }
+
+        &__link {
+          padding-left: .400em;
+            font: 1.250em "Lato";
+            line-height: 86.5px;
+            text-transform: uppercase;
+            color: #95badf;
+        }
+
+        &--borderright {
+            border-right: 2px solid #aac8e4;
+        }
+
+    }
+
+    li {
+        width: 47%;
+        padding-right: 4.500em;
+        margin-right: 2.000em;
+        margin-bottom: 3.800em;
+        i {
+          float: right;
+          top: 1.500em;
+          font: normal normal normal 1.250em/1 FontAwesome;
+          color: #95badf;
         }
     }
 
