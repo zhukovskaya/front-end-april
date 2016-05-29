@@ -67,7 +67,7 @@ function getLastElements(array, n) {
  "Red,Green,White,Black"
  "Red+Green+White+Black"
  */
-function join(array) {
+function join(array, separator) {
 
 };
 
