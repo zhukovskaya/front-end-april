@@ -22,3 +22,18 @@ if ($('#back-to-top').length) {
         }, 700);
     });
 }
+
+
+// ____________________________________________________________________
+
+var counter = 0;
+
+$('.fa-cog').click(function(clickmenu) {
+    clickmenu.preventDefault();
+    counter++;
+    if((counter%2) == 0) {
+      $('main div.mainmenu div.mainmenu__list').removeClass('nohidden');
+    } else {
+      $('main div.mainmenu div.mainmenu__list').addClass('nohidden');
+    }
+});
