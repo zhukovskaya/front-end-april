@@ -216,7 +216,9 @@ h2 + ul {
     border: 1px solid #aac8e4; }
     @media only screen and (min-width: 320px) and (max-width: 767px) {
       .mainmenu__list {
-        top: 36px; } }
+        top: 36px;
+        padding: 1.000em;
+        text-align: center; } }
     @media only screen and (min-width: 768px) and (max-width: 1199px) {
       .mainmenu__list {
         top: 42px; } }
@@ -279,18 +281,39 @@ h2 + ul {
           border-left: 0.75em solid transparent;
           border-right: 0.75em solid transparent; } }
     .mainmenu__list__link {
-      padding-left: .400em;
+      padding-left: 0.400em;
       font: 1.250em "Lato";
       line-height: 86.5px;
       text-transform: uppercase;
       color: #95badf; }
+      @media only screen and (min-width: 320px) and (max-width: 835px) {
+        .mainmenu__list__link {
+          line-height: 1.250em; } }
     .mainmenu__list--borderright {
       border-right: 2px solid #aac8e4; }
+      @media only screen and (min-width: 320px) and (max-width: 835px) {
+        .mainmenu__list--borderright {
+          border-right: transparent; } }
+    .mainmenu__list hr {
+      width: 100%;
+      margin: 1.900em auto;
+      border: 0;
+      border-bottom: 2px solid #aac8e4; }
+      @media only screen and (min-width: 320px) and (max-width: 835px) {
+        .mainmenu__list hr {
+          display: none; } }
   .mainmenu li {
     width: 47%;
     padding-right: 4.500em;
-    margin-right: 2.000em;
-    margin-bottom: 3.800em; }
+    margin-right: 2.000em; }
+    @media only screen and (min-width: 320px) and (max-width: 835px) {
+      .mainmenu li {
+        width: 100%;
+        padding: 1.000em;
+        margin-right: auto; } }
+    @media only screen and (min-width: 835px) and (max-width: 1402px) {
+      .mainmenu li {
+        width: 45%; } }
     .mainmenu li i {
       float: right;
       top: 1.500em;
@@ -300,6 +323,9 @@ h2 + ul {
     float: right;
     color: #a1c4e6;
     cursor: pointer; }
+  @media only screen and (min-width: 320px) and (max-width: 835px) {
+    .mainmenu .fa-calendar-check-o {
+      display: none; } }
 
 .nohidden {
   display: block; }
