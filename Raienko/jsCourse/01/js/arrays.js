@@ -700,7 +700,27 @@ function removeFalse(array) {
  }]
  */
 function sortByTitle(array) {
+  var titles=[];
+  var i=0;
+  var sorted=[];
+  var outputArray=[];
+  array.forEach(function(item){
+    titles[i]=item.title;
+    i++;
+  });
 
+  sorted=(sort(titles));
+  i=0;
+  sorted.forEach(function(nextTitle){
+    array.forEach(function(currentObject){
+    if (currentObject.title==nextTitle){
+      outputArray[i]=currentObject;
+      i++;
+    }
+    });
+  });
+  console.log(outputArray);
+  return outputArray;
 }
 
 /*26. Write a JavaScript program to find a pair of elements (indices of the two numbers) from an given array whose sum equals a specific target number.
