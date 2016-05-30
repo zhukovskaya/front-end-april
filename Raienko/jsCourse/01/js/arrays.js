@@ -32,6 +32,7 @@ function cloneArray(array) {
 
     console.log(clonedArray);
     return clonedArray;
+
   } else {return false;}
 }
 
@@ -148,6 +149,8 @@ function join(array,separator) {
  */
 function setDashes(string) {
   if (string) {
+    console.log(string);
+    string=string+"";
     if (typeof string == 'string') {
       var i=0;
       var outputString="";
@@ -171,6 +174,7 @@ function setDashes(string) {
   } else {return false;}
 }
 
+
 /*
  7. Write a JavaScript program to sort the items of an array.
  Sample array : var arr1 = [ 3, 8, 7, 6, 5, -4, 3, 2, 1 ];
@@ -185,7 +189,7 @@ function sort(array) {
     for (j = 0; j < len; j++) {
       outputArray[j]=array[j];
     }
-    console.log("Before :",outputArray);
+    console.log("Before sort:",outputArray);
     for (j = 0; j < len-1; j++) {
         var swapped = false;
         var i = 0;
@@ -201,7 +205,7 @@ function sort(array) {
         if(!swapped)
             break;
     }
-    console.log("After :",outputArray);
+    console.log("After sort:",outputArray);
     return outputArray;
 
   } else {return false;}
@@ -344,21 +348,27 @@ function removeDuplicate(array) {
       var len = array.length;
       var outputArray=[];
       var duplication;
+      var numberToStr1;
+      var numberToStr2;
 
       array.forEach(function pereborParent(itemPr) {
         duplication=false;
         outputArray.forEach(function pereborChild(itemCh){
-
-            if (itemPr.toUpperCase()==itemCh.toUpperCase()) {
-              duplication=true;
-            }
+          // немного брутального перевода в строку
+          numberToStr1="";
+          numberToStr2="";
+          numberToStr1+=itemPr;
+          numberToStr2+=itemCh;
+          if (numberToStr1.toUpperCase()==numberToStr2.toUpperCase()) {
+            duplication=true;
+          }
         });
         if (!duplication) {
           outputArray[i]=itemPr;
           i++;};
       });
-      console.log("Inputed : ",array);
-      console.log("Outputed : ",outputArray);
+      console.log("With duplication : ",array);
+      console.log("Without duplication : ",outputArray);
       return outputArray;
   } return false;
 }
@@ -528,7 +538,8 @@ function findDuplicate(array) {
   } else {return false;}
 }
 
-/*21. Write a JavaScript program to flatten a nested (any depth) array. If you pass shallow, the array will only be flattened a single level
+/*21. Write a JavaScript program to flatten a nested (any depth) array. If you pass shallow, 
+the array will only be flattened a single level
  Sample Data :
  console.log(flattenNested([1, [2], [3, [[4]]],[5,6]]));
  [1, 2, 3, 4, 5, 6]
@@ -536,7 +547,31 @@ function findDuplicate(array) {
  [1, 2, 3, [[4]], 5, 6]
  */
 function flattenNested(array) {
+  // замкнутый счетчик (копипаст)
+  function makeCounter() {
+    function counter() {
+      return counter.currentCount++;
+    };
+    counter.currentCount = 0;
+    return counter;
+  }
+  var counter = makeCounter();
 
+  var outputArray=[];
+
+  // рекурсивный флаттер
+  function flatDis(array) {
+    if (isArray(array)) {
+      array.forEach(function(item){
+        flatDis(item);
+      });
+    } else { 
+      outputArray[counter()]=array;};
+  }
+  flatDis(array);
+
+  console.log(outputArray);
+  return outputArray;
 }
 
 /*22. Write a JavaScript program to compute the union of two arrays.
@@ -545,7 +580,22 @@ function flattenNested(array) {
  [1, 2, 3, 10, 100]
  */
 function computeUnion(array1, array2) {
-
+  var outputArray=[];
+  var temporaryArray=[];
+  var i=0;
+  if (isArray(array1)&&isArray(array2)) {
+    array1.forEach(function(item){
+      temporaryArray[i]=item;
+      i++;
+    });
+    array2.forEach(function(item){
+      temporaryArray[i]=item;
+      i++;
+    });
+    outputArray=sort(removeDuplicate(temporaryArray));
+    console.log("Result: ",outputArray);
+    return outputArray;
+  } else {console.log("incorrect input"); return false;}
 }
 
 /*23. Write a JavaScript function to find the difference of two arrays.
@@ -558,15 +608,70 @@ function computeUnion(array1, array2) {
  ["3", "10", "100"]
  */
 function difference(array1, array2) {
+  if (isArray(array1)&&isArray(array2)) {
+    var firstArray = removeDuplicate(flattenNested(array1));
+    var secondArray = removeDuplicate(flattenNested(array2));
+    var outputArray=[];
+
+    function justAdd(array1,array2){
+      var i=0;
+      var temporaryArray=[];
+      array1.forEach(function(item){
+        temporaryArray[i]=item;
+        i++;
+      });
+      array2.forEach(function(item){
+        temporaryArray[i]=item;
+        i++;
+      });
+      return temporaryArray;
+    }
+
+    function deleteDuplicated(array){
+      var outputArray=[];
+      var i=0;
+      array.forEach(function(itemParent){
+        var duplication=0;
+        array.forEach(function(itemChild){
+          if (itemParent==itemChild) {
+            duplication+=1;
+          }
+        });
+        if (duplication==1) {
+          outputArray[i]=itemParent;
+          i++;
+        }
+      });
+      return outputArray;
+    };
+    outputArray=sort(deleteDuplicated(justAdd(firstArray,secondArray)));
+
+  } else { console.log('incorrect input'); return false;}
 
 }
 
-/*24. Write a JavaScript function to remove. 'null', '0', '""', 'false', 'undefined' and 'NaN' values from an array.
+/*24. Write a JavaScript function to remove. 'null', '0', '""', 'false', 'undefined' and 'NaN' values 
+from an array.
  Sample array : [NaN, 0, 15, false, -22, '',undefined, 47, null]
  Expected result : [15, -22, 47]
  */
 function removeFalse(array) {
-
+  if (isArray(array)) {
+    var outputArray=[];
+    var i=0;
+    array.forEach(function(item){
+      switch (Boolean(item)) {
+        case false : {break;}
+        case true : { 
+          outputArray[i]=item;
+          i++; 
+          break;}
+        default : {break;}
+      }
+    });
+    console.log(outputArray);
+    return outputArray;
+  } else {console.log("incorrect input"); return false;}
 }
 
 /*25. Write a JavaScript function to sort the following array of objects by title value.

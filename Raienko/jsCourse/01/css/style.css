@@ -2,3 +2,7 @@ input {
   margin: 10px;
   display: block;
 }
+section {
+  width: 200px;
+  float: left;
+}
