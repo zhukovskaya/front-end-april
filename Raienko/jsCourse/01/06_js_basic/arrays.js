@@ -7,13 +7,7 @@
  true
  */
 function isArray(item) {
-<<<<<<< HEAD
   return ((typeof item) !== undefined) && (item) && (item.constructor === Array);
-=======
-  console.log("is Array: " + ( typeof item !== undefined && item && item.constructor === Array ););
-  return ( typeof item !== undefined && item && item.constructor === Array );
-  // ( typeof item !== undefined && item && item.constructor === Array );
->>>>>>> 57403e365098a1a7a464ab164ca2ace9b13dab31
 }
 
 /*
@@ -26,13 +20,9 @@ function isArray(item) {
 
  */
 function cloneArray(array) {
-<<<<<<< HEAD
   if (!isArray(array)) {
     throw new Error ("ENTER AN ARRAY");
   }
-=======
-  if (isArray(array)) {
->>>>>>> 57403e365098a1a7a464ab164ca2ace9b13dab31
     var i=0,
         clonedArray=[];
 
@@ -368,7 +358,7 @@ function removeDuplicate(array) {
       array.forEach(function pereborParent(itemPr) {
         duplication=false;
         outputArray.forEach(function pereborChild(itemCh){
-          // немного брутального перевода в строку
+          // РЅРµРјРЅРѕРіРѕ Р±СЂСѓС‚Р°Р»СЊРЅРѕРіРѕ РїРµСЂРµРІРѕРґР° РІ СЃС‚СЂРѕРєСѓ
           numberToStr1="";
           numberToStr2="";
           numberToStr1+=itemPr;
@@ -449,11 +439,11 @@ function shuffleArray(array) {
     for (i=0;i<len;i++) {
       changed=false;
       while (!changed) {
-        newPosition = (Math.floor(Math.random()*(len))); // получаем рандомную позицию
-        if (!outputArray[newPosition]) { // проверяем занята ли полученная позиция
+        newPosition = (Math.floor(Math.random()*(len))); // РїРѕР»СѓС‡Р°РµРј СЂР°РЅРґРѕРјРЅСѓСЋ РїРѕР·РёС†РёСЋ
+        if (!outputArray[newPosition]) { // РїСЂРѕРІРµСЂСЏРµРј Р·Р°РЅСЏС‚Р° Р»Рё РїРѕР»СѓС‡РµРЅРЅР°СЏ РїРѕР·РёС†РёСЏ
           outputArray[newPosition]=array[i]; 
           changed=true;
-        } // если занята - повторяем цикл
+        } // РµСЃР»Рё Р·Р°РЅСЏС‚Р° - РїРѕРІС‚РѕСЂСЏРµРј С†РёРєР»
       }
     }
     console.log("INPUT ",array);
@@ -561,7 +551,7 @@ the array will only be flattened a single level
  [1, 2, 3, [[4]], 5, 6]
  */
 function flattenNested(array) {
-  // замкнутый счетчик (копипаст)
+  // Р·Р°РјРєРЅСѓС‚С‹Р№ СЃС‡РµС‚С‡РёРє (РєРѕРїРёРїР°СЃС‚)
   function makeCounter() {
     function counter() {
       return counter.currentCount++;
@@ -573,7 +563,7 @@ function flattenNested(array) {
 
   var outputArray=[];
 
-  // рекурсивный флаттер
+  // СЂРµРєСѓСЂСЃРёРІРЅС‹Р№ С„Р»Р°С‚С‚РµСЂ
   function flatDis(array) {
     if (isArray(array)) {
       array.forEach(function(item){
@@ -817,10 +807,10 @@ function keepOriginal(array) {
  console.log(nthLargest([ 43, 56, 23, 89, 88, 90, 99, 652], 4));
  89
 
- суть задачи: найти самый большой n элемент в массиве не СОРТИРУЯ его
- n - это индекс самого большого.
- из примера выше: если отсортируем массив то получим [23, 43, 56, 88, 89, 90, 99, 654] и число n = 89.
- если я ввиду target = 2 то должен получить число 99
+ СЃСѓС‚СЊ Р·Р°РґР°С‡Рё: РЅР°Р№С‚Рё СЃР°РјС‹Р№ Р±РѕР»СЊС€РѕР№ n СЌР»РµРјРµРЅС‚ РІ РјР°СЃСЃРёРІРµ РЅРµ РЎРћР РўРР РЈРЇ РµРіРѕ
+ n - СЌС‚Рѕ РёРЅРґРµРєСЃ СЃР°РјРѕРіРѕ Р±РѕР»СЊС€РѕРіРѕ.
+ РёР· РїСЂРёРјРµСЂР° РІС‹С€Рµ: РµСЃР»Рё РѕС‚СЃРѕСЂС‚РёСЂСѓРµРј РјР°СЃСЃРёРІ С‚Рѕ РїРѕР»СѓС‡РёРј [23, 43, 56, 88, 89, 90, 99, 654] Рё С‡РёСЃР»Рѕ n = 89.
+ РµСЃР»Рё СЏ РІРІРёРґСѓ target = 2 С‚Рѕ РґРѕР»Р¶РµРЅ РїРѕР»СѓС‡РёС‚СЊ С‡РёСЃР»Рѕ 99
  */
 function nthLargest(array, target) {
 
