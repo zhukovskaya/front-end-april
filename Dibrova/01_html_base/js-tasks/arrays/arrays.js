@@ -7,7 +7,7 @@
  true
  */
 function isArray(item) {
-
+    return (typeof item !== undefined && item && item.constructor === Array);
 };
 
 /*
@@ -19,9 +19,46 @@ function isArray(item) {
  [1, 2, [4, 0]]
 
  */
+
 function cloneArray(array) {
+    if (!isArray(array)) {
+    throw new Error('Enter an array!')
+    }
+
+
+
+    var clone = [],
+        i = 0,
+        len = array.length;
+
+    for (; i < len; i++) {
+        if (array[i].length && array[i].constructor === Array) {
+            clone[i] = cloneArray(array[i]);
+
+        } else {
+            clone[i] = array[i];
+        }
+    }
+
+    return clone;
 
 };
+var a = [1, 2, 3, 4, 5];
+var b = cloneArray(a);
+var c = a;
+console.log(' a : ', a);
+console.log(' b : ', b);
+console.log(' c : ', c);
+// b[3].push(6);
+b.push(8);
+a.push(7);
+console.log('===== after push =====');
+console.log(' a : ', a);
+console.log(' b : ', b);
+console.log(' c : ', c);
+
+
+
 
 /*
  3. Write a JavaScript function to get the first element of an array. Passing a parameter 'n' will return the first 'n' elements of the array.
@@ -203,7 +240,7 @@ function binarySearch(array, target) {
  Expected Output :
  [4, 5, 8, 10, 12, 13]
  */
-function sumOfInvidual(array1,array2) {
+function sumOfInvidual(array1, array2) {
 
 };
 
@@ -451,47 +488,47 @@ function rangeBetween(start, end) {
 }
 
 var ArraysTasks = {
-  isArray              : isArray,
-  cloneArray           : cloneArray,
-  getFirstElements     : getFirstElements,
-  getLastElements      : getLastElements,
-  join                 : join,
-  setDashes            : setDashes,
-  sort                 : sort,
-  mostFrequent         : mostFrequent,
-  swapLetter           : swapLetter,
-  getNestedArray       : getNestedArray,
-  sumSquares           : sumSquares,
-  sumArrayInteger      : sumArrayInteger,
-  addToArray           : addToArray,
-  removeDuplicate      : removeDuplicate,
-  displayColor         : displayColor,
-  leapYear             : leapYear,
-  shuffleArray         : shuffleArray,
-  binarySearch         : binarySearch,
-  sumOfInvidual        : sumOfInvidual,
-  findDuplicate        : findDuplicate,
-  flattenNested        : flattenNested,
-  computeUnion         : computeUnion,
-  difference           : difference,
-  removeFalse          : removeFalse,
-  sortByTitle          : sortByTitle,
-  pairOfEqualsSum      : pairOfEqualsSum,
-  retrieveValue        : retrieveValue,
-  longestSubstring     : longestSubstring,
-  suppliedBounds       : suppliedBounds,
-  merge                : merge,
-  removeElement        : removeElement,
-  findElement          : findElement,
-  keepOriginal         : keepOriginal,
-  nthLargest           : nthLargest,
-  randomElement        : randomElement,
-  fillSpecifiedNumeric : fillSpecifiedNumeric,
-  fillSpecifiedString  : fillSpecifiedString,
-  move                 : move,
-  filter               : filter,
-  arrayRange           : arrayRange,
-  rangeBetween         : rangeBetween
+    isArray: isArray,
+    cloneArray: cloneArray,
+    getFirstElements: getFirstElements,
+    getLastElements: getLastElements,
+    join: join,
+    setDashes: setDashes,
+    sort: sort,
+    mostFrequent: mostFrequent,
+    swapLetter: swapLetter,
+    getNestedArray: getNestedArray,
+    sumSquares: sumSquares,
+    sumArrayInteger: sumArrayInteger,
+    addToArray: addToArray,
+    removeDuplicate: removeDuplicate,
+    displayColor: displayColor,
+    leapYear: leapYear,
+    shuffleArray: shuffleArray,
+    binarySearch: binarySearch,
+    sumOfInvidual: sumOfInvidual,
+    findDuplicate: findDuplicate,
+    flattenNested: flattenNested,
+    computeUnion: computeUnion,
+    difference: difference,
+    removeFalse: removeFalse,
+    sortByTitle: sortByTitle,
+    pairOfEqualsSum: pairOfEqualsSum,
+    retrieveValue: retrieveValue,
+    longestSubstring: longestSubstring,
+    suppliedBounds: suppliedBounds,
+    merge: merge,
+    removeElement: removeElement,
+    findElement: findElement,
+    keepOriginal: keepOriginal,
+    nthLargest: nthLargest,
+    randomElement: randomElement,
+    fillSpecifiedNumeric: fillSpecifiedNumeric,
+    fillSpecifiedString: fillSpecifiedString,
+    move: move,
+    filter: filter,
+    arrayRange: arrayRange,
+    rangeBetween: rangeBetween
 };
 
 //module.exports = ArraysTasks;
