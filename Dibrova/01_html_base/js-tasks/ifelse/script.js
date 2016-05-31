@@ -16,18 +16,40 @@ console.log('2. The World Translator')
 
 function helloWorld(language) {
     if (language == 'en') {
-        return console.log('Hello, World');
+        console.log('Hello, World');
     } else if (language == 'es') {
-        return console.log('Hola Mundo');
+        console.log('Hola Mundo');
     } else if (language == 'de') {
-        return console.log('Hallo Welt');
-    } else return console.log('Hello, World');
+        console.log('Hallo Welt');
+    } else console.log('Hello, World');
 }
 helloWorld('en');
 helloWorld('es');
 helloWorld('de');
 //3
-// function assignGrade()
+
+console.log('3. The Grade Assigner');
+
+function assignGrade(mark) {
+    if (mark <= 100 && mark >= 80) {
+        console.log("A");
+    } else if (mark <= 79 && mark >= 60) {
+    	console.log("B");
+    } else if (mark <= 59 && mark >= 40) {
+    	console.log("C");
+    } else if (mark <= 39 && mark >= 20) {
+    	console.log("D");
+    } else if (mark <= 19 && mark >= 0) {
+    	console.log("F");
+    }
+    
+}
+
+assignGrade(98);
+assignGrade(75);
+assignGrade(55);
+assignGrade(35);
+assignGrade(15);
 
 //4
 // function pluralize()
