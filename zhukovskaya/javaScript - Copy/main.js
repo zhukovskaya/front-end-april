@@ -1,7 +1,7 @@
 //1
 function isArray(item) {
-	return (type)
-}
+	return (typeof item !== undefined && item && item.construktor === Array);
+};
 
 //2
 function clone (array) {
@@ -30,6 +30,29 @@ console.log
 
 b.push(6);
 
+//3
+function getFirstElements(array, n) {
+	var array = [],
+		i = 0,
+		n,
+		len = array.length;
+		if(!isArray(array)) {
+			return throw new Error("Enter an array");
+		}
+
+	for(var i = 0; i < array.length; i++) {
+		if(n = underfined) {
+	return array[0];
+	} 
+		n = n || 1	
+		}
+}
+};
+
+//4
+for(var i = array.length - 1; i >= 0; i--) {
+	if(i = )
+}
 
 /*
 
