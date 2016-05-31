@@ -7,8 +7,9 @@
  true
  */
 function isArray(item) {
-  console.log("is Array: "+(typeof item === 'object'));
-  return (typeof item === 'object');
+  console.log("is Array: " + ( typeof item !== undefined && item && item.constructor === Array ););
+  return ( typeof item !== undefined && item && item.constructor === Array );
+  // ( typeof item !== undefined && item && item.constructor === Array );
 }
 
 /*
@@ -22,11 +23,13 @@ function isArray(item) {
  */
 function cloneArray(array) {
   if (isArray(array)) {
-    var i=0;
-    var clonedArray=[];
+    var i=0,
+        clonedArray=[];
 
     while (i < array.length) {
-      clonedArray[i]=array[i];
+      if (isArray(array[i])) {
+        clonedArray[i]=cloneArray(array[i]);
+      } else {clonedArray[i]=array[i];}
       i++;
     }
 
@@ -35,6 +38,8 @@ function cloneArray(array) {
 
   } else {return false;}
 }
+// !!!!!!!!!!!!!!! return throw new Error ("Enter an array!"); - shut down
+// return "enter an array"  - don't kill program.
 
 /*
  3. Write a JavaScript function to get the first element of an array. Passing a parameter 'n' will return the first 'n' elements of the array.
