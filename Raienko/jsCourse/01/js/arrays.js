@@ -7,8 +7,7 @@
  true
  */
 function isArray(item) {
-  console.log("is Array: "+(typeof item === 'object'));
-  return (typeof item === 'object');
+  return ((typeof item) !== undefined) && (item) && (item.constructor === Array);
 }
 
 /*
@@ -21,20 +20,26 @@ function isArray(item) {
 
  */
 function cloneArray(array) {
-  if (isArray(array)) {
-    var i=0;
-    var clonedArray=[];
+  if (!isArray(array)) {
+    throw new Error ("ENTER AN ARRAY");
+  }
+    var i=0,
+        clonedArray=[];
 
     while (i < array.length) {
-      clonedArray[i]=array[i];
+      if (isArray(array[i])) {
+        clonedArray[i]=cloneArray(array[i]);
+      } else {clonedArray[i]=array[i];}
       i++;
     }
 
     console.log(clonedArray);
     return clonedArray;
 
-  } else {return false;}
+  //}
 }
+// !!!!!!!!!!!!!!! return throw new Error ("Enter an array!"); - shut down
+// return "enter an array"  - don't kill program.
 
 /*
  3. Write a JavaScript function to get the first element of an array. Passing a parameter 'n' will return the first 'n' elements of the array.
@@ -67,11 +72,10 @@ function getFirstElements(array, n) {
         if (array[i] != undefined) {newArray[i]=array[i];}
         i++;
       }
-
     console.log(newArray);
     return newArray;
 
-  } else {return false;}
+  } else throw new Error ("ENTER AN ARRAY");
 }
 
 /*
@@ -354,7 +358,7 @@ function removeDuplicate(array) {
       array.forEach(function pereborParent(itemPr) {
         duplication=false;
         outputArray.forEach(function pereborChild(itemCh){
-          // Ð½ÐµÐ¼Ð½Ð¾Ð³Ð¾ Ð±Ñ€ÑƒÑ‚Ð°Ð»ÑŒÐ½Ð¾Ð³Ð¾ Ð¿ÐµÑ€ÐµÐ²Ð¾Ð´Ð° Ð² ÑÑ‚Ñ€Ð¾ÐºÑƒ
+          // íåìíîãî áðóòàëüíîãî ïåðåâîäà â ñòðîêó
           numberToStr1="";
           numberToStr2="";
           numberToStr1+=itemPr;
@@ -435,11 +439,11 @@ function shuffleArray(array) {
     for (i=0;i<len;i++) {
       changed=false;
       while (!changed) {
-        newPosition = (Math.floor(Math.random()*(len))); // Ð¿Ð¾Ð»ÑƒÑ‡Ð°ÐµÐ¼ Ñ€Ð°Ð½Ð´Ð¾Ð¼Ð½ÑƒÑŽ Ð¿Ð¾Ð·Ð¸Ñ†Ð¸ÑŽ
-        if (!outputArray[newPosition]) { // Ð¿Ñ€Ð¾Ð²ÐµÑ€ÑÐµÐ¼ Ð·Ð°Ð½ÑÑ‚Ð° Ð»Ð¸ Ð¿Ð¾Ð»ÑƒÑ‡ÐµÐ½Ð½Ð°Ñ Ð¿Ð¾Ð·Ð¸Ñ†Ð¸Ñ
+        newPosition = (Math.floor(Math.random()*(len))); // ïîëó÷àåì ðàíäîìíóþ ïîçèöèþ
+        if (!outputArray[newPosition]) { // ïðîâåðÿåì çàíÿòà ëè ïîëó÷åííàÿ ïîçèöèÿ
           outputArray[newPosition]=array[i]; 
           changed=true;
-        } // ÐµÑÐ»Ð¸ Ð·Ð°Ð½ÑÑ‚Ð° - Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€ÑÐµÐ¼ Ñ†Ð¸ÐºÐ»
+        } // åñëè çàíÿòà - ïîâòîðÿåì öèêë
       }
     }
     console.log("INPUT ",array);
@@ -547,7 +551,7 @@ the array will only be flattened a single level
  [1, 2, 3, [[4]], 5, 6]
  */
 function flattenNested(array) {
-  // Ð·Ð°Ð¼ÐºÐ½ÑƒÑ‚Ñ‹Ð¹ ÑÑ‡ÐµÑ‚Ñ‡Ð¸Ðº (ÐºÐ¾Ð¿Ð¸Ð¿Ð°ÑÑ‚)
+  // çàìêíóòûé ñ÷åò÷èê (êîïèïàñò)
   function makeCounter() {
     function counter() {
       return counter.currentCount++;
@@ -559,7 +563,7 @@ function flattenNested(array) {
 
   var outputArray=[];
 
-  // Ñ€ÐµÐºÑƒÑ€ÑÐ¸Ð²Ð½Ñ‹Ð¹ Ñ„Ð»Ð°Ñ‚Ñ‚ÐµÑ€
+  // ðåêóðñèâíûé ôëàòòåð
   function flatDis(array) {
     if (isArray(array)) {
       array.forEach(function(item){
@@ -803,10 +807,10 @@ function keepOriginal(array) {
  console.log(nthLargest([ 43, 56, 23, 89, 88, 90, 99, 652], 4));
  89
 
- ÑÑƒÑ‚ÑŒ Ð·Ð°Ð´Ð°Ñ‡Ð¸: Ð½Ð°Ð¹Ñ‚Ð¸ ÑÐ°Ð¼Ñ‹Ð¹ Ð±Ð¾Ð»ÑŒÑˆÐ¾Ð¹ n ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð² Ð¼Ð°ÑÑÐ¸Ð²Ðµ Ð½Ðµ Ð¡ÐžÐ Ð¢Ð˜Ð Ð£Ð¯ ÐµÐ³Ð¾
- n - ÑÑ‚Ð¾ Ð¸Ð½Ð´ÐµÐºÑ ÑÐ°Ð¼Ð¾Ð³Ð¾ Ð±Ð¾Ð»ÑŒÑˆÐ¾Ð³Ð¾.
- Ð¸Ð· Ð¿Ñ€Ð¸Ð¼ÐµÑ€Ð° Ð²Ñ‹ÑˆÐµ: ÐµÑÐ»Ð¸ Ð¾Ñ‚ÑÐ¾Ñ€Ñ‚Ð¸Ñ€ÑƒÐµÐ¼ Ð¼Ð°ÑÑÐ¸Ð² Ñ‚Ð¾ Ð¿Ð¾Ð»ÑƒÑ‡Ð¸Ð¼ [23, 43, 56, 88, 89, 90, 99, 654] Ð¸ Ñ‡Ð¸ÑÐ»Ð¾ n = 89.
- ÐµÑÐ»Ð¸ Ñ Ð²Ð²Ð¸Ð´Ñƒ target = 2 Ñ‚Ð¾ Ð´Ð¾Ð»Ð¶ÐµÐ½ Ð¿Ð¾Ð»ÑƒÑ‡Ð¸Ñ‚ÑŒ Ñ‡Ð¸ÑÐ»Ð¾ 99
+ ñóòü çàäà÷è: íàéòè ñàìûé áîëüøîé n ýëåìåíò â ìàññèâå íå ÑÎÐÒÈÐÓß åãî
+ n - ýòî èíäåêñ ñàìîãî áîëüøîãî.
+ èç ïðèìåðà âûøå: åñëè îòñîðòèðóåì ìàññèâ òî ïîëó÷èì [23, 43, 56, 88, 89, 90, 99, 654] è ÷èñëî n = 89.
+ åñëè ÿ ââèäó target = 2 òî äîëæåí ïîëó÷èòü ÷èñëî 99
  */
 function nthLargest(array, target) {
 
@@ -933,4 +937,4 @@ var ArraysTasks = {
   rangeBetween         : rangeBetween
 }
 
-//module.exports = ArraysTasks;
+module.exports = ArraysTasks;
