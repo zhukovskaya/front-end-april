@@ -1,6 +1,6 @@
 var assert = require('chai').assert,
     expect = require('chai').expect,
-    arrays = require('../06_js_basic/arrays.js');
+    arrays = require('../06_js_basic/arrays1.js');
 
 function testOnArray(object, methodName) {
   expect(object[methodName].bind(object, 'fewfqew')).to.throw(Error);

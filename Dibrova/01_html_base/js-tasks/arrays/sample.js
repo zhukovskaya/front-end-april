@@ -1,46 +1,24 @@
-/*
- 2. Write a JavaScript function to clone an array.
- Test Data :
- console.log(cloneArray([1, 2, 4, 0]));
- console.log(cloneArray([1, 2, [4, 0]]));
- [1, 2, 4, 0]
- [1, 2, [4, 0]]
+function isArray(item) {
+    return (typeof item !== undefined && item && item.constructor === Array);
+};
 
- */
-
-function cloneArray(array) {
-    // if (!isArray(array)) {
-    // throw new Error('Enter an array!')
-    // }
-
-
-
-    var clone = [],
-        i = 0,
-        len = array.length;
-
-    for (; i < len; i++) {
-        if (array[i].length && array[i].constructor === Array) {
-            clone[i] = cloneArray(array[i]);
-
-        } else {
-            clone[i] = array[i];
-        }
+function getFirstElements(array, n) {
+    if (!isArray(array)) {
+        throw new Error('Enter an array!')
     }
 
-    return clone;
+    var  n = array[0];
+
+    
+    console.log('array: ' + array);
+
+
+    return n;
 
 };
-var a = [1, 2, 3, 4, 5];
-var b = cloneArray(a);
-var c = a;
-console.log(' a : ', a);
-console.log(' b : ', b);
-console.log(' c : ', c);
-// b[3].push(6);
-b.push(8);
-a.push(7);
-console.log('===== after push =====');
-console.log(' a : ', a);
-console.log(' b : ', b);
-console.log(' c : ', c);
+
+console.log(getFirstElements([7, 9, 0, -2]));
+// console.log(getFirstElements([], 3));
+console.log(getFirstElements([[7, 9, 0, -2], 3]));
+// console.log(getFirstElements([7, 9, 0, -2], 6));
+// console.log(getFirstElements([7, 9, 0, -2], -3));

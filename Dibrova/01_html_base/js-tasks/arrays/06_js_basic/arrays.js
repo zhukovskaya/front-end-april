@@ -10,6 +10,9 @@ function isArray(item) {
     return (typeof item !== undefined && item && item.constructor === Array);
 };
 
+console.log(isArray('w3resource'));
+console.log(isArray([1, 2, 4, 0]));
+
 /*
  2. Write a JavaScript function to clone an array.
  Test Data :
@@ -22,10 +25,8 @@ function isArray(item) {
 
 function cloneArray(array) {
     if (!isArray(array)) {
-    throw new Error('Enter an array!')
+        throw new Error('Enter an array!')
     }
-
-
 
     var clone = [],
         i = 0,
@@ -43,19 +44,9 @@ function cloneArray(array) {
     return clone;
 
 };
-var a = [1, 2, 3, 4, 5];
-var b = cloneArray(a);
-var c = a;
-console.log(' a : ', a);
-console.log(' b : ', b);
-console.log(' c : ', c);
-// b[3].push(6);
-b.push(8);
-a.push(7);
-console.log('===== after push =====');
-console.log(' a : ', a);
-console.log(' b : ', b);
-console.log(' c : ', c);
+console.log(cloneArray([1, 2, 4, 0]));
+console.log(cloneArray([1, 2, [4, 0]]));
+
 
 
 
