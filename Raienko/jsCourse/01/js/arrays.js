@@ -1,3 +1,10 @@
+/* usefull
+if isArray(array) {
+
+} else throw new Error ("Input array"); 
+*/
+
+
 /*
  1. Write a JavaScript function to check whether an `input` is an array or not.
  Test Data :
@@ -7,13 +14,8 @@
  true
  */
 function isArray(item) {
-<<<<<<< HEAD
-  return ((typeof item) !== undefined) && (item) && (item.constructor === Array);
-=======
-  console.log("is Array: " + ( typeof item !== undefined && item && item.constructor === Array ););
-  return ( typeof item !== undefined && item && item.constructor === Array );
+  return ( (typeof item !== undefined) && item && (item.constructor === Array) );
   // ( typeof item !== undefined && item && item.constructor === Array );
->>>>>>> 57403e365098a1a7a464ab164ca2ace9b13dab31
 }
 
 /*
@@ -26,27 +28,23 @@ function isArray(item) {
 
  */
 function cloneArray(array) {
-<<<<<<< HEAD
+
   if (!isArray(array)) {
     throw new Error ("ENTER AN ARRAY");
   }
-=======
-  if (isArray(array)) {
->>>>>>> 57403e365098a1a7a464ab164ca2ace9b13dab31
-    var i=0,
-        clonedArray=[];
+  var i=0,
+      clonedArray=[];
 
-    while (i < array.length) {
-      if (isArray(array[i])) {
-        clonedArray[i]=cloneArray(array[i]);
-      } else {clonedArray[i]=array[i];}
-      i++;
-    }
+  while (i < array.length) {
+    if (isArray(array[i])) {
+      clonedArray[i]=cloneArray(array[i]);
+    } else {clonedArray[i]=array[i];}
+    i++;
+  }
 
-    console.log(clonedArray);
-    return clonedArray;
+  console.log(clonedArray);
+  return clonedArray;
 
-  //}
 }
 // !!!!!!!!!!!!!!! return throw new Error ("Enter an array!"); - shut down
 // return "enter an array"  - don't kill program.
@@ -714,10 +712,11 @@ function removeFalse(array) {
  }]
  */
 function sortByTitle(array) {
-  var titles=[];
-  var i=0;
-  var sorted=[];
-  var outputArray=[];
+  var titles=[],
+    i=0,
+    sorted=[],
+    outputArray=[];
+
   array.forEach(function(item){
     titles[i]=item.title;
     i++;
@@ -743,15 +742,72 @@ function sortByTitle(array) {
  Output: 3, 4
  */
 function pairOfEqualsSum(array, target) {
+  if (isArray(array) && !isNaN(target)) {
+    var present,
+      outputArray=[],
+      len,
+      i=0,
+      j=0;
+      k=0;
+    array.forEach(function(item){
+      if (target == item) present=true;
+    });
+    if (!present) {throw new Error ("No such number in array");}
 
+    len = array.length;
+
+    for (i=0;i<len;i++) {
+      for (j=0;j<len;j++){
+        if (i!=j) {
+          if (array[i]+array[j]==target) {
+            console.log(i+"+"+j);
+            outputArray[k]=sort([i,j]);
+            k++;
+          }
+        }
+      }
+    }
+    console.log("temporary :",outputArray);
+    console.log("result :",join(removeDuplicate(outputArray),' '));
+    return outputArray;
+  } else throw new Error ("Enter an array and number");
 }
 
 /*27. Write a JavaScript function to retrieve the value of a given property from all elements in an array.
  Sample array : [NaN, 0, 15, false, -22, '',undefined, 47, null]
  Expected result : [15, -22, 47]
  */
-function retrieveValue(array) {
-
+function retrieveValue(array,property) {
+  if (isArray(array)&&property) {
+    var present,
+      propertyInObject,
+      outputArray=[],
+      k=0;
+      epsentCounter=0;
+    array.forEach(function(objects){
+      console.log("Objects :",objects);
+      present=false;
+      for (var propertyInObject in objects) {
+        console.log("property? :",propertyInObject);
+        if (propertyInObject == property) {
+          console.log(objects[property],"<- value?");
+          present=true;
+        }
+      }
+      if (present==true && objects[property] && objects[property].length>0) {
+        outputArray[k]=objects[property];
+      } else {
+        outputArray[k]="Object number "+k+" has no property '"+property+"' !";
+        k+=1;
+        epsentCounter+=1;
+        return "Object number "+k+" has no property '"+property+"' !";
+      } 
+      k++;
+    });
+    console.log("RETURN ",outputArray);
+    if (epsentCounter==array.length) {throw new Error ("No such property");}
+    return outputArray;
+  } else throw new Error ("Input array and property"); 
 }
 
 /*28. Write a JavaScript function to find the longest common starting substring in a set of strings.
@@ -760,7 +816,32 @@ function retrieveValue(array) {
  Expected result : "go"
  */
 function longestSubstring(array) {
-
+  if (isArray(array)) {
+    var i,
+      similar,
+      max='';
+    array.forEach(function(string){
+      string+="";
+      if (string&&string.length>0) {
+        array.forEach(function(stringToCompare){
+          stringToCompare+="";
+          if (string != stringToCompare) {
+            i=0;
+            similar='';
+            while (string[i]==stringToCompare[i]) {
+              similar+=string[i];
+              i++;
+            }
+            if (similar.length>max.length) {
+              max=similar;
+            }
+          }
+        });
+      } else {return "empty string"}
+    });
+    console.log("MAX",max);
+    return max;
+  } else throw new Error ("Input array"); 
 }
 /*29. Write a JavaScript function to fill an array with values (numeric, string with one character) on supplied bounds.
 
@@ -769,7 +850,12 @@ function longestSubstring(array) {
  ["a", "c", "e", "g", "i", "k", "m", "o", "q", "s", "u", "w", "y"]
  */
 function suppliedBounds(start, end, step) {
-
+  if (start && end && step) {
+    var i=0; 
+      lowerCase=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'],
+      upperCase=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+    console.log("good");
+  }else {throw new Error ("Incorrect input")};
 }
 
 /*30. Write a JavaScript function to merge two arrays and removes all duplicates elements.
@@ -947,4 +1033,4 @@ var ArraysTasks = {
   rangeBetween         : rangeBetween
 }
 
-module.exports = ArraysTasks;
+//module.exports = ArraysTasks;
