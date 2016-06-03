@@ -479,12 +479,13 @@ function binarySearch(array, target) {
       i++;
       binarySearch(array,target,i);
     } else if (i==len){
-      console.log("Elemnt not found");
+      console.log("Element not found");
       return false;
       } else {
-        console.log(i);
-        return i;};
- } else {return false;}
+        console.log("Element ha number",i);
+        return i}
+ } else {console.log("HELLO");return false;}
+ return i;
 }
 
 /*
@@ -559,7 +560,7 @@ the array will only be flattened a single level
  [1, 2, 3, [[4]], 5, 6]
  */
 function flattenNested(array) {
-  // замкнутый счетчик (копипаст)
+  // copypasted counter
   function makeCounter() {
     function counter() {
       return counter.currentCount++;
@@ -571,7 +572,7 @@ function flattenNested(array) {
 
   var outputArray=[];
 
-  // рекурсивный флаттер
+  // recurs
   function flatDis(array) {
     if (isArray(array)) {
       array.forEach(function(item){
@@ -619,6 +620,24 @@ function computeUnion(array1, array2) {
  console.log(difference([1, 2, 3], [100, 2, 1, 10]));
  ["3", "10", "100"]
  */
+function deleteDuplicated(array){
+      var outputArray=[];
+      var i=0;
+      array.forEach(function(itemParent){
+        var duplication=0;
+        array.forEach(function(itemChild){
+          if (itemParent==itemChild) {
+            duplication+=1;
+          }
+        });
+        if (duplication==1) {
+          outputArray[i]=itemParent;
+          i++;
+        }
+      });
+      return outputArray;
+}
+
 function difference(array1, array2) {
   if (isArray(array1)&&isArray(array2)) {
     var firstArray = removeDuplicate(flattenNested(array1));
@@ -639,23 +658,6 @@ function difference(array1, array2) {
       return temporaryArray;
     }
 
-    function deleteDuplicated(array){
-      var outputArray=[];
-      var i=0;
-      array.forEach(function(itemParent){
-        var duplication=0;
-        array.forEach(function(itemChild){
-          if (itemParent==itemChild) {
-            duplication+=1;
-          }
-        });
-        if (duplication==1) {
-          outputArray[i]=itemParent;
-          i++;
-        }
-      });
-      return outputArray;
-    };
     outputArray=sort(deleteDuplicated(justAdd(firstArray,secondArray)));
 
   } else { console.log('incorrect input'); return false;}
@@ -850,11 +852,33 @@ function longestSubstring(array) {
  ["a", "c", "e", "g", "i", "k", "m", "o", "q", "s", "u", "w", "y"]
  */
 function suppliedBounds(start, end, step) {
-  if (start && end && step) {
-    var i=0; 
+  if (start && end && start.length==1 && end.length==1 && step && ((b=step-1)&&b!=NaN)) {
+    var i, 
       lowerCase=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'],
-      upperCase=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
-    console.log("good");
+      upperCase=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'],
+      len=lowerCase.length,
+      inputedValues=[],
+      outputArray=[],
+      k=0;
+    for (i=0;i<len;i++){
+      if (start == lowerCase[i] || start == upperCase[i]) {
+        inputedValues[k]=i;
+        k++;
+      } 
+      if (end == lowerCase[i] || end == upperCase[i]) {
+        inputedValues[k]=i;
+        k++;
+      }
+    }
+    if (k==0) {throw new Error ("Incorrect input");} else k=0;;
+    // why sorted???
+    for (i=inputedValues[0];i<inputedValues[1];i++) {
+      if (i%step==0) {
+        outputArray[k]=(lowerCase[i]);
+        k++;
+      }
+    }
+    console.log(outputArray);
   }else {throw new Error ("Incorrect input")};
 }
 
@@ -877,6 +901,14 @@ function merge(first, second) {
  [2, 9, 6]
  */
 function removeElement(array, target) {
+if (isArray(array)&&binarySearch(array,target)) {
+  var outputArray=cloneArray(array),
+    len=outputArray.length;
+  outputArray[len]=target;
+  outputArray=deleteDuplicated(outputArray);
+  console.log(outputArray);
+  return outputArray;
+} else throw new Error ("incorrect input");
 
 }
 
@@ -965,7 +997,8 @@ function filter(array) {
 
 }
 
-/*40. Write a JavaScript function to generate an array of specified length, filled with integer numbers, increase by one from starting position.
+/*40. Write a JavaScript function to generate an array of specified length, 
+filled with integer numbers, increase by one from starting position.
 
  Test Data :
  console.log(arrayRange(1, 4));
