@@ -75,7 +75,7 @@ var number 2  = +prompt("Enter second number ")
 while (stop) {
 	perform = prompt ("Enter what move you want!")
 
-	switch(peerform) {
+	switch(perform) {
 		case "Addition" :
 		console.log(number2 + number 1);
 		case "Addition" :

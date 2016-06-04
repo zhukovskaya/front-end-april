@@ -47,7 +47,8 @@ header:after,
 #nav:after,
 .slider:after,
 #main-content:after,
-aside:after {
+aside:after, 
+.tabs:after {
     content: '';
     display: block;
     clear: both;
@@ -336,36 +337,60 @@ aside {
 }
  
 .tabs {
-  position: relative;   
+  
   clear: both;
   margin: 0;
+  position: relative;
+  
 }
 .tab {
-  float: left;
+ float: left;
+ 
 }
 .tab label {
-  padding: 10px 20px; 
-  position: relative;
-  left: 1px; 
+ padding: 10px 20px; 
+ position: relative;
+ left: 0px; 
+ top: 0px;
+ cursor: pointer;
 }
-.tab [type=radio] {
-  display: none;   
-}
+
 .tab-content {
   position: absolute;
   top: 28px;
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 20px;
   margin: 10px 0;
   display: none;
+  width: 324px;
 }
 
+.tab [type=radio] {
+  display: none;   
+}
 
-input:checked ~ label ~ .tab-content {
+input:checked ~ .tab-content {
   display: block;
 }
+
+.tab-content img {
+	float:left;
+	margin: 0 10px 10px 0;
+}
+
+.tab-content img + p {
+	color: #00aedb; 
+	font: 16px/20px;
+	font-weight: bold;
+}
+
+.tab-content p {
+	margin: 0 auto 0;
+	}
+
+
+
 
 
 /*footer*/
