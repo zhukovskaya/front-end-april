@@ -18,7 +18,7 @@ function getFirstElements(array, n) {
 };
 
 console.log(getFirstElements([7, 9, 0, -2]));
-// console.log(getFirstElements([], 3));
+console.log(getFirstElements([[], 3]));
 console.log(getFirstElements([[7, 9, 0, -2], 3]));
-// console.log(getFirstElements([7, 9, 0, -2], 6));
-// console.log(getFirstElements([7, 9, 0, -2], -3));
+console.log(getFirstElements([[7, 9, 0, -2], 6]));
+console.log(getFirstElements([[7, 9, 0, -2], -3]));
