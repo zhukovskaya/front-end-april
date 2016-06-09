@@ -10,3 +10,32 @@ function stringMagic(string) {
   var a=string.match(RegExp(/hello/ig));
   document.writeln('<br> Variable?(/"hello"/i): ',a);
 }
+function tryCatchPract() {
+  var result;
+  while (true) {
+    try {
+      result=eval(prompt("enter an expression"));
+      if (isNaN(result)) {
+        throw new Error("wrong input!");
+      }
+      alert(result);
+      break;
+    } catch (error) {
+      alert("ERROR! ",error.message);
+    }
+  }
+}
+function sum(a){
+  return function(b){
+    return a+b;
+  };
+}
+
+function makeBufferGo() {
+  var text="";
+  return function(input){
+    text+=input;
+  };
+  console.log(text);
+  return text;
+}
