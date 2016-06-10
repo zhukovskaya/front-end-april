@@ -54,9 +54,9 @@ function cloneArray(array) {
  */
 array = [7, 9, 0, -2];	
 function getFirstElements(array, n) {
-		if(!isArray(array)) {
-		/*throw new*/ Error("Enter an array");
-		} else  if(+n !== number) {
+		/*if(!isArray(array)) {
+		throw new Error("Enter an array");
+		} else */ if(+n !== number) {
 			console.log("Enter a number")
 		} else {s
 			var result = [],
@@ -72,7 +72,7 @@ function getFirstElements(array, n) {
 					for(var i = 0; i < n; i++) {
 						result[i] = array[i];
 						}	
-					}	
+					//}	
 		}	return result; 		
 }
 console.log(getFirstElements([7, 9, 0, -2]));
@@ -96,6 +96,7 @@ for(var i = array.length - 1; i >= 0; i--) {
 //	if(i = )
 };
 
+
 /*
  5. Write a simple JavaScript program to join all elements of the following array into a string.
  Set second argument as choisen separator (e.g. - ";" , "," , "+"). By default must be ",".
@@ -105,8 +106,19 @@ for(var i = array.length - 1; i >= 0; i--) {
  "Red,Green,White,Black"
  "Red+Green+White+Black"
  */
+ var myColor = ["Red", "Green", "White", "Black"];
 function join(array, separator) {
-
+	var separator = prompt("Enter a separator.");
+	switch(separator) {
+		case ";" : 
+		consol.log(array.join("; "));
+		break;
+		case "+" :
+		consol.log(array.join(" + "));
+		break;
+		default:
+		consol.log(array.join(", "));
+}
 };
 
 /*
@@ -123,8 +135,11 @@ function setDashes(string) {
  Sample array : var arr1 = [ 3, 8, 7, 6, 5, -4, 3, 2, 1 ];
  Sample Output : -4,-3,1,2,3,5,6,7,8
  */
+ var array = [ 3, 8, 7, 6, 5, -4, 3, 2, 1 ]; 
 function sort(array) {
-
+	arr1.sort(function(a, b) {
+		return a - b;
+	})
 };
 
 /*
@@ -159,6 +174,7 @@ function swapLetter(string) {
  ------
  */
 function getNestedArray(array) {
+
 
 };
 
@@ -487,7 +503,7 @@ function arrayRange(from, times) {
 function rangeBetween(start, end) {
 
 }
-/*
+
 var ArraysTasks = {
   isArray              : isArray,
   cloneArray           : cloneArray,
@@ -532,4 +548,4 @@ var ArraysTasks = {
   rangeBetween         : rangeBetween
 };
 
-//module.exports = ArraysTasks;
+module.exports = ArraysTasks;
