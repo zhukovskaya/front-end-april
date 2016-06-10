@@ -20,9 +20,8 @@ function isArray(item) {
  */
 function cloneArray(array) {
 	if(!isArray(array)) {
-			return /*throw*/ new Error("Enter an array");
+			/*throw new*/ Error("Enter an array");
 		} else {
-
 				var clone = [],
 					i = 0,
 					len = array.length;
@@ -36,7 +35,6 @@ function cloneArray(array) {
 			} return clone;
 				
 		}
-}
 
 /*
  3. Write a JavaScript function to get the first element of an array. Passing a parameter 'n' will return the first 'n' elements of the array.
@@ -54,16 +52,16 @@ function cloneArray(array) {
  []
 
  */
+array = [7, 9, 0, -2];	
 function getFirstElements(array, n) {
-			
-	if(!isArray(array)) {
-		return /*throw*/ new Error("Enter an array");
-		} else {
-
+		if(!isArray(array)) {
+		/*throw new*/ Error("Enter an array");
+		} else  if(+n !== number) {
+			console.log("Enter a number")
+		} else {s
 			var result = [],
 			i = 0,
 			len = array.length;
-
 			if(array = [] || n < 0) {
 					result[i] = [];
 				} else if(n > len) {
@@ -72,16 +70,16 @@ function getFirstElements(array, n) {
 					result = array[0];
 				} else {
 					for(var i = 0; i < n; i++) {
-						result[i] = array[i] ;
+						result[i] = array[i];
 						}	
 					}	
-			}	return result; 
+		}	return result; 		
 }
 console.log(getFirstElements([7, 9, 0, -2]));
- console.log(getFirstElements([],3));
- console.log(getFirstElements([7, 9, 0, -2],3));
- console.log(getFirstElements([7, 9, 0, -2],6));
- console.log(getFirstElements([7, 9, 0, -2],-3));
+console.log(getFirstElements([],3));
+console.log(getFirstElements([7, 9, 0, -2],3));
+console.log(getFirstElements([7, 9, 0, -2],6));
+console.log(getFirstElements([7, 9, 0, -2],-3));
 /*
  4. Write a JavaScript function to get the last element of an array. Passing a parameter 'n' will return the last 'n' elements of the array.
  Test Data :
@@ -489,7 +487,7 @@ function arrayRange(from, times) {
 function rangeBetween(start, end) {
 
 }
-
+/*
 var ArraysTasks = {
   isArray              : isArray,
   cloneArray           : cloneArray,
@@ -534,4 +532,4 @@ var ArraysTasks = {
   rangeBetween         : rangeBetween
 };
 
-module.exports = ArraysTasks;
+//module.exports = ArraysTasks;

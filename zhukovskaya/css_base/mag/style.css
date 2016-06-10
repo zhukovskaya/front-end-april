@@ -3,7 +3,7 @@ body {
     background: #ebebeb;
     color: #494949;
     font: 14px/20px Arial, Helvetica, sans-serif;
-    
+   
 }
 
 a {
@@ -35,7 +35,8 @@ aside {
 	width: 1055px;
 	background: #fff;
 	margin: 0 auto;
-	overflow: hidden;
+	
+
 }
 
 ul {
@@ -177,6 +178,7 @@ header:after {
 
 .slider {
 	padding: 0 30px;
+	position: relative;
 }
 
 .slider h3 {
@@ -199,13 +201,44 @@ header:after {
 	height: 187px;
 }
 .slider p {
-color #6a6666;
-font-weight: bold;
-font-size: 14px;
+	color #6a6666;
+	font-weight: bold;
+	font-size: 14px;
 }
-.slider div {
-margin: -5px 0 0 0;
-padding: 8px 0 8px 30px;
+.slider ul div {
+	margin: -5px 0 0 0;
+	padding: 8px 0 8px 30px;
+}
+
+.slider ul div:before {
+display: inline-block;
+  position: relative;
+  left: -20px;
+  content: '';
+  border-style: solid;
+  border-width: 6px 0 6px 6px;
+  border-color: transparent transparent transparent #ffffff;
+  margin: 0px 10px;
+}
+
+#prev {
+position: absolute;
+bottom: 62px;
+left: 12px;
+display: inline-block;
+border-style: solid;
+border-width: 10px 12px 10px 0;
+border-color: transparent #00aedb transparent transparent;
+}
+
+#next {
+	position: absolute;
+	bottom: 62px;
+	right: 16px;
+	display: inline-block;
+	border-style: solid;
+	border-width: 10px 0 10px 12px;
+	border-color: transparent transparent  transparent #ec098d;
 }
  
  /* main content*/	
@@ -213,13 +246,15 @@ padding: 8px 0 8px 30px;
 	background: #fff;
 	width: 1055px;
 	margin: 0 auto;
-	overflow: hidden;
+	clear: both;
+
 }
 
  #main-content {
  	float: left;
  	width: 652px;
  	margin: 20px auto 0 30px;
+ 	
  }
 
 .artical {
@@ -227,14 +262,13 @@ padding: 8px 0 8px 30px;
 }
 
 .date {
-	
-
+ z-index: auto;
 
 }
 
 .date p {
 	height: 47px;
-	width: 63px;
+	width: 65px;
 	font-weight: bold;
 	font-size: 25px;
 	color: #ebebeb;
@@ -244,16 +278,16 @@ padding: 8px 0 8px 30px;
 	float: right;
 	position: absolute;
 	top: 6px;
-	left: -63px;
+	left: -70px;
 }
 
 .date p + p {
 	height: 25px;
-	width: 58px;
+	width: 60px;
 	font-size: 14px;
 	position: absolute;
 	top: 53px;
-	left: -58px;
+	left: -65px;
 }
 
   .gal {
@@ -274,12 +308,13 @@ margin-bottom: 20px;
 
  .gal li {
  	border: 1px solid #bfbfbf;
- 	height: 156px;
+ 	height: 152px;
+
  }
 
  .gal ul img {
  	border: 3px solid #fff;
- 	 }
+ 	height: 144px; }
 
  .artical-links {
  	margin: 20px 0;
@@ -316,25 +351,24 @@ aside {
 }
 
 #first-title {
-	display: inline-block;
-	height: 30px;
+	margin-bottom: 5px;
 }
-
+ 
 #first-title div {
 	float: left;
-	width: 155px;
+	width: 140px;
+	padding: 9px 20px;
+    margin-bottom: 20px;
 }
 
 #first-title div + div {
-	width: 30px;
-	border-top: 15px #fff;
-	
+	width: 38px;
+	padding: 0;
+	border-style: solid;
+	border-width: 38.5px 0 0 38px;
+	border-color: transparent transparent transparent #5261ac;
 }
-#first-title div + div + div {
-	visibility: none;
-	
-	width: 125px;
-}
+
  
 .tabs {
   
@@ -365,6 +399,9 @@ aside {
   display: none;
   width: 324px;
 }
+.tab-content img {
+border: 3px solid #fff;
+}
 
 .tab [type=radio] {
   display: none;   
@@ -372,6 +409,17 @@ aside {
 
 input:checked ~ .tab-content {
   display: block;
+}
+
+input:checked ~ label:after {
+position: absolute;
+top: 20px;
+left: 60px;
+width: 10px;
+height: 10px0;
+border-left: 50px solid transparent;
+border-right: 50px solid transparent;
+border-top: 100px solid inherit;
 }
 
 .tab-content img {
@@ -389,6 +437,10 @@ input:checked ~ .tab-content {
 	margin: 0 auto 0;
 	}
 
+#might-like {
+	clear: both;
+
+}
 
 
 
