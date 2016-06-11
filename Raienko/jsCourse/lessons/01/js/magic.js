@@ -39,3 +39,15 @@ function makeBufferGo() {
   console.log(text);
   return text;
 }
+
+(function () {
+  var obj = {
+    firstName:'Tolya',
+    secondName:'Pachkov',
+    getName:function(){
+      return this.firstName;
+    };
+  };
+  var newObject = obj;
+  console.log(newObject.getName());
+})()
