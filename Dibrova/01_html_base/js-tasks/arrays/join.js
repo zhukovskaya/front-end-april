@@ -13,10 +13,19 @@ function isArray(item) {
  */
 function join(array, separator) {
 
+	var  i, str = array[0];
 
-	var  n = array.join('+')
+	if (typeof separator != 'string' || undefined) {
+		separator = ',';
+	}
 
-    return n;
+	for (i = 1; i < array.length; i++) {
+		str = (str + separator + array[i]);
+	}
+
+    return str;
 };
 
 console.log(join(["Red", "Green", "White", "Black"]));
+console.log(join(["Red", "Green", "White", "Black"], ';'));
+console.log(join(["Red", "Green", "White", "Black"], '+'));
