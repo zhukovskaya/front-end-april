@@ -1,8 +1,12 @@
 var mul = document.getElementById('multiplication-matrix');
 var setTable = document.getElementById('set-matrix');
+var batterfly = document.getElementById('batterfly');
+var pascalTriangle = document.getElementById('pascal-triangle');
 
 setTable.innerHTML = render(setMatrix(10));
 mul.innerHTML = render(setMulMatrix(10));
+batterfly.innerHTML = render(setBatterfly(10));
+pascalTriangle.innerHTML = render(setPascalTriangle(10));
 
 
 function setMatrix(size) {
@@ -26,6 +30,19 @@ function setMulMatrix(size) {
 	}
 	return array;
 }
+
+function setBatterfly(size) {
+	var matrix = [];
+
+	return matrix;
+}
+
+function setPascalTriangle(size) {
+	var triangle = [];
+
+	return triangle;
+}
+
 
 function render(array) {
     var rowsQty = array.length;
