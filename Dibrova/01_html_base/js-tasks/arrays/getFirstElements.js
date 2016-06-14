@@ -23,19 +23,22 @@ function getFirstElements(array, n) {
     if (!isArray(array)) {
         throw new Error('Enter an array!')
     }
+    var i, arr = [];
 
-    var  n = array[0];
+    if (typeof n != 'number') {
+        n = 1;
+    }
 
-    
-    console.log('array: ' + array);
+    for (i = 0; i < n && array[i] != undefined; i++) {
+        arr[i] = array[i];
+    }
 
-
-    return n;
+    return (arr);
 
 };
 
 console.log(getFirstElements([7, 9, 0, -2]));
-console.log(getFirstElements([[], 3]));
-console.log(getFirstElements([[7, 9, 0, -2], 3]));
-console.log(getFirstElements([[7, 9, 0, -2], 6]));
-console.log(getFirstElements([[7, 9, 0, -2], -3]));
+console.log(getFirstElements([], 3));
+console.log(getFirstElements([7, 9, 0, -2], 3));
+console.log(getFirstElements([7, 9, 0, -2], 6));
+console.log(getFirstElements([7, 9, 0, -2], -3));

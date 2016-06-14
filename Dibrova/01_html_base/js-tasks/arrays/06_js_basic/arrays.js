@@ -10,8 +10,8 @@ function isArray(item) {
     return (typeof item !== undefined && item && item.constructor === Array);
 };
 
-console.log(isArray('w3resource'));
-console.log(isArray([1, 2, 4, 0]));
+// console.log(isArray('w3resource'));
+// console.log(isArray([1, 2, 4, 0]));
 
 /*
  2. Write a JavaScript function to clone an array.
@@ -44,8 +44,9 @@ function cloneArray(array) {
     return clone;
 
 };
-console.log(cloneArray([1, 2, 4, 0]));
-console.log(cloneArray([1, 2, [4, 0]]));
+
+// console.log(cloneArray([1, 2, 4, 0]));
+// console.log(cloneArray([1, 2, [4, 0]]));
 
 /*
  3. Write a JavaScript function to get the first element of an array. Passing a parameter 'n' will return the first 'n' elements of the array.
@@ -64,8 +65,29 @@ console.log(cloneArray([1, 2, [4, 0]]));
 
  */
 function getFirstElements(array, n) {
+    if (!isArray(array)) {
+        throw new Error('Enter an array!')
+    }
+    var i, arr = [];
+
+    if (typeof n != 'number') {
+        n = 1;
+    }
+
+    for (i = 0; i < n && array[i] != undefined; i++) {
+        arr[i] = array[i];
+    }
+
+    return (arr);
 
 };
+
+// console.log(getFirstElements([7, 9, 0, -2]));
+// console.log(getFirstElements([], 3));
+// console.log(getFirstElements([7, 9, 0, -2], 3));
+// console.log(getFirstElements([7, 9, 0, -2], 6));
+// console.log(getFirstElements([7, 9, 0, -2], -3));
+
 
 /*
  4. Write a JavaScript function to get the last element of an array. Passing a parameter 'n' will return the last 'n' elements of the array.
@@ -79,8 +101,33 @@ function getFirstElements(array, n) {
  [7, 9, 0, -2]
  */
 function getLastElements(array, n) {
+    if (!isArray(array)) {
+        throw new Error('Enter an array!')
+    }
+
+    var i, j = 0,
+        arr = [];
+
+    if (typeof n != 'number') {
+        n = 1;
+    }
+    if (n > array.length) {
+        n = array.length;
+    }
+
+    for (i = array.length - n; i < array.length && array[i] != undefined; i++) {
+        arr[j] = array[i];
+        j = j + 1;
+    }
+
+    return (arr);
 
 };
+
+// console.log(getLastElements([7, 9, 0, -2]));
+// console.log(getLastElements([7, 9, 0, -2], 3));
+// console.log(getLastElements([7, 9, 0, -2], 6));
+
 
 /*
  5. Write a simple JavaScript program to join all elements of the following array into a string.
@@ -93,7 +140,22 @@ function getLastElements(array, n) {
  */
 function join(array, separator) {
 
+    var  i, str = array[0];
+
+    if (typeof separator != 'string' || undefined) {
+        separator = ',';
+    }
+
+    for (i = 1; i < array.length; i++) {
+        str = (str + separator + array[i]);
+    }
+
+    return str;
 };
+
+// console.log(join(["Red", "Green", "White", "Black"]));
+// console.log(join(["Red", "Green", "White", "Black"], ';'));
+// console.log(join(["Red", "Green", "White", "Black"], '+'));
 
 /*
  6. Write a JavaScript program which accept a number as input and insert dashes (-) between each two even numbers.
@@ -101,7 +163,34 @@ function join(array, separator) {
 
  */
 function setDashes(string) {
+    var i,
+        j = 0,
+        z, n,
+        strDash = string,
+        str;
 
+    for (i = 0; i < string.length; i++) {
+
+        if (string[i] % 2 == 0 && string[i + 1] % 2 == 0) {
+
+            str = '';
+            n = i + j;
+
+            for (z = 0; z < strDash.length; z++) {
+                if (z == n) {
+                    str = str + strDash[z] + '-';
+                    for (z = n + 1; z < strDash.length; z++) {
+                        str = str + strDash[z];
+                    }
+                } else {
+                    str = str + strDash[z];
+                }
+            }
+            j = j + 1;
+            strDash = str;
+        }
+    }
+    return strDash;
 };
 
 /*
@@ -110,16 +199,51 @@ function setDashes(string) {
  Sample Output : -4,-3,1,2,3,5,6,7,8
  */
 function sort(array) {
+    var i, j, n;
 
+    for (i = 0; i < array.length - 1; i++) {
+
+        for (j = 0; j < array.length - 1 - i; j++) {
+            
+            if (array[j + 1] < array[j]) {
+                n = array[j + 1];
+                array[j + 1] = array[j];
+                array[j] = n;               
+            } 
+        }
+    }
+    return array;
 };
-
 /*
  8. Write a JavaScript program to find the most frequent item of an array.
  Sample array : var arr1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
  Sample Output : a ( 5 times )
  */
 function mostFrequent(array) {
+    var i, j, n = 0,
+        a, b, arrN = [];
 
+    for (i = 0; i < array.length; i++) {
+        for (j = 0; j < array.length; j++) {
+
+            if (array[i] === array[j]) {
+                n = n + 1;
+            }
+        }
+        arrN[i] = n;
+        n = 0;
+    }
+
+    for (i = 0; i < array.length; i++) {
+        for (j = 0; j < array.length; j++) {
+
+            if (arrN[j] > arrN[i]) {
+                a = array[j];
+                b = arrN[j];
+            }
+        }
+    }
+    return console.log(a + ' ( ' + b + ' times )');
 };
 
 /*
@@ -127,7 +251,19 @@ function mostFrequent(array) {
  For example if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX'.
  */
 function swapLetter(string) {
+    var i, arr = [];
 
+    for (i = 0; i < string.length; i++) {
+
+        arr[i] = string[i];
+
+        if (arr[i] == arr[i].toLowerCase()) {
+            arr[i] = arr[i].toUpperCase();
+        } else {
+           arr[i] = arr[i].toLowerCase(); 
+        }
+    }
+    return join(arr,'');
 };
 
 /*
@@ -145,8 +281,18 @@ function swapLetter(string) {
  ------
  */
 function getNestedArray(array) {
+    var i;
 
+    for (i = 0; i < array.length; i++) {
+        console.log('"row ' + i + '"');
+        for (j = 0; j < array[i].length; j++) {
+            
+            console.log(array[i][j]);
+        }
+    }
 };
+
+getNestedArray([[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]]);
 
 /*
  11. Write a JavaScript program to find the sum of squares of a numeric vector.

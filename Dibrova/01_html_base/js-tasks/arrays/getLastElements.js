@@ -14,17 +14,29 @@ function isArray(item) {
  [7, 9, 0, -2]
  */
 function getLastElements(array, n) {
-	if (!isArray(array)) {
+    if (!isArray(array)) {
         throw new Error('Enter an array!')
     }
 
-	console.log('array: ' + array);
-    var  n = array.pop();
+    var i, j = 0,
+        arr = [];
 
-    return n;
+    if (typeof n != 'number') {
+        n = 1;
+    }
+    if (n > array.length) {
+        n = array.length;
+    }
+
+    for (i = array.length - n; i < array.length && array[i] != undefined; i++) {
+        arr[j] = array[i];
+        j = j + 1;
+    }
+
+    return (arr);
 
 };
 
 console.log(getLastElements([7, 9, 0, -2]));
-console.log(getLastElements([[7, 9, 0, -2], 3]));
-console.log(getLastElements([[7, 9, 0, -2], 6]));
+console.log(getLastElements([7, 9, 0, -2], 3));
+console.log(getLastElements([7, 9, 0, -2], 6));
