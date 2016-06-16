@@ -89,4 +89,8 @@ var obj = {
     calc.calculate("3 + 7"); // 10
 
 })();
+<<<<<<< HEAD
 >>>>>>> da5bccb208f2047fccaabf2c3d3a7099a66278f2
+=======
+>>>>>>> 7d03179b858663c16312cf2aa83ce9f1ebcb2328
+>>>>>>> b13366fcebe9e5ee70e32c1712c3b53e079b0865
