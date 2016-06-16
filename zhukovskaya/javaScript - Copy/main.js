@@ -1,146 +1,47 @@
-//1
-function isArray(item) {
-	return (typeof item !== undefined && item && item.construktor === Array);
-};
-
-//2
-function clone (array) {
-	if(!isArray(array)) {
-		return throw new Error("Enter an array");
-	}
-
-	var clone = [],
-		i = 0,
-		len = array.length;
-
-	for(; i < len; i++) {
-		if(array[i].length && array[i].constructor === Array) {
-		clone[i] = cloneArray(array[i]);
-		} else {
-		clone[i] = array[i];
-	}
-}
-	return clone;
-}
-
-var a = [1,2,3,4,5];
-var b = clone();
-var c = a;
-console.log
-
-b.push(6);
-
-//3
-function getFirstElements(array, n) {
-	var array = [],
-		i = 0,
-		n,
-		len = array.length;
-		if(!isArray(array)) {
-			return throw new Error("Enter an array");
+/*var expresion,
+result; 
+while(true) {
+	expresion = prompt("Enter an expresion");
+	if  (expresion == null) break;
+	try  {
+		result = eval(expresion)
+		
+		if (isNaN(result)) {
+			throw new Error("Неправильный результат")
 		}
-
-	for(var i = 0; i < array.length; i++) {
-		if(n = underfined) {
-	return array[0];
-	} 
-		n = n || 1	
-		}
+		break;
+	
+} catch(error) {
+	alert("Not correct imput : " + error.message);
 }
-};
-
-//4
-for(var i = array.length - 1; i >= 0; i--) {
-	if(i = )
+	
 }
-
-/*
-
-var a = +prompt("Введите число а");
-var b = +prompt("Введите число b");
-console.log (a, b);
-var c = a + b;
-alert(c);
-
-
-var x = +prompt("Введите кол-во баллов от 0 до 100")ж
-var mark;
-if(x>100) {
-	mark = A+
-}	else if(100 >= x && x =< 95) {
-	mark = "A";
-} else if(94 >= x && x <= 85) {
-	mark = "B";
-}	else if(84 >= x && x <= 75) {
-	mark = "C";
-}	else if(74 >= x && x <= 65) {
-	mark = "D";
-} 	else if(64 >= x && x <= 60) {
-	mark = "E";
-}	else if(59 >= x && x <= 0) {
-	mark = "FX";
-}	else {
-	"enter balls";
-};
-
-
-alert(mark);
+alert(result);
+consol.log(error);
 */
 
-var numberOfChildren = 3,
-	partnerName = "Ann",
-	geographicLocation = "Canada", 
-	jobTitle = "driver";
+function sum(a) {
+	return  function(b) {
+		return  function (c) {
+				return a + b + c;
+			}
+}
 
-console.log ("You will be a " + jobTitle + " in " + geographicLocation + ", and married to " + partnerName + " with " + numberOfChildren + " kids.");
 
 
-var correntYear = 2016,
-	birthYear = 1985,
-	age1,
-	age2;
-
-age1 = correntYear - birthYear;
-age2 = age1-1;
-console.log ("They are either " + age1 + " or " + age2 + ".");
-
-var age = 31,
-	maxAge = 100,
-	applesPerDay = 2,
-	appelesPerLife;
+var closure = (function() {
+	var text = "Hello";
 	
-appelesPerLife = (maxAge - age) * 365 * applesPerDay;
-console.log ("You will need " + appelesPerLife + " apples to last you until the ripe old age of " + maxAge + " .");
-
-
-
-var i,
-	mark;
-for (i = 0; i<5; i+=1) {
-	mark = prompt("Enter mark")
-	if (mark >= 60) {
-		prompt("passed");
-	} else {
-		break;
+	function concat(name) {
+		return text + " " +  name;
+	}
+	return getName : function(name) {
+		return concat(name);
 	}
 }
+})
 
-var perform;
-var number1 = +prompt("Enter first number ")
-var number 2  = +prompt("Enter second number ")
-while (stop) {
-	perform = prompt ("Enter what move you want!")
+var greeting = closure();
+console.log(greeting("Vlad"));
 
-	switch(peerform) {
-		case "Addition" :
-		console.log(number2 + number 1);
-		case "Addition" :
-		console.log(number2 + number 1);
-		break;
-		case "That's all" :
-		stop = false;
-		break;
-		befault:
-			console.log("Wrong operation")
-	}
-}
+
