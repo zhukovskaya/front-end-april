@@ -33,6 +33,20 @@ function setMulMatrix(size) {
 
 function setBatterfly(size) {
 	var matrix = [];
+  for (var i=0;i<size;i++){
+    matrix[i]=[];
+    for (var j=0;j<size;j++){
+      if (i==j) {matrix[i][j]=1;} else {
+        if (i+j==(size-1)) {matrix[i][j]=2} else {
+          if (i<j) {
+            if (i+j<(size-1)) {matrix[i][j]=3} else {matrix[i][j]=4;}
+          } else {
+            if (i+j<(size-1)) {matrix[i][j]=6} else {matrix[i][j]=5;}
+          };
+        };
+      };
+    };
+  };
 
 	return matrix;
 }
