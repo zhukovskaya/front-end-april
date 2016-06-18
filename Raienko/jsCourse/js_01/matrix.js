@@ -56,9 +56,9 @@ function setPascalTriangle(size) {
   for (var i=0;i<size;i++){
     triangle[i]=[];
     for (var j=0;j<size;j++){
-      if (j==0||j==i) {triangle[i][j]=1;} else if (i>j){
-        triangle[i][j]=triangle[i-1][j-1]+triangle[i-1][j];
-      };
+      if (j==0||j==i) {triangle[i][j]=1;} else {
+        if (i>j){ triangle[i][j]=triangle[i-1][j-1]+triangle[i-1][j]; };
+      }
     }
   }
 	return triangle;
