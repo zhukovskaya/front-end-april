@@ -8,7 +8,7 @@ function createCounter() {
 var chooseSame = createCounter(),
     chooseAnother = createCounter();
 
-for (var j = 0; j < 10; j++) {
+for (var j = 0; j < 1000; j++) {
   var carDoor = Math.floor(Math.random() * 3),
     doors=[],
     playerChoice;
