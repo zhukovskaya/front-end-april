@@ -140,7 +140,7 @@ function getLastElements(array, n) {
  */
 function join(array, separator) {
 
-    var  i, str = array[0];
+    var i, str = array[0];
 
     if (typeof separator != 'string' || undefined) {
         separator = ',';
@@ -204,12 +204,12 @@ function sort(array) {
     for (i = 0; i < array.length - 1; i++) {
 
         for (j = 0; j < array.length - 1 - i; j++) {
-            
+
             if (array[j + 1] < array[j]) {
                 n = array[j + 1];
                 array[j + 1] = array[j];
-                array[j] = n;               
-            } 
+                array[j] = n;
+            }
         }
     }
     return array;
@@ -260,10 +260,10 @@ function swapLetter(string) {
         if (arr[i] == arr[i].toLowerCase()) {
             arr[i] = arr[i].toUpperCase();
         } else {
-           arr[i] = arr[i].toLowerCase(); 
+            arr[i] = arr[i].toLowerCase();
         }
     }
-    return join(arr,'');
+    return join(arr, '');
 };
 
 /*
@@ -286,26 +286,44 @@ function getNestedArray(array) {
     for (i = 0; i < array.length; i++) {
         console.log('"row ' + i + '"');
         for (j = 0; j < array[i].length; j++) {
-            
+
             console.log(array[i][j]);
         }
     }
 };
 
-getNestedArray([[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]]);
+// getNestedArray([
+//     [1, 2, 1, 24],
+//     [8, 11, 9, 4],
+//     [7, 0, 7, 27],
+//     [7, 4, 28, 14],
+//     [3, 10, 26, 7]
+// ]);
 
 /*
  11. Write a JavaScript program to find the sum of squares of a numeric vector.
  */
 function sumSquares(array) {
+    var i, sum = 0;
 
+    for (i = 0; i < array.length; i++) {
+        sum = sum + (array[i] * array[i]);
+    }
+    return console.log(sum);
 };
 
 /*
  12. Write a JavaScript program to compute the sum and product of an array of integers.
  */
 function sumArrayInteger(array) {
+    var i, sum = 0,
+        product = 1;
 
+    for (i = 0; i < array.length; i++) {
+        sum = sum + array[i];
+        product = product * array[i];
+    }
+    return console.log(sum, product);
 };
 
 /*
@@ -313,16 +331,39 @@ function sumArrayInteger(array) {
  Use arguments array to take all pass arguments in function and loop over them to push in array. Then return array
  */
 function addToArray(item, item1, item2) {
+    var i, arr = [];
 
+    for (i = 0; i < array.length; i++) {
+
+    }
 };
 
 /*
  14. Write a JavaScript program to remove duplicate items from an array (ignore case sensitivity).
  */
 function removeDuplicate(array) {
+    var i, j, x = 0, y = 0, z =0, arrRemove = [], arr = array;
 
+    for (i = 0; i < array.length; i++) {
+        x++;
+        
+        for (j = x; j < array.length; j++) {
+            if (array[i] == array[j]) {
+                arr[j] = '';
+                y++;
+            }
+        }
+    }
+
+    for (i = 0; i < array.length; i++) {
+        if (array[i] == '') {
+            z++;
+        } else {
+          arrRemove[i - z] = array[i];
+        }
+    }
+     return console.log(arrRemove);
 }
-
 /*
  15. We have the following arrays :
  color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
@@ -349,7 +390,17 @@ function leapYear(array) {
  17. Write a JavaScript program to shuffle an array.
  */
 function shuffleArray(array) {
+    var i, x, y;
 
+    for (i = 0; i < array.length; i++) {
+
+        y = Math.floor(Math.random() * i);
+
+        x = array[i];  
+        array[i] = array[y];  
+        array[y] = x; 
+    }
+    return array;
 }
 
 /*
@@ -374,7 +425,18 @@ function binarySearch(array, target) {
  [4, 5, 8, 10, 12, 13]
  */
 function sumOfInvidual(array1, array2) {
+    var i, array;
 
+    if (array1.length > array2.length) {
+        array = array1;
+    } else {
+        array = array2;
+    }
+
+    for (i = 0; i < array.length - 1; i++) {
+        array[i] = array1[i] + array2[i];
+    }    
+    return array;
 };
 
 /*
