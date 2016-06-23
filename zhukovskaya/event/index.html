@@ -1,0 +1,104 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="menu">
+<button data-action="save">Сохранить</button>
+<button data-action="load">Загрузить</button>
+<button data-action="search">Поиск</button>
+</div>
+<script src="script.js" type="text/javascript"></script>
+<script> 
+function Menu (elem) {
+	this.save = function(){
+		alert( 'сохраняю' );
+	};
+	this.load = function(){
+		alert( 'загружаю' );
+	};
+	this.search = function(){
+		alert( 'ищу' );
+	};
+	var self = this;
+	elem.onclick = function(e) {
+		var target = e.target;
+		var action = target.getAttribute('data-action');
+		if (action) {
+			self[action]();
+			}
+	};
+}
+new Menu(menu);
+</script>
+
+<button id="del"> del</button>
+<div>text</div>
+<button onclick = "this.style.display ='none'"> del</button>
+
+<div id=main>
+	<div class="pane">
+		<button class="remove-button">[x]</button>
+		<h3>Лошадь</h3>
+		<p>Домашняя лошадь.</p>
+	</div>
+	<div class="pane">
+		<button class="remove-button">[x]</button>
+		<h3>Осел</h3>
+		<p>Домашний лсел или ишак.</p>
+	</div>
+	<div class="pane">
+		<button class="remove-button">[x]</button>
+		<h3>Корова, а также пара слов о диком быке, о волах и телках.</h3>
+		<p>Корова</p>
+	</div>
+</div>
+<script>
+function del(elem) {
+	var  parent = getElementById('mes-cont');
+	container.onclick = function(event){
+		if (!event.target.classList.contains('remove-button')) return;
+		event.target.parentNode.hidden = !event.target.parentNode.hidden;
+	}
+}
+</script>
+
+<ul class = "tree">
+	<li>Животные
+		<ul>
+			<li>Млекопитающие
+			<ul>
+				<li>Коровы</li>
+				<li>Ослы</li>
+				<li>Собаки</li>
+				<li>Тигры</li>
+			</ul>
+			</li>
+			<li>Другие</li>
+			<ul>
+			<li>Змеи</li>
+			<li>Птицы</li>
+			<li>Ящерицы</li>
+</ul>
+		</ul>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</li>
+	<li>
+		ul
+	</li>
+</ul>
+<ul>
+	<li></li>
+	<li></li>
+</ul>
+
+
+</body>
+</html>
