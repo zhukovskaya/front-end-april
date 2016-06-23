@@ -112,27 +112,27 @@ footer {
 }
 #social li {
   position: absolute;
-  list-style: none;
-  top: 0;
+	list-style: none;
+	top: 0;
 }
 #social li, #social a {
 	height: 36px;
 	display: block;
 }
 #hi-fi {
-	left: 0px;
-  width: 36px;
-  background: url(../MagBlog/social.png) 0 0;
+	left: 1px;
+	width: 36px;
+	background: url(../MagBlog/social.png) -1px 0;
 }
 #facebook {
 	left: 43px;
-  width: 36px;
-  background: url(../MagBlog/social.png) -45px 0;
+	width: 36px;
+	background: url(../MagBlog/social.png) -43px 0;
 }
 #twitter {
-	left: 84px;
+	left: 86px;
   width: 36px;
-  background: url(../MagBlog/social.png) -87px 0;
+  background: url(../MagBlog/social.png) -86px 0;
 }
 .clearfix {
   clear: both;
