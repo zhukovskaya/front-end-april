@@ -1,17 +1,30 @@
-var baton=document.getElementById('evilBtn');
-var elements = document.querySelectorAll('h3,p');
-console.log(elements);
-baton.onclick=function() {
-  var holder=document.getElementById('holder');
-  holder.addEventListener('click',deleter,false);
-  function deleter(event){
-    console.log('Whom should i kill?');
-    event.target.style.display='none';
+function spanWrapper (){
+  var liValues=document.getElementsByTagName('li'),
+    len=liValues.length,
+    span,
+    ul;
+    console.log('BEFORE:',liValues);
+  for (var i=0;i<len;i++) {
+    span=document.createElement('span');
+    span.innerText=liValues[i].firstChild.nodeValue;
+    liValues[i].removeChild(liValues[i].firstChild);
+    liValues[i].insertBefore(span,liValues[i].firstChild);
   }
-};
-var baton2=document.getElementById('goodBtn');
-baton2.onclick=function(){
-  for (var i = 0; i < elements.length; i++) {
-      elements[i].style.display='inline-block';
+  console.log('AFTER:',liValues);
+}
+spanWrapper();
+
+document.addEventListener('click',menuMagic,false);
+
+function menuMagic(event) {
+  var currentElement;
+  if (event.target.parentNode.tagName=='LI') {
+    currentElement=event.target.parentNode.childNodes[1];
+    console.log(currentElement);
+    if (currentElement.style.display === 'none') {
+        currentElement.style.display = 'block';
+    } else {
+        currentElement.style.display = 'none';
     }
+  }
 }

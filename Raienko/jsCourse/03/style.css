@@ -1,17 +1,9 @@
-h3,p {
-	border:2px solid black;
-	padding: 10px;
-	display: inline-block;
+.menu ul{
+  display: none;
 }
-button {
-	width: 200px;
-	height: 50px;
+.menu li{
+  list-style-type: none;
 }
-body {
-	text-align: center;
-}
-ul {
-	margin: 0 auto;
-	width: 300px;
-	text-align: left;
+span {
+  text-transform: capitalize;
 }
