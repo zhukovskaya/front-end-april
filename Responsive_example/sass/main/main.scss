@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Container */
 @import 'layouts/container';
 
@@ -12,3 +13,16 @@
 
 /* Icons*/
 @import 'image/icons';
+=======
+/* Container */
+@import 'layouts/container';
+
+/* Layouts */
+@import 'layouts/header';
+@import 'layouts/main';
+@import 'layouts/sidebar';
+@import 'layouts/footer';
+
+/* Blocks */
+@import 'blocks/elements';
+>>>>>>> 369fc5562c70886b99db7cec30bd44db6069e4be
