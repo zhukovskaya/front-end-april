@@ -14,7 +14,10 @@ function spanWrapper (){
 }
 spanWrapper();
 
-document.addEventListener('click',menuMagic,false);
+var menushka = document.getElementById('menu');
+console.log(menushka);
+menushka.addEventListener('click',menuMagic);
+//document.addEventListener('click',menuMagic,false);
 
 function menuMagic(event) {
   var currentElement;
@@ -23,7 +26,9 @@ function menuMagic(event) {
     console.log(currentElement);
     if (currentElement.style.display === 'none') {
         currentElement.style.display = 'block';
+        console.log("1");
     } else {
+      console.log("2");
         currentElement.style.display = 'none';
     }
   }
