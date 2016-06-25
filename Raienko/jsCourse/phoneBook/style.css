@@ -1,4 +1,13 @@
 table *{
-	border: 2px solid black;
 	width: 150px;
+	border: 1px solid black;
+	text-align: center;
 }
+table th {
+	background: gray;
+	border: 2px solid black;
+	color: white;
+}
+table tbody tr:nth-child(even) {
+	background: #E6E6E6;
+} 
