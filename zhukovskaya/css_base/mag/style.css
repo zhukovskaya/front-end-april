@@ -1,9 +1,10 @@
+
 body {
     margin: 0;
     background: #ebebeb;
     color: #494949;
     font: 14px/20px Arial, Helvetica, sans-serif;
-    
+   
 }
 
 a {
@@ -17,8 +18,8 @@ a {
 h1, h2 {
     margin: 0;
     font-weight: bold;
-    font-size: 20px;
-    line-height: 28px;
+    font-size: 38px;
+    line-height: 40px;
 }
 
 header, 
@@ -35,7 +36,6 @@ aside {
 	width: 1055px;
 	background: #fff;
 	margin: 0 auto;
-	overflow: hidden;
 }
 
 ul {
@@ -47,7 +47,8 @@ header:after,
 #nav:after,
 .slider:after,
 #main-content:after,
-aside:after {
+aside:after, 
+.tabs:after {
     content: '';
     display: block;
     clear: both;
@@ -176,10 +177,11 @@ header:after {
 
 .slider {
 	padding: 0 30px;
+	position: relative;
 }
 
 .slider h3 {
-	margin: 10px 30px 10px 30px;
+	margin: 10px 30px 10px 0px;
 	font-weight: bold;
 	text-transform: uppercase;
 	color: #00aedb;}
@@ -198,13 +200,44 @@ header:after {
 	height: 187px;
 }
 .slider p {
-color #6a6666;
-font-weight: bold;
-font-size: 14px;
+	color #6a6666;
+	font-weight: bold;
+	font-size: 14px;
 }
-.slider div {
-margin: -5px 0 0 0;
-padding: 8px 0 8px 30px;
+.slider ul div {
+	margin: -5px 0 0 0;
+	padding: 8px 0 8px 30px;
+}
+
+.slider ul div:before {
+display: inline-block;
+  position: relative;
+  left: -20px;
+  content: '';
+  border-style: solid;
+  border-width: 6px 0 6px 6px;
+  border-color: transparent transparent transparent #ffffff;
+  margin: 0px 10px;
+}
+
+#prev {
+position: absolute;
+bottom: 62px;
+left: 12px;
+display: inline-block;
+border-style: solid;
+border-width: 10px 12px 10px 0;
+border-color: transparent #00aedb transparent transparent;
+}
+
+#next {
+	position: absolute;
+	bottom: 62px;
+	right: 16px;
+	display: inline-block;
+	border-style: solid;
+	border-width: 10px 0 10px 12px;
+	border-color: transparent transparent  transparent #ec098d;
 }
  
  /* main content*/	
@@ -212,28 +245,23 @@ padding: 8px 0 8px 30px;
 	background: #fff;
 	width: 1055px;
 	margin: 0 auto;
-	overflow: hidden;
+	display: table;
 }
 
  #main-content {
  	float: left;
  	width: 652px;
  	margin: 20px auto 0 30px;
+ 	
  }
 
 .artical {
 	position: relative;
 }
 
-.date {
-	
-
-
-}
-
 .date p {
 	height: 47px;
-	width: 63px;
+	width: 65px;
 	font-weight: bold;
 	font-size: 25px;
 	color: #ebebeb;
@@ -243,16 +271,16 @@ padding: 8px 0 8px 30px;
 	float: right;
 	position: absolute;
 	top: 6px;
-	left: -63px;
+	left: -70px;
 }
 
 .date p + p {
 	height: 25px;
-	width: 58px;
+	width: 60px;
 	font-size: 14px;
 	position: absolute;
 	top: 53px;
-	left: -58px;
+	left: -65px;
 }
 
   .gal {
@@ -261,10 +289,12 @@ padding: 12px;
 border: 1px solid #bfbfbf;
 float: left;
 margin-bottom: 20px;
-  }
+ }
+
  .gal a {
  	display: inline-block;
- }
+}
+
  .gal ul, .gal li {
  	display: inline-block;
  	margin: 0;
@@ -273,12 +303,13 @@ margin-bottom: 20px;
 
  .gal li {
  	border: 1px solid #bfbfbf;
- 	height: 156px;
+ 	height: 152px;
  }
 
  .gal ul img {
  	border: 3px solid #fff;
- 	 }
+ 	height: 144px; 
+ }
 
  .artical-links {
  	margin: 20px 0;
@@ -304,68 +335,130 @@ margin-bottom: 20px;
 
 
 
-/* aside
+/* aside */
 
- Do not finished yet */
  
 aside {
 	float: right;
-	width: 324px;
-	margin: 23px 30px 30px 0;
-}
-
-#first-title {
-	display: inline-block;
-	height: 30px;
+	width: 340px;
+	margin: 23px 20px 30px 0;
+	overflow: auto;
 }
 
 #first-title div {
 	float: left;
-	width: 155px;
+	width: 140px;
+	padding: 9px 20px;
+    margin-bottom: 20px;
 }
 
 #first-title div + div {
-	width: 30px;
-	border-top: 15px #fff;
-	
+	width: 38px;
+	padding: 0;
+	border-style: solid;
+	border-width: 38.5px 0 0 38px;
+	border-color: transparent transparent transparent #5261ac;
 }
-#first-title div + div + div {
-	visibility: none;
-	
-	width: 125px;
-}
+
  
 .tabs {
-  position: relative;   
+  display: table;
   clear: both;
   margin: 0;
+  position: relative;
+  width: 335px;
+  
 }
 .tab {
-  float: left;
+ float: left;
+ height: 460px;
 }
 .tab label {
-  padding: 10px 20px; 
-  position: relative;
-  left: 1px; 
+ padding: 10px 20px; 
+ position: relative;
+ left: 0px; 
+ top: 0px;
+ cursor: pointer;
+ width: 30%;
 }
-.tab [type=radio] {
-  display: none;   
-}
+
 .tab-content {
   position: absolute;
   top: 28px;
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 20px;
   margin: 10px 0;
   display: none;
+  
+ 
 }
 
 
-input:checked ~ label ~ .tab-content {
+
+.tab [type=radio] {
+  display: none;   
+}
+
+input:checked ~ .tab-content {
   display: block;
 }
+
+input:checked ~ label:after {
+position: absolute;
+top: 20px;
+left: 60px;
+width: 10px;
+height: 10px;
+border-left: 50px solid transparent;
+border-right: 50px solid transparent;
+border-top: 100px solid inherit;
+}
+
+.tab-content div {
+	padding: 10px 0;
+}
+ .tab-content div + div {
+ 	border-top:  1px solid #dedddd;
+ 	
+ }
+.tab-content img {
+	border: 3px solid #fff;
+	margin: 0;
+	
+ }
+ .tab-content > div > div {
+border: 1px solid #bfbfbf;
+float:left;
+margin: 0 6px 6px 0;
+padding: 0;
+height: 103px;
+}
+
+.tab-content img + p {
+	color: #00aedb; 
+	
+	font-weight: bold;
+}
+
+.tab-content p {
+	margin: 0 auto 0;
+	padding: 0;
+
+	}
+
+.tab-content div + p {
+	color: #00aedb;
+	font-weight: bold;
+	font: 16px/20px;
+}
+
+#might-like {
+	clear: both;
+
+}
+
+
 
 
 /*footer*/
@@ -378,55 +471,4 @@ footer p {
 
 
 }
-
-/*.holder {
-	position: relative;
-	width: 300px;
-	height: 300px;
-	margin: 0 auto;
-	background: #cda;
-}
-
-.triangle {
-	display: block;
-	position: absolute;
-	top:50%;
-	left: 50%;
-	margin: -25px -25%;
-	border-color: transparent #134 transparent;
-	border-style: solid;
-	border-width: 12px 14px 12px 0;
-	height: 0;
-
-}
-
-
-.triangle {
-	display: block;
-	position: absolute;
-	top:50%;
-	left: 50%;
-	margin: -25px -25%;
-	border-color:  transparent #134 transparent;
-	border-style: solid;
-	border-width: 12px 14px 12px 0;
-	height: 0;
-
-}
-
-.triangle {
-	display: block;
-	position: absolute;
-	top:50%;
-	left: 50%;
-	margin: -25px -25%;
-	border-color: transparent #134 transparent;
-	border-style: solid;
-	border-width: 12px 14px 12px 0;
-	height: 0;
-
-}
-*/
-
-
 

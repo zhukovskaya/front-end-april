@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,6 +48,7 @@
 			</nav>
 			<section class="slider">
 				<h3>top stories</h3>
+				<a  id="prev" href="#"></a>
 				<ul>
 					<li><a href="#">
 							<img src="img/img-top.jpg" alt="">
@@ -69,6 +69,7 @@
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, sapiente, veritatis.</p>
 					</li>
 				</ul>
+				<a  id="next" href="#"></a>
 			</section>
 			<div class="content">
 				<section id="main-content">
@@ -122,42 +123,41 @@
 					<div id="first-title">
 						<div class="dark-blue" >top stories</div>
 						<div></div>
-						<div></div>
 					</div>
 					<section class="tabs">
-						<form class="tab">
+						<div class="tab">
+							<input type="radio" name="tab" id="fashion" checked />
 							<label class="pink" for="fashion">fashion</label>
-							<input type="radio" name="fashion" id="fashion" checked />
 							<div class="tab-content">
 				        		<div>
-									<img src="img/img6.jpg" alt=""/>
+									<div><img src="img/img6.jpg" alt=""/></div>
 									<p>Lorem Ipsum is simply dummy text of the printing </p> 
 									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
 								</div>
 								<div>
-									<img src="img/img6.jpg" alt=""/>
+									<div><img src="img/img6.jpg" alt=""/></div>
 									<p>Lorem Ipsum is simply dummy text of the printing </p> 
 									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
 							  	</div>
 								<div>
-									<img src="img/img6.jpg" alt=""/>
+									<div><img src="img/img6.jpg" alt=""/></div>
 							  		<p>Lorem Ipsum is simply dummy text of the printing </p> 
 							  		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
 							  	</div>
 							</div>
-						</form>	
+						</div>	
 						<div class="tab">
-							<label class="orange" for="cinema">cinema</label>
-				        	<input type="radio" name="cinema" id="cinema" />
+							<input type="radio" name="tab" id="cinema" />
+				        	<label class="orange" for="cinema">cinema</label>
 				        	<div class="tab-content"></div>
 				       	</div>
 				        <div class="tab">
-				        	<label class="blue" for="television">television</label>
-				       		<input type="radio" name="television" id="television" />
+				        	<input type="radio" name="tab" id="television" />
+				       		<label class="blue" for="television">television</label>
 							<div class="tab-content"></div>
 						</div>	
 					</section>
-					<section>
+					<section id="might-like">
 						<div class="dark-blue">you might also like</div>
 						<ul>
 							<li>
@@ -182,7 +182,7 @@
 							</li>
 						</ul>	
 					</section>
-					<section>
+					<section id="archives">
 						<div class="dark-blue">archives</div>
 						<ul>
 							<li>
@@ -264,6 +264,5 @@
 	</footer>
 </body>
 </html>
-
 
 
