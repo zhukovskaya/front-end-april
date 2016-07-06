@@ -1,30 +1,46 @@
-var name = document.getElementById("name"),
-	phone = document.getElementById("phone"),
-	email = document.getElementById("email"),
-	buttonAdd = document.getElementById("add"),
+window.onload = function(){ 
+   var doc = document,
+	name = doc.getElementById("name"),
+	phone = doc.getElementById("phone"),
+	email = doc.getElementById("email"),
+	buttonAdd = doc.getElementById("add"),
 	phoneRegExp = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im,
 	emailRegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-	error = document.getElementById("error");
+	form = doc.getElementById("info");
 
-buttonAdd.onclick = add;
+form.onclick = function() {
+    
+	if(!validError) {
+		alert('hi');
+	}	//createElement()
+
+};	
 
 
-function validName() {
-	return name && name.length;
-}
+//validation
 
-function validPhone() {
-	return phoneRegExp.test(phone.value); 
-}
+	function validName() {
+		return name && name.length;
+		
+	}
 
-function validEmail(email) {
- 	return emailRegExp.test(email.value);
-}
+	function validPhone() {
+		return phoneRegExp.test(phone.value); 
+	}
 
-function validError() {
-	if(!validName() || !validPhone || !validEmail)
- error.innerHTML = "Please, enter valid information";
+	function validEmail(email) {
+	 	return emailRegExp.test(email.value);
+	}
 
+	function validError() {
+		if(!validName() || !validPhone() || !validEmail()) {
+		var error = doc.createElement("p");
+		error.innerHTML = "Please, enter valid information" ;
+		form.appendChild(error);
+		}
+	}
+	 
+};
 
 
 
