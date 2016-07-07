@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ajax</title>
+</head>
+<body>
+<div class="form-holder">
+	<form id="quest-form" action="http://192.168.1.74:4730/answers" method="POST">
+		<div class="row">
+			<label>
+				<span>What is your name?</span>
+				<input type="text" name="name" required>
+			</label>
+		</div>
+		<div class="row">
+			<label>
+				<span>Are you working?</span>
+				<select name="working" >
+					<option value="">--No Data--</option>
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+				</select>
+			</label>
+		</div>
+		<div class="row">
+			<label>
+				<span>Would you be occupate?</span>
+				<select name="occupation" >
+					<option value="">--No Data--</option>
+					<option value="yes">Yes</option>
+					<option value="no">No</option>
+					<option value="maybe">May be</option>
+				</select>
+			</label>
+		</div>
+		<button type="submit">Submit</button>
+	</form>
+	<script>
+		var $questForm.onsubmit = function(event) {
+			event.preventDefault();
+			var
+			request = {},
+			element = $questForm.elements;
+
+			for (var i = 0; i < elements.length; i++) {
+				if (elements[i].attributes.name) {
+					request[elements[i].attributes.name.value] = elements[i].value;
+					}
+			}
+
+			request = JSON.srtingify(request);
+
+			var req = new XMLHttpRequest();
+
+			reg.open($questForm.attributes.mathod.value, $questForm.attributes.action.value, true);
+			req.setRequestHeader('Content-Type', 'application/json');
+
+			req.onreadystatechange = function() {
+				if (req.readyState == req.DONE && req.status == 200) {
+					var answers = JSON.parse (req.response);
+					console.table(aswers);
+					var works = answer.filter(function(item) {
+						return item.working == 'yes';
+						});
+					console.log("Work $s% people of $s", Math.round(works.length / answers.length *100))
+
+				}
+			}
+
+		}
+</body>
+</html>
