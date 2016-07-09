@@ -12,7 +12,7 @@
 			<button>Search</button>
 			<button>Reset</button>
 		</form>
-		<table>
+		<table id="myTable">
 			<thead>
 				<th>Name</th>
 				<th>Phone</th>
@@ -26,8 +26,8 @@
 		<hr>
 		<form id="info" novalidate>
 			<div class="row">
-				<label for="name">Name</label>
-				<input id="name" type="text" placeholder="Enter a name">
+				<label for="user-name">Name</label>
+				<input id="user-name" type="text" placeholder="Enter a name">
 			</div>
 			<div class="row">
 				<label for="phone">Phone</label>
@@ -37,7 +37,8 @@
 				<label for="email">Email</label>
 				<input id="email" type="email" placeholder="Enter an Email">
 			</div>
-			<button id="add" type="button" value="add contact" >Add contact</button>
+			<button id="add" type="button" >Add contact</button>
+			<div id="error"></div>
 		</form>
 	</body>
 </html>
