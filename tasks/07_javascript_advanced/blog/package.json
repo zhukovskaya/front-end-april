@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "json-server --watch db.json"
+    "start": "ws --spa index.html"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "font-awesome": "^4.6.3",
-    "json-server": "^0.8.15"
+    "json-server": "^0.8.15",
+    "local-web-server": "^1.2.6"
   }
 }
