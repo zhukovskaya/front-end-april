@@ -8,15 +8,15 @@
 	phone = doc.getElementById("phone"),
 	email = doc.getElementById("email"),
 	buttonAdd = doc.getElementById("add"),
-	phoneRegExp = /\d/,
-	emailRegExp =/\w/,
+	phoneRegExp = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im,
+	emailRegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
 	errorMessage = doc.getElementById("error"),
 	form = doc.getElementById("info"),
 	table = doc.getElementById("myTable");
 
 
 	buttonAdd.onclick = function add() {
-		
+		if(!isValid ()) return;
 		
 		var newRow = table.insertRow(-1);
 		var cellName = newRow.insertCell(-1);
@@ -52,31 +52,30 @@
 
 //validation
 
-	// function validName() {
-	// 	return name && name.length;
+	function validName() {
+		return !!name.value.trim();
 		
-	// }
+	}
 
-	// function validPhone() {
-	// 	return phoneRegExp.test(phone.value); 
-	// }
+	function validPhone() {
+		return phoneRegExp.test(phone.value); 
+	}
 
-	// function validEmail() {
-	//  	return emailRegExp.test(email.value);
-	// }
+	function validEmail() {
+	 	return emailRegExp.test(email.value);
+	}
 
-	// function isValid() {
-		 
-	// 	if(!validName() || !validPhone() || !validEmail()) {
-	// 		errorMessage.innerHTML = "Please, enter valid information" ;
-	// 	} else {
-	// 		return validName() && validPhone() && validEmail();
-	// 	}
-	// }
+	 function isValid() {
+		if(!validName() || !validPhone() || !validEmail()) {
+			errorMessage.innerHTML = "Please, enter valid information" ;
+			return false;
+		} else {
+			errorMessage.innerHTML = "" ;
+			return true;
+		}
+	}
 	
-	 // function () {
-	 // 	var obj = {};
-	 // 	obj.name = 
+	 
 
 	 
 
