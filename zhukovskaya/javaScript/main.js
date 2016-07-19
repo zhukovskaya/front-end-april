@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*
 
 var a = +prompt("Введите число а");
@@ -272,6 +273,8 @@ while (stop) {
 			console.log("Wrong operation")
 	}
 =======
+=======
+>>>>>>> 48d727877ab5a1913ea60d98a5a07ac490951c16
 /*
 
 var a = +prompt("Введите число а");
@@ -361,6 +364,9 @@ while (stop) {
 		befault:
 			console.log("Wrong operation")
 	}
+<<<<<<< HEAD
 >>>>>>> 369fc5562c70886b99db7cec30bd44db6069e4be
 >>>>>>> 10420b9dad52911ad0c9ed786d84236f92390322
+=======
+>>>>>>> 48d727877ab5a1913ea60d98a5a07ac490951c16
 }
