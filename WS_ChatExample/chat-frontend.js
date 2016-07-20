@@ -26,7 +26,7 @@
     }
 
     // open connection
-    var connection = new WebSocket('ws://192.168.1.74:1337');
+    var connection = new WebSocket('ws://127.0.0.1:1337');
 
     connection.onopen = function () {
         // first we want users to enter their names
@@ -102,7 +102,7 @@
 
     var
      debounceIndex,
-     debounceDelay = 1000;
+     debounceDelay = 5000;
     input.keydown(function(e) {
         if (e.keyCode === 13) {
             var msg = $(this).val();
@@ -121,14 +121,19 @@
                 myName = msg;
             }
         }
+		
+		if (!myName) return;
 
         clearTimeout(debounceIndex);
 
-        connection.send('{{is typing}}');
+        if (!debounceIndex) {
+			connection.send('{{is typing}}');
+		}
 
-        debounceIndex = setTimeout(function() {
-           connection.send('{{end typing}}');
-        }, debounceDelay);
+		debounceIndex = setTimeout(function() {
+		   connection.send('{{end typing}}');
+		   debounceIndex = null;
+		}, debounceDelay);
     });
 
     /**

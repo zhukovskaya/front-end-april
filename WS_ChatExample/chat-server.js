@@ -70,9 +70,11 @@ wsServer.on('request', function(request) {
     // accept connection - you should check 'request.origin' to make sure that
     // client is connecting from your website
     // (http://en.wikipedia.org/wiki/Same_origin_policy)
-    var connection = request.accept(null, request.origin); 
-    // we need to know client index to remove them on 'close' event
-    var index = clients.push(connection) - 1;
+    var connection = request.accept(null, request.origin);
+	
+    clients.push(connection) - 1;
+	
+    var typingKey = (Math.round(Math.random() * 1000000)).toString(36);
     var userName = false;
     var userColor = false;
 
@@ -101,13 +103,13 @@ wsServer.on('request', function(request) {
                 var json;
 
                 if (htmlEntities(message.utf8Data) == '{{is typing}}') {
-                    if (!typing[index]) {
-                        typing[index] = userName;
+                    if (!typing[typingKey]) {
+                        typing[typingKey] = userName;
                         json = JSON.stringify({ type:'typing', data: typing });
                     }
                     
                 } else if (htmlEntities(message.utf8Data) == '{{end typing}}') {
-                    delete typing[index];
+                    delete typing[typingKey];
                     json = JSON.stringify({ type:'typing', data: typing });
                 } else {
                     // we want to keep history of all sent messages
@@ -135,13 +137,19 @@ wsServer.on('request', function(request) {
     });
 
     // user disconnected
-    connection.on('close', function(connection) {
+    connection.on('close', function(error) {
         if (userName !== false && userColor !== false) {
             console.log((new Date()) + " Peer "
                 + userName + " disconnected.");
             // remove user from the list of connected clients
+			var index = clients.indexOf(connection);
             clients.splice(index, 1);
-            delete typing[index];
+            delete typing[typingKey];
+			
+			var json = JSON.stringify({ type:'typing', data: typing });
+			for (var i=0; i < clients.length; i++) {
+				clients[i].sendUTF(json);
+			}
         }
     });
 
