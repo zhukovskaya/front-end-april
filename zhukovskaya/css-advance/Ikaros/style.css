@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 body{
 	margin: 0;
     background: #fdfdfd;
@@ -137,6 +138,8 @@ a:hover {
 }
 
 =======
+=======
+>>>>>>> 48d727877ab5a1913ea60d98a5a07ac490951c16
 body{
 	margin: 0;
     background: #fff;
@@ -348,5 +351,9 @@ main {
     width: 948px;
     margin: -16px auto 0;
     border: 1px solid #eeeedc;
+<<<<<<< HEAD
+    padding: 22px 15px 16p
+>>>>>>> 48d727877ab5a1913ea60d98a5a07ac490951c16
+=======
     padding: 22px 15px 16p
 >>>>>>> 48d727877ab5a1913ea60d98a5a07ac490951c16
