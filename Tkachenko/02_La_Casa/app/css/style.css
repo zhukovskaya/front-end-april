@@ -37,7 +37,7 @@ h2 {
   color: #ffffff; }
   @media only screen and (min-width: 480px) and (max-width: 991px) {
     h2 {
-      font-size: 4.250em;
+      font-size: 4.000em;
       padding: 0; } }
   @media only screen and (min-width: 992px) and (max-width: 4799px) {
     h2 {
@@ -91,6 +91,9 @@ img {
   @media only screen and (min-width: 992px) and (max-width: 4800px) {
     .wrapper {
       width: 95%; } }
+
+.hidden {
+  display: none; }
 
 #back-to-top {
   position: fixed;
@@ -157,6 +160,12 @@ img {
 .fa-shopping-cart:before,
 .fa-sign-in:before {
   margin-right: 0.6em; }
+
+.fa-bars {
+  margin-top: 0.670em; }
+  .fa-bars:before {
+    font-size: 2.000em;
+    color: white; }
 
 .navigation {
   width: 6.250em;

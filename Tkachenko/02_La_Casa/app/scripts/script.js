@@ -45,10 +45,29 @@
 })();
 
 /*BARS*/
-(function() {
-  if ($(window).width() < 768) {
-    console.log($(window).width());
-    $('nav.headertop__right').addClass('headertop__right--hamburger fa fa-bars');
-    $('nav.headertop__right').addClass('hidden');
-  } else  $('nav.headertop__right').removeClass('hidden');
-})();
+// (function() {
+//
+//   $(window).resize(function() {
+//     if ($(window).width() > 767) {
+//       console.log($(window).width());
+//       $('nav.headertop__right').removeClass('headertop__right--hamburger fa fa-bars');
+//       $('ul.bar').removeClass('hidden');
+//     } else {
+//       $('nav.headertop__right').addClass('headertop__right--hamburger fa fa-bars');
+//       $('ul.bar').addClass('hidden');
+//     }
+//
+//     let counter = 0;
+//
+//     $('.fa-bars').click(function(e) {
+//       e.preventDefault();
+//       counter++;
+//       if ((counter % 2) === 0) {
+//         $('ul.bar').removeClass('hidden');
+//       } else {
+//         $('ul.bar').addClass('hidden');
+//       }
+//   });
+//
+//
+// })();

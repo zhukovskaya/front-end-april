@@ -42,7 +42,7 @@ h2 {
     text-align: center;
     color: #ffffff;
     @include respond(480, 992) {
-        font-size: 4.250em;
+        font-size: 4.000em;
         padding: 0;
     }
     @include respond(992, 4800) {
@@ -105,6 +105,10 @@ img {
     @include respond(992, 4801) {
         width: 95%;
     }
+}
+
+.hidden {
+    display: none;
 }
 
 #back-to-top {
