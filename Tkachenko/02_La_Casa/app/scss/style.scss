@@ -111,6 +111,10 @@ img {
     display: none;
 }
 
+.fa-arrow-right:before {
+  content: "\f061";
+}
+
 #back-to-top {
     position: fixed;
     bottom: 0.300em;
