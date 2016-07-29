@@ -95,6 +95,9 @@ img {
 .hidden {
   display: none; }
 
+.fa-arrow-right:before {
+  content: "\f061"; }
+
 #back-to-top {
   position: fixed;
   bottom: 0.300em;
@@ -146,12 +149,14 @@ img {
   @media only screen and (min-width: 1200px) and (max-width: 4800px) {
     .headertop {
       padding: 1.414em 12.500em 0; } }
-  @media only screen and (min-width: 480px) and (max-width: 4800px) {
-    .headertop__left {
-      float: left; } }
-  @media only screen and (min-width: 480px) and (max-width: 4800px) {
-    .headertop__right {
-      float: right; } }
+  .headertop__left {
+    float: left; }
+  .headertop__right {
+    float: right; }
+
+@media only screen and (min-width: 0px) and (max-width: 479px) {
+  .headerbottom {
+    margin-top: 2.000em; } }
 
 .fa-bed:before,
 .fa-fax:before,
@@ -161,9 +166,12 @@ img {
 .fa-sign-in:before {
   margin-right: 0.6em; }
 
+.fa-arrow-right,
 .fa-bars {
   margin-top: 0.670em; }
+  .fa-arrow-right:before,
   .fa-bars:before {
+    float: right;
     font-size: 2.000em;
     color: white; }
 
