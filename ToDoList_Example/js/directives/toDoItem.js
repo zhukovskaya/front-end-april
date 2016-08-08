@@ -7,8 +7,10 @@ myApp.directive('toDoItem', function() {
 				return 'Начать делать »';
 	  	} else if (status == "inprogress") {
 	  		return 'Завершить »';
+	  	} else if (status == "done") {
+	  		return '';
 	  	}
-  	}
+  	};
 
   	$scope.getBtnClass = function(status) {
   		if (status == "todo") {
@@ -16,18 +18,20 @@ myApp.directive('toDoItem', function() {
 	  	} else if (status == "inprogress") {
 	  		return 'btn-success';
 	  	}
-  	}
-  	
-  	
+  	};
+
   	$scope.removeItem = function($event) {
   		$event.preventDefault();
-
-  		$scope.itemData = null;
-  	}
+			
+  		$scope.onRemove({taskId: $scope.taskId});
+  	};
 
   	$scope.changeStatus = function(status) {
   		if (status == 'todo') {
   			$scope.itemData.status = 'inprogress';
+  		}
+  		if (status == 'inprogress') {
+  			$scope.itemData.status = 'done';
   		}
   	}
   }
@@ -36,9 +40,10 @@ myApp.directive('toDoItem', function() {
   	restrict: 'E',
   	scope: {
   		itemData: '=',
-  		taskId: '@' 
+  		taskId: '@',
+			onRemove: '&'
   	},
-    template: ['<div class="item" ng-if="itemData">',
+    template: ['<div class="item">',
 							    '<div class="close">',
 								    '<a class="btn btn-danger btn-delete" href="#" ng-click="removeItem($event)">',
 								    	'<span class="glyphicon glyphicon-remove"></span>',
@@ -52,7 +57,7 @@ myApp.directive('toDoItem', function() {
     								' class="btn "',
     								' ng-class="getBtnClass(itemData.status)"',
     								' ng-click="changeStatus(itemData.status)"',
-    								'ng-if="getBtnName">{{getBtnName(itemData.status)}}</button>',
+    								'ng-if="getBtnName(itemData.status)">{{getBtnName(itemData.status)}}</button>',
     							'</p>',
     						'</div>'].join(''),
     controller: toDoItemController

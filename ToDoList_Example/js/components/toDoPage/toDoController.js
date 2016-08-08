@@ -3,7 +3,7 @@ myApp.controller('TodoListController', function($location, casheService) {
 
 	toDoCtr.toDoListIsVisible = false;
 
-	toDoCtr.boardName = 'Uncnown';
+	toDoCtr.boardName = 'Unknown';
 
 	if ($location.hash()) {
 		toDoCtr.toDoListIsVisible = true;
@@ -18,7 +18,7 @@ myApp.controller('TodoListController', function($location, casheService) {
 		toDoCtr.toDoListIsVisible = true;
 
 		toDoCtr.boardName = toDoKey;
-	}
+	};
 
 	casheService.getBoardData('example')
 	.then(function(data) {
@@ -28,9 +28,19 @@ myApp.controller('TodoListController', function($location, casheService) {
 		console.log(error)
 	});
 
-	toDoCtr.exapmle = {
-		title: 'some title',
-		description: 'description',
-		status: 'todo'
+	toDoCtr.filterTasks = function(boardItems, status) {
+		var filteredColumn = {};
+
+		angular.forEach(boardItems, function(value, key) {
+			if (value.status == status) {
+				filteredColumn[key] = value;
+			}
+		});
+
+		return filteredColumn;
+	};
+
+	toDoCtr.removeTask = function(taskId) {
+		delete toDoCtr.board[taskId];
 	}
 });

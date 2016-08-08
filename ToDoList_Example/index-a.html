@@ -45,19 +45,29 @@
 					<div class="col-xs-3">
 						<h2>Делать</h2>
 
-						<div id="todo">
-							<to-do-item item-data="control.exapmle"></to-do-item>
-						</div>
+						<to-do-item
+								ng-repeat="(taskId, item) in control.filterTasks(control.board, 'todo')"
+								task-id="{{taskId}}"
+								on-remove="control.removeTask(taskId)"
+								item-data="item"></to-do-item>
 					</div>
 					<div class="col-xs-3">
 						<h2>В работе</h2>
 
-						<div id="inprogress"></div>
+						<to-do-item
+							ng-repeat="(taskId, item) in control.filterTasks(control.board, 'inprogress')"
+							task-id="{{taskId}}"
+							on-remove="control.removeTask(taskId)"
+							item-data="item"></to-do-item>
 					</div>
 					<div class="col-xs-3">
 						<h2>Готово</h2>
 
-						<div id="done"></div>
+						<to-do-item
+							ng-repeat="(taskId, item) in control.filterTasks(control.board, 'done')"
+							task-id="{{taskId}}"
+							on-remove="control.removeTask(taskId)"
+							item-data="item"></to-do-item>
 					</div>
 					<div class="col-xs-3">
 						<h2>Новая задача</h2>
