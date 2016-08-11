@@ -1,0 +1,5 @@
+myApp.controller('SimpleController', function() {
+	var sCtrl = this;
+
+	sCntrl.table = []
+})

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="todoApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Angular</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.0/css/bootstrap-theme.min.css"/>
+	<style type="text/css">
+
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="js/main.js"></script>
+    
+    <script src="js/components/toDoPage/toDoController.js"></script>
+</head>
+
+<body>
+		<div class="container">
+			<div ng-controller="SimpleController as SCtrl">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Id</th>
+						<th>Name</th>
+						<th>Email</th>
+						<th>Description</th>
+						<th>Is working</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="item in sCntrl.table">
+						<td>{{item.id}}</td>
+						<td>{{item.name}}</td>
+						<td>{{item.email}}</td>
+						<td ng-click="isEdit = true">
+							<span ng-show="isEdit">{{item.description}}</td>
+							<span ng-hide="isEdit">
+								<label>
+									Type some description
+									<input 
+									type="text" 
+									class="form-control"
+									ng-click="isEdit = true"
+									ng-class=""	
+									ng-model="item.description"
+									ng-blur="isEdit = false"/>
+								</label>
+						<td>
+							<label>
+							Check input
+							<input type="checkbox" ng-model="item.isWorking"/>
+							</label>
+						</td>
+					</tr>
+				</tbody>
+			<pre> {{sCtrl.table | json}}</pre>		
+	    </div>
+		</div>    
+</body>
+
+</html>
