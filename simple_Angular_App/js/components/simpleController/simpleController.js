@@ -3,7 +3,7 @@ myApp.controller('SimpleController', function($timeout, tableService) {
 
 	sCtrl.table = tableService.data;
 
-	$timeout(function() {
+	sCtrl.addRow = function() {
 		sCtrl.table.push({
 			id: sCtrl.table.length + 1,
 			name: 'New Worker ' + (sCtrl.table.length + 1),
@@ -12,7 +12,7 @@ myApp.controller('SimpleController', function($timeout, tableService) {
 			description: 'Some description',
 			isWorking: true
 		})
-	}, 2000);
+	};
 
 	sCtrl.getDate = function(date) {
 		return new Date(date)
