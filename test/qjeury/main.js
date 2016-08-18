@@ -3,6 +3,6 @@ $(document).ready(function() {
 
     $('h3').css({
     	"font-size": "40px",
-    	color : "blue"
+    	"color" : "blue"
     })
 });
